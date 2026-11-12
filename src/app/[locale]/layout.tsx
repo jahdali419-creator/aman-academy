@@ -32,6 +32,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: { default: `${t("brand")} | ${t("brandOther")}`, template: `%s · ${t("brand")}` },
     description: t("footer.blurb"),
     applicationName: t("brand"),
+    // A demonstration site must not be listed by search engines.
+    ...(config.demoMode ? { robots: { index: false, follow: false } } : {}),
     alternates: { languages: { ar: "/ar", en: "/en" } },
     icons: { icon: "/icons/icon.svg", apple: "/icons/apple-touch-icon.png" },
   };

@@ -12,7 +12,9 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   serverExternalPackages: ["@electric-sql/pglite", "pg", "pdfkit"],
-  outputFileTracingIncludes: { "/api/certificates/**": ["./assets/fonts/**"] },
+  // Files read from disk at run time must be listed so hosted builds include them:
+  // certificate fonts, and the database migrations that run when the server starts.
+  outputFileTracingIncludes: { "/api/certificates/**": ["./assets/fonts/**"], "/**": ["./drizzle/**/*"] },
   async headers() {
     return [
       { source: "/:path*", headers: securityHeaders },
