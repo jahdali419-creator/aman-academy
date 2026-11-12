@@ -1,0 +1,24 @@
+{
+  "progress": {
+    "session_upcoming": "Session upcoming",
+    "attendance_pending": "Attendance pending",
+    "exam_available": "Exam available",
+    "exam_in_progress": "Exam in progress",
+    "passed": "Passed",
+    "action_required": "Action required",
+    "cancelled": "Cancelled",
+    "enrolled": "Enrolled"
+  },
+  "reason": {
+    "attendance_insufficient": "Recorded attendance is below the course minimum.",
+    "no_attempts_left": "All exam attempts have been used.",
+    "session_cancelled": "This session was cancelled.",
+    "certificate_revoked": "The certificate for this course was revoked."
+  },
+  "attendance": { "present": "Present", "partial": "Partial", "absent": "Absent", "pending": "Not recorded yet" },
+  "certificate": { "valid": "Valid", "revoked": "Revoked", "expired": "Expired" },
+  "order": { "pending": "Awaiting payment", "paid": "Paid", "failed": "Payment failed", "cancelled": "Cancelled", "refunded": "Refund required" },
+  "session": { "scheduled": "Scheduled", "completed": "Completed", "cancelled": "Cancelled" },
+  "invitation": { "pending": "Pending", "accepted": "Accepted", "revoked": "Revoked", "expired": "Expired" },
+  "attempt": { "in_progress": "In progress", "submitted": "Submitted", "expired": "Time expired" }
+}

@@ -1,0 +1,123 @@
+import { Suspense } from "react";
+import { getLocale, getTranslations } from "next-intl/server";
+import { LogOut, UserRound } from "lucide-react";
+import { Link } from "@/i18n/navigation";
+import { getViewer, homePathFor } from "@/server/auth/session";
+import { signOutAction } from "@/server/actions/auth";
+import { ButtonLink, buttonClass } from "@/components/ui/button";
+import { Ltr } from "@/components/ui/primitives";
+import { Logo } from "./logo";
+import { LocaleSwitch } from "./locale-switch";
+import { MobileNav } from "./mobile-nav";
+import { NavLink } from "./nav-link";
+
+export async function Header() {
+  const [t, viewer, locale] = await Promise.all([getTranslations("common"), getViewer(), getLocale()]);
+  const links = [
+    { href: "/courses", label: t("nav.courses") },
+    { href: "/companies", label: t("nav.companies") },
+    { href: "/about", label: t("nav.about") },
+    { href: "/verify", label: t("nav.verify") },
+    { href: "/contact", label: t("nav.contact") },
+  ];
+  const home = viewer ? homePathFor(viewer) : null;
+  const homeLabel = viewer
+    ? viewer.role === "admin"
+      ? t("nav.admin")
+      : viewer.role === "instructor"
+        ? t("nav.instructor")
+        : viewer.org?.role === "manager"
+          ? t("nav.company")
+          : t("nav.dashboard")
+    : "";
+  const displayName = viewer ? (locale === "ar" ? viewer.nameAr || viewer.name : viewer.name) : "";
+
+  return (
+    <header className="no-print sticky top-0 z-50 border-b border-line/80 bg-paper/90 backdrop-blur-md">
+      <div className="container-page flex h-[4.25rem] items-center gap-4">
+        <Link href="/" className="shrink-0 rounded-lg" aria-label={t("brand")}>
+          <Logo brand={t("brand")} />
+        </Link>
+
+        <nav aria-label={t("nav.main")} className="ms-4 hidden items-center gap-0.5 xl:flex">
+          {links.map((l) => (
+            <NavLink key={l.href} href={l.href}>
+              {l.label}
+            </NavLink>
+          ))}
+        </nav>
+
+        <div className="ms-auto flex items-center gap-2">
+          <Suspense>
+            <LocaleSwitch />
+          </Suspense>
+          <div className="hidden items-center gap-2 xl:flex">
+            {viewer && home ? (
+              <>
+                <ButtonLink href={home} variant="secondary" size="sm" className="h-10">
+                  {homeLabel}
+                </ButtonLink>
+                <Link href="/settings" aria-label={t("nav.settings")} title={displayName} className="grid size-10 place-items-center rounded-full border border-line-strong bg-white text-navy-900 hover:bg-paper-2">
+                  <UserRound aria-hidden className="size-4.5" />
+                </Link>
+                <form action={signOutAction}>
+                  <button type="submit" aria-label={t("nav.signOut")} title={t("nav.signOut")} className="grid size-10 place-items-center rounded-full text-navy-700 hover:bg-navy-50">
+                    <LogOut aria-hidden className="size-4.5 rtl:-scale-x-100" />
+                  </button>
+                </form>
+              </>
+            ) : (
+              <>
+                <ButtonLink href="/sign-in" variant="ghost" size="sm" className="h-10">
+                  {t("nav.signIn")}
+                </ButtonLink>
+                <ButtonLink href="/register" variant="secondary" size="sm" className="h-10">
+                  {t("nav.register")}
+                </ButtonLink>
+              </>
+            )}
+          </div>
+
+          <MobileNav openLabel={t("nav.openMenu")} closeLabel={t("nav.closeMenu")}>
+            <nav aria-label={t("nav.main")} className="flex flex-col">
+              {links.map((l) => (
+                <Link key={l.href} href={l.href} className="border-b border-line py-4 text-lg font-semibold text-navy-900">
+                  {l.label}
+                </Link>
+              ))}
+            </nav>
+            <div className="mt-6 flex flex-col gap-3">
+              {viewer && home ? (
+                <>
+                  <p className="text-sm text-muted">
+                    {displayName} · <Ltr>{viewer.email}</Ltr>
+                  </p>
+                  <Link href={home} className={buttonClass("secondary", "lg")}>
+                    {homeLabel}
+                  </Link>
+                  <Link href="/settings" className={buttonClass("light", "lg")}>
+                    {t("nav.settings")}
+                  </Link>
+                  <form action={signOutAction}>
+                    <button type="submit" className={buttonClass("ghost", "lg", "w-full")}>
+                      {t("nav.signOut")}
+                    </button>
+                  </form>
+                </>
+              ) : (
+                <>
+                  <Link href="/register" className={buttonClass("secondary", "lg")}>
+                    {t("nav.register")}
+                  </Link>
+                  <Link href="/sign-in" className={buttonClass("light", "lg")}>
+                    {t("nav.signIn")}
+                  </Link>
+                </>
+              )}
+            </div>
+          </MobileNav>
+        </div>
+      </div>
+    </header>
+  );
+}

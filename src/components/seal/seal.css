@@ -1,0 +1,354 @@
+/* The Seal — the locked brand: Medallion, navy, gold, cream. */
+.ca {
+  --navy: #0b1b33; --navy-2: #10264a; --gold: #e0b65c; --gold-deep: #8f6520; --cream: #f3ead7; --ivory: #fbf6e9;
+  --line: rgb(224 182 92 / 0.28);
+  --f-d: var(--a-gulzar), "Gulzar", serif;
+  --f-t: var(--a-messiri), "El Messiri", sans-serif;
+  --lh-d: 1.85; --ls-eyebrow: 0;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --gut: max(20px, env(safe-area-inset-left, 0px));
+  background: var(--navy); color: var(--cream);
+  font-family: var(--f-t); font-size: 1.0625rem; line-height: 1.85;
+  min-height: 100dvh;
+}
+html[lang="en"] .ca {
+  --f-d: var(--a-fraunces), "Fraunces", serif;
+  --f-t: var(--a-garamond), "EB Garamond", serif;
+  --lh-d: 1.04; --ls-eyebrow: 0.2em;
+  font-size: 1.1875rem; line-height: 1.6;
+}
+.ca ::selection { background: var(--gold); color: var(--navy) }
+.ca a { text-decoration: none }
+.ca :focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; border-radius: 2px }
+.ca-wrap { width: min(100% - 2 * var(--gut), 1240px); margin-inline: auto }
+
+/* ---------- header ---------- */
+.ca-head {
+  position: fixed; inset-block-start: 0; inset-inline: 0; z-index: 50;
+  display: flex; align-items: center; gap: 28px;
+  padding: 16px max(20px, 4vw);
+  transition: background 0.5s var(--ease), padding 0.5s var(--ease), box-shadow 0.5s;
+}
+html[data-scrolled] .ca-head { background: rgb(11 27 51 / 0.92); backdrop-filter: blur(10px); padding-block: 10px; box-shadow: 0 1px 0 var(--line) }
+.ca-logo { display: flex; align-items: center; gap: 12px; margin-inline-end: auto }
+.ca-logo-mark { width: 52px; height: 52px; transition: width 0.5s var(--ease), height 0.5s var(--ease) }
+html[data-scrolled] .ca-logo-mark { width: 42px; height: 42px }
+.ca-logo-word { font-family: var(--f-d); font-size: 1.35rem; line-height: 1.6; color: var(--cream) }
+html[lang="en"] .ca-logo-word { font-size: 1.2rem; letter-spacing: 0.01em }
+.ca-nav { display: flex; gap: 30px; font-size: 1rem }
+.ca-nav a { position: relative; padding-block: 6px; color: rgb(243 234 215 / 0.82); transition: color 0.3s }
+.ca-nav a::after { content: ""; position: absolute; inset-inline: 0; inset-block-end: 0; height: 1px; background: var(--gold); transform: scaleX(0); transform-origin: inline-start; transition: transform 0.5s var(--ease) }
+.ca-nav a:hover { color: var(--cream) } .ca-nav a:hover::after { transform: scaleX(1) }
+.ca-nav-cta { display: none }
+.ca-tools { display: flex; align-items: center; gap: 14px }
+.ca-lang { display: flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; font-family: var(--a-fraunces), serif; font-size: 0.78rem; letter-spacing: 0.12em }
+.ca-lang button { border: 0; background: none; min-width: 40px; height: 32px; border-radius: 999px; color: rgb(243 234 215 / 0.7); transition: background 0.4s var(--ease), color 0.3s }
+.ca-lang button[aria-pressed="true"] { background: var(--gold); color: var(--navy) }
+.ca-lang[data-pending] { opacity: 0.6 }
+.ca-burger { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: 50%; background: none; position: relative }
+.ca-burger i { position: absolute; inset-inline: 13px; height: 1.5px; background: var(--gold); transition: transform 0.45s var(--ease), top 0.45s var(--ease) }
+.ca-burger i:nth-of-type(1) { top: 17px } .ca-burger i:nth-of-type(2) { top: 25px }
+html[data-menu] .ca-burger i:nth-of-type(1) { top: 21px; transform: rotate(45deg) }
+html[data-menu] .ca-burger i:nth-of-type(2) { top: 21px; transform: rotate(-45deg) }
+
+/* ---------- buttons ---------- */
+.ca-btn {
+  display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 28px; border-radius: 999px;
+  font-family: var(--f-t); font-weight: 600; font-size: 1rem; white-space: nowrap;
+  transform: translate(var(--mx, 0px), var(--my, 0px));
+  transition: transform 0.5s var(--ease), background 0.35s, color 0.35s, box-shadow 0.35s;
+}
+.ca-btn:active { transform: translate(var(--mx, 0px), var(--my, 0px)) scale(0.97) }
+.ca-btn--gold { background: linear-gradient(135deg, #f6dc9a, #d7a94a 45%, #f3d68b 70%, #b98524); color: var(--navy); box-shadow: 0 10px 30px -12px rgb(224 182 92 / 0.6) }
+.ca-btn--gold:hover { box-shadow: 0 16px 40px -12px rgb(224 182 92 / 0.8) }
+.ca-btn--line { border: 1px solid var(--gold); color: var(--gold) }
+.ca-btn--line:hover { background: var(--gold); color: var(--navy) }
+.ca-btn--navy { background: var(--navy); color: var(--cream) }
+.ca-btn--navy:hover { background: var(--navy-2) }
+.ca-head-cta { min-height: 42px; padding: 0 20px; font-size: 0.95rem }
+.ca-arrow { flex: none; transition: transform 0.5s var(--ease) }
+[dir="rtl"] .ca-arrow { transform: scaleX(-1) }
+.ca-btn:hover .ca-arrow, .ca-ledger a:hover .ca-arrow { transform: translateX(5px) }
+[dir="rtl"] .ca-btn:hover .ca-arrow, [dir="rtl"] .ca-ledger a:hover .ca-arrow { transform: scaleX(-1) translateX(5px) }
+.ca-link { border-bottom: 1px solid currentColor; padding-block: 4px; opacity: 0.85; transition: opacity 0.3s }
+.ca-link:hover { opacity: 1 }
+
+/* ---------- type ---------- */
+.ca-eyebrow { font-size: 0.9rem; color: var(--gold); letter-spacing: var(--ls-eyebrow) }
+html[lang="en"] .ca-eyebrow { font-family: var(--a-fraunces), serif; text-transform: uppercase; font-size: 0.74rem }
+.ca-h2 { font-family: var(--f-d); font-weight: 400; font-size: clamp(1.8rem, 3.6vw, 3.1rem); line-height: var(--lh-d); text-wrap: balance }
+html[lang="en"] .ca-h2 { font-size: clamp(2rem, 4vw, 3.4rem); letter-spacing: -0.015em }
+.ca-h2--xl { font-size: clamp(2.2rem, 5vw, 4.2rem) }
+.ca-sec-lead { max-width: 56ch; opacity: 0.82 }
+
+/* ---------- hero ---------- */
+.ca-hero {
+  position: relative; min-height: 100dvh; overflow: clip;
+  display: grid; grid-template-rows: 1fr auto; padding: 130px max(20px, 6vw) 0;
+  background: radial-gradient(120% 90% at 85% 40%, #142d57 0%, var(--navy) 55%);
+}
+[dir="ltr"] .ca-hero { background: radial-gradient(120% 90% at 85% 40%, #142d57 0%, var(--navy) 55%) }
+[dir="rtl"] .ca-hero { background: radial-gradient(120% 90% at 15% 40%, #142d57 0%, var(--navy) 55%) }
+.ca-hero-text { position: relative; z-index: 2; align-self: center; max-width: min(46rem, 58%); padding-block: 30px 60px }
+.ca-h1 { font-family: var(--f-d); font-weight: 400; font-size: clamp(2.7rem, 6.6vw, 6.2rem); line-height: 1.7; margin-block: 0.38em 0 }
+html[lang="en"] .ca-h1 { font-size: clamp(2.6rem, 5.6vw, 5.4rem); line-height: 1.04; letter-spacing: -0.02em; margin-block: 22px 26px; font-variation-settings: "opsz" 144 }
+.ca-h1-line { display: block }
+.ca-h1-line.is-gold { background: linear-gradient(100deg, #f6dc9a, #d7a94a 40%, #f3d68b 65%, #b98524); -webkit-background-clip: text; background-clip: text; color: transparent; padding-block-end: 0.25em }
+html[lang="en"] .ca-h1-line.is-gold { font-style: italic; padding-block-end: 0.08em }
+.ca-rule { display: block; width: 120px; height: 1px; background: var(--gold); margin-block: 8px 26px; transform-origin: inline-start }
+.ca-lead { max-width: 44ch; font-size: 1.15em; opacity: 0.88 }
+.ca-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 26px; margin-block-start: 34px }
+
+.ca-dial { position: absolute; z-index: 1; inset-block-start: 50%; inset-inline-end: -9vw; width: min(78vh, 62vw); aspect-ratio: 1; translate: 0 -52%; pointer-events: none }
+.ca-dial-rings { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible }
+.ca-tk { stroke: var(--gold); stroke-width: 1.3; opacity: 0.75 }
+.ca-tk--soft { opacity: 0.35 }
+.ca-ring { fill: none; stroke: var(--gold); stroke-width: 1.2; opacity: 0.55; stroke-dasharray: 1; stroke-dashoffset: 0 }
+.ca-ring--thin { stroke-width: 0.7; opacity: 0.4 }
+.ca-dial-outer, .ca-dial-inner, .ca-gauge-turn { transform-box: fill-box; transform-origin: center }
+.ca-dial-outer { transform: rotate(calc(var(--sy, 0) * 0.035deg)) }
+.ca-dial-inner { transform: rotate(calc(var(--sy, 0) * -0.06deg)) }
+.ca-dial-mark { position: absolute; inset: 21%; width: 58%; height: 58%; filter: drop-shadow(0 30px 50px rgb(0 0 0 / 0.45)) }
+.md-spin { transform-box: fill-box; transform-origin: center; animation: ca-turn 60s linear infinite }
+.md-shine { transform: translateX(-80px) skewX(-18deg); animation: ca-shine 6s cubic-bezier(0.5, 0, 0.3, 1) 1.6s infinite }
+@keyframes ca-turn { to { transform: rotate(360deg) } }
+@keyframes ca-shine { 0% { transform: translateX(-80px) skewX(-18deg) } 50%, 100% { transform: translateX(300px) skewX(-18deg) } }
+
+.ca-facts { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); margin-inline: calc(-1 * max(20px, 6vw)); padding-inline: max(20px, 6vw); background: rgb(11 27 51 / 0.55); backdrop-filter: blur(6px) }
+.ca-facts > div { padding: 22px 0; padding-inline-end: 24px }
+.ca-facts > div + div { border-inline-start: 1px solid var(--line); padding-inline-start: 24px }
+.ca-facts dt { font-family: var(--f-d); font-size: 1.35rem; color: var(--gold); line-height: 1.7 }
+html[lang="en"] .ca-facts dt { line-height: 1.2; font-style: italic }
+.ca-facts dd { font-size: 0.95rem; opacity: 0.8; line-height: 1.6 }
+
+/* page-load sequence */
+html[data-motion="on"] .ca-load { animation: ca-rise 1.25s var(--ease) both; animation-delay: calc(0.25s + var(--d, 0) * 0.13s) }
+html[data-motion="on"] .ca-load-rule { animation: ca-draw 1.4s var(--ease) 0.7s both }
+html[data-motion="on"] .ca-hero .ca-ring { animation: ca-stroke 2.4s var(--ease) 0.2s both }
+html[data-motion="on"] .ca-dial-mark { animation: ca-seal 1.8s var(--ease) 0.15s both }
+html[data-motion="on"] .ca-hero .ca-tk { animation: ca-fade 2s ease 0.6s both }
+@keyframes ca-rise { from { opacity: 0; transform: translateY(34px); filter: blur(6px) } to { opacity: 1; transform: none; filter: none } }
+@keyframes ca-draw { from { transform: scaleX(0) } to { transform: scaleX(1) } }
+@keyframes ca-stroke { from { stroke-dashoffset: 1 } to { stroke-dashoffset: 0 } }
+@keyframes ca-seal { from { opacity: 0; transform: scale(0.86) rotate(-24deg) } to { opacity: 1; transform: none } }
+@keyframes ca-fade { from { opacity: 0 } }
+
+/* scroll reveals */
+html[data-motion="on"] .ca [data-reveal] { opacity: 0; transform: translateY(30px); transition: opacity 1s var(--ease), transform 1s var(--ease); transition-delay: calc(var(--i, 0) * 110ms) }
+html[data-motion="on"] .ca [data-reveal][data-in] { opacity: 1; transform: none }
+
+/* ---------- sections ---------- */
+.ca-sec { padding-block: clamp(72px, 11vw, 150px) }
+.ca-sec--cream { background: var(--cream); color: var(--navy) }
+.ca-sec--ivory { background: var(--ivory); color: var(--navy) }
+.ca-sec--cream .ca-eyebrow, .ca-sec--ivory .ca-eyebrow { color: var(--gold-deep) }
+.ca-sec--cream :focus-visible, .ca-sec--ivory :focus-visible { outline-color: var(--navy) }
+.ca-sec-head { display: grid; gap: 10px; margin-block-end: clamp(36px, 5vw, 64px) }
+
+/* ledger of courses */
+.ca-ledger { border-top: 1px solid rgb(11 27 51 / 0.25) }
+.ca-ledger li { border-bottom: 1px solid rgb(11 27 51 / 0.25) }
+.ca-ledger a { position: relative; display: grid; grid-template-columns: 5.5rem minmax(0, 1.2fr) minmax(0, 1.3fr) auto 28px; align-items: center; gap: 28px; padding: 30px 22px; transition: color 0.5s var(--ease) }
+.ca-ledger a::before { content: ""; position: absolute; inset: 0; background: var(--navy); transform: scaleY(0); transform-origin: bottom; transition: transform 0.6s var(--ease); z-index: 0 }
+.ca-ledger a > * { position: relative; z-index: 1 }
+.ca-ledger a:hover, .ca-ledger a:focus-visible { color: var(--cream) }
+.ca-ledger a:hover::before, .ca-ledger a:focus-visible::before { transform: scaleY(1) }
+.ca-ledger-n { font-family: var(--f-d); font-size: 2.4rem; line-height: 1.5; color: var(--gold-deep); transition: color 0.5s }
+html[lang="en"] .ca-ledger-n { font-size: 2.6rem; line-height: 1; font-style: italic }
+.ca-ledger a:hover .ca-ledger-n, .ca-ledger a:focus-visible .ca-ledger-n { color: var(--gold) }
+.ca-ledger-main { display: grid }
+.ca-ledger-title { font-family: var(--f-d); font-size: clamp(1.5rem, 2.6vw, 2.2rem); line-height: var(--lh-d) }
+html[lang="en"] .ca-ledger-title { line-height: 1.15; margin-block-end: 6px }
+.ca-ledger-body { opacity: 0.8 }
+.ca-ledger-topics { font-size: 0.95rem; opacity: 0.7 }
+.ca-ledger-meta { display: grid; text-align: end; font-size: 0.95rem; white-space: nowrap }
+.ca-ledger-meta b { font-weight: 600 }
+.ca-ledger-meta em { font-style: normal; font-size: 0.78rem; opacity: 0.65; display: block }
+
+/* how it works */
+.ca-how-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr); gap: clamp(32px, 7vw, 110px); align-items: start }
+.ca-how-side { position: sticky; inset-block-start: 110px; display: grid; gap: 36px }
+.ca-gauge { position: relative; width: min(100%, 420px); aspect-ratio: 1 }
+.ca-gauge svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible }
+.ca-gauge-turn { transform: rotate(calc(var(--p, 0) * 220deg)) }
+.ca-ring--static { stroke-dasharray: none }
+.ca-gauge-fill { fill: none; stroke: var(--gold); stroke-width: 5; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: calc(1 - clamp(0, (var(--p, 0) - 0.22) * 1.9, 1)) }
+.ca-gauge-mark { position: absolute; inset: 24%; width: 52%; height: 52% }
+.ca-steps { display: grid; counter-reset: s }
+.ca-steps li { position: relative; padding-block: 34px; padding-inline-start: 92px; border-top: 1px solid var(--line) }
+.ca-steps li:last-child { border-bottom: 1px solid var(--line) }
+.ca-step-n { position: absolute; inset-inline-start: 0; inset-block-start: 26px; width: 62px; height: 62px; border: 1px solid var(--gold); border-radius: 50%; display: grid; place-items: center; font-family: var(--f-d); font-size: 1.5rem; color: var(--gold); line-height: 1 }
+html[lang="en"] .ca-step-n { font-style: italic }
+.ca-steps h3 { font-family: var(--f-d); font-weight: 400; font-size: 1.7rem; line-height: var(--lh-d) }
+html[lang="en"] .ca-steps h3 { line-height: 1.2; margin-block-end: 6px }
+.ca-steps p { opacity: 0.78; max-width: 40ch }
+
+/* trust */
+.ca-clauses { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid rgb(11 27 51 / 0.22) }
+.ca-clauses li { padding: 34px 0; padding-inline-end: 40px; border-bottom: 1px solid rgb(11 27 51 / 0.22) }
+.ca-clauses li:nth-child(even) { padding-inline: 40px 0; border-inline-start: 1px solid rgb(11 27 51 / 0.22) }
+.ca-clauses h3 { font-family: var(--f-d); font-weight: 400; font-size: 1.6rem; line-height: var(--lh-d) }
+html[lang="en"] .ca-clauses h3 { line-height: 1.2; margin-block-end: 8px; font-style: italic }
+.ca-clauses p { opacity: 0.8 }
+.ca-record { margin: clamp(40px, 6vw, 72px) 0 0; background: var(--navy); color: var(--cream); border-radius: 4px; padding: 6px; box-shadow: 0 40px 80px -40px rgb(11 27 51 / 0.6) }
+.ca-record figcaption { padding: 10px 18px; font-size: 0.82rem; color: var(--gold) }
+.ca-record-body { border: 1px solid var(--line); display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 30px; padding: 26px 30px }
+.ca-record-mark { width: 84px; height: 84px }
+.ca-record dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px }
+.ca-record dt { font-size: 0.8rem; opacity: 0.65 }
+.ca-ph { height: 10px; margin-block-start: 10px; border-radius: 6px; background: rgb(243 234 215 / 0.18); width: 80% }
+.ca-ph--s { width: 60% } .ca-ph--xs { width: 45% }
+.ca-record-id { display: grid; gap: 6px; justify-items: end; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.9rem; letter-spacing: 0.06em }
+.ca-record-id b { font-family: var(--f-t); font-weight: 600; font-size: 0.85rem; letter-spacing: 0; color: var(--navy); background: var(--gold); padding: 2px 14px; border-radius: 999px }
+
+/* companies */
+.ca-co { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: clamp(32px, 7vw, 110px); align-items: end }
+.ca-co header { display: grid; gap: 10px }
+.ca-co-list { margin-block-end: 34px }
+.ca-co-list li { padding-block: 16px; border-bottom: 1px solid var(--line); padding-inline-start: 26px; position: relative }
+.ca-co-list li::before { content: ""; position: absolute; inset-inline-start: 0; inset-block-start: 1.65em; width: 8px; height: 8px; border-radius: 50%; border: 1px solid var(--gold) }
+
+/* final call */
+.ca-final-grid { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(28px, 6vw, 90px); align-items: center }
+.ca-final-mark { width: clamp(140px, 22vw, 300px); height: auto }
+.ca-final .ca-sec-lead { margin-block-start: 8px }
+
+/* footer */
+.ca-foot { background: #081427; padding-block: 64px 40px; padding-bottom: max(40px, env(safe-area-inset-bottom, 0px)); font-size: 0.95rem }
+.ca-foot-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 40px; align-items: start }
+.ca-foot-brand { display: grid; gap: 4px; justify-items: start }
+.ca-foot-mark { width: 76px; height: 76px; margin-block-end: 10px }
+.ca-foot nav { display: grid; gap: 10px }
+.ca-foot nav a { opacity: 0.8 } .ca-foot nav a:hover { opacity: 1; color: var(--gold) }
+.ca-foot-note { grid-column: 1 / -1; border-top: 1px solid var(--line); padding-block-start: 22px; font-size: 0.85rem; opacity: 0.7 }
+.ca-foot-note a { text-decoration: underline; text-underline-offset: 4px }
+
+/* ---------- tablet ---------- */
+@media (max-width: 1180px) {
+  .ca-nav {
+    position: fixed; inset: 0; z-index: -1; flex-direction: column; justify-content: center; gap: 6px;
+    padding: 110px max(24px, 8vw) 40px; background: var(--navy);
+    visibility: hidden; opacity: 0; transition: opacity 0.5s var(--ease), visibility 0s 0.5s;
+  }
+  html[data-menu] .ca-nav { visibility: visible; opacity: 1; transition: opacity 0.5s var(--ease) }
+  .ca-nav a { font-family: var(--f-d); font-size: 2rem; line-height: 1.9; color: var(--cream); border-bottom: 1px solid var(--line); opacity: 0; transform: translateY(18px); transition: opacity 0.6s var(--ease), transform 0.6s var(--ease) }
+  html[lang="en"] .ca-nav a { line-height: 1.5; padding-block: 10px }
+  html[data-menu] .ca-nav a { opacity: 1; transform: none }
+  html[data-menu] .ca-nav a:nth-child(2) { transition-delay: 0.06s } html[data-menu] .ca-nav a:nth-child(3) { transition-delay: 0.12s }
+  html[data-menu] .ca-nav a:nth-child(4) { transition-delay: 0.18s } html[data-menu] .ca-nav a:nth-child(5) { transition-delay: 0.24s }
+  .ca-nav a::after { display: none }
+  .ca-nav-cta { display: block; color: var(--gold) !important; border-bottom: 0 !important }
+  .ca-burger { display: block }
+  .ca-head-cta { display: none }
+  html[data-menu] { overflow: hidden }
+  html[data-menu] .ca-head { background: var(--navy); backdrop-filter: none }
+}
+@media (max-width: 1000px) {
+  .ca-hero { grid-template-rows: auto 1fr auto }
+  .ca-hero-text { max-width: 100%; align-self: start; padding-block: 18px 48px }
+  .ca-dial { position: relative; inset: auto; translate: none; width: min(74vw, 400px); margin: 0 auto; opacity: 1 }
+  .ca-ledger a { grid-template-columns: 4rem minmax(0, 1fr) auto; gap: 18px }
+  .ca-ledger-topics { grid-column: 2 / -1; grid-row: 2 }
+  .ca-ledger a > .ca-arrow { display: none }
+  .ca-how-grid, .ca-co { grid-template-columns: 1fr }
+  .ca-how-side { position: static }
+  .ca-gauge { width: 220px }
+  .ca-record-body { grid-template-columns: auto minmax(0, 1fr) }
+  .ca-record-id { grid-column: 1 / -1; justify-items: start; grid-auto-flow: column; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); padding-block-start: 18px }
+}
+
+/* ---------- phone ---------- */
+@media (max-width: 640px) {
+  .ca-logo-word { font-size: 1.1rem }
+  .ca-logo-mark { width: 44px; height: 44px }
+  .ca-head { gap: 10px; padding-inline: 16px }
+  .ca-tools { gap: 8px }
+  .ca-hero { padding-top: 104px; padding-inline: 20px }
+  .ca-dial { width: min(74vw, 320px) }
+  .ca-hero-text { padding-block: 18px 40px }
+  .ca-h1 { font-size: clamp(2.3rem, 11.4vw, 3.2rem) }
+  .ca-actions { gap: 18px }
+  .ca-facts { grid-template-columns: 1fr; margin-inline: -20px; padding-inline: 20px }
+  .ca-facts > div { padding: 14px 0 }
+  .ca-facts > div + div { border-inline-start: 0; padding-inline-start: 0; border-top: 1px solid var(--line) }
+  .ca-ledger a { grid-template-columns: 1fr; gap: 8px; padding: 24px 6px }
+  .ca-ledger-topics { grid-column: auto; grid-row: auto }
+  .ca-ledger-meta { text-align: start; display: flex; gap: 14px; align-items: baseline }
+  .ca-ledger-meta em { display: inline; margin-inline-start: 6px }
+  .ca-steps li { padding-inline-start: 72px }
+  .ca-step-n { width: 52px; height: 52px; font-size: 1.25rem }
+  .ca-clauses { grid-template-columns: 1fr }
+  .ca-clauses li, .ca-clauses li:nth-child(even) { padding: 26px 0; border-inline-start: 0 }
+  .ca-record-body { grid-template-columns: 1fr; padding: 20px }
+  .ca-record dl { grid-template-columns: 1fr; gap: 14px }
+  .ca-final-grid { grid-template-columns: 1fr }
+  .ca-final-mark { width: 120px }
+  .ca-foot-grid { grid-template-columns: 1fr }
+}
+
+/* ---------- Arabic sizing: Gulzar is a tall Nastaliq face, so it is set smaller than the Latin and given room so no letter is cut ---------- */
+html[lang="ar"] .ca-h1 { font-size: clamp(2.1rem, 4.5vw, 4.1rem); line-height: 1.9 }
+html[lang="ar"] .ca-h1-line.is-gold { padding-block: 0.3em 0.5em; margin-block: -0.3em -0.2em }
+html[lang="ar"] .ca-h2 { font-size: clamp(1.5rem, 2.8vw, 2.35rem); line-height: 1.95 }
+html[lang="ar"] .ca-h2--xl { font-size: clamp(1.7rem, 3.5vw, 2.9rem) }
+html[lang="ar"] .ca-ledger-title { font-size: clamp(1.3rem, 2vw, 1.7rem); line-height: 1.95 }
+html[lang="ar"] .ca-ledger-n { font-size: 1.9rem }
+html[lang="ar"] .ca-steps h3 { font-size: 1.4rem; line-height: 1.95 }
+html[lang="ar"] .ca-clauses h3 { font-size: 1.35rem; line-height: 1.95 }
+html[lang="ar"] .ca-facts dt { font-size: 1.2rem; line-height: 1.9 }
+@media (max-width: 1180px) {
+  html[lang="ar"] .ca-nav a { font-size: 1.5rem; line-height: 2.1 }
+}
+@media (max-width: 640px) {
+  html[lang="ar"] .ca-h1 { font-size: clamp(1.7rem, 7.6vw, 2.2rem) }
+  html[lang="ar"] .ca-h2 { font-size: 1.45rem }
+  html[lang="ar"] .ca-h2--xl { font-size: 1.6rem }
+}
+
+/* ================= site integration (header and footer on every page) ================= */
+.ca.ca-bar { min-height: 0; background: none }
+.ca-head-slot { position: sticky; inset-block-start: 0; z-index: 50 }
+.ca-head-slot .ca-head { position: relative; background: var(--navy); padding-block: 10px; box-shadow: 0 1px 0 var(--line) }
+.ca-head-slot .ca-logo-mark { width: 44px; height: 44px }
+.ca-nav a[aria-current="page"] { color: var(--gold) }
+.ca-lang a { display: grid; place-items: center; min-width: 40px; height: 32px; border-radius: 999px; color: rgb(243 234 215 / 0.7); transition: background 0.4s var(--ease), color 0.3s }
+.ca-lang a[aria-current="true"] { background: var(--gold); color: var(--navy) }
+.ca-head-link { color: rgb(243 234 215 / 0.85); white-space: nowrap; transition: color 0.3s }
+.ca-head-link:hover { color: var(--gold) }
+.ca-icon { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; background: none; color: var(--gold); transition: background 0.35s, color 0.35s }
+.ca-icon:hover { background: var(--gold); color: var(--navy) }
+.ca-nav-out { display: none }
+/* home: the header floats over the hero and turns solid after scrolling */
+body:has(.ca-home) .ca-head-slot { height: 0 }
+body:has(.ca-home) .ca-head-slot .ca-head { position: absolute; inset-inline: 0; inset-block-start: 0; background: transparent; padding-block: 16px; box-shadow: none }
+body:has(.ca-home) .ca-head-slot .ca-logo-mark { width: 52px; height: 52px }
+html[data-scrolled] body:has(.ca-home) .ca-head-slot .ca-head { background: rgb(11 27 51 / 0.92); backdrop-filter: blur(10px); padding-block: 10px; box-shadow: 0 1px 0 var(--line) }
+html[data-scrolled] body:has(.ca-home) .ca-head-slot .ca-logo-mark { width: 42px; height: 42px }
+html[data-menu] body .ca-head-slot .ca-head { background: var(--navy); backdrop-filter: none }
+@media (max-width: 1180px) {
+  .ca-head-link, .ca-icon { display: none }
+  .ca-nav { overflow-y: auto }
+  .ca-nav-out { display: block }
+  .ca-nav-out button { font-family: var(--f-d); font-size: 1.5rem; line-height: 2.1; color: var(--gold); background: none; border: 0; padding: 0 }
+  html[lang="en"] .ca-nav-out button { font-size: 2rem; line-height: 1.5; padding-block: 10px }
+}
+@media (max-width: 640px) {
+  body:has(.ca-home) .ca-head-slot .ca-logo-mark, .ca-head-slot .ca-logo-mark { width: 44px; height: 44px }
+}
+
+.ca.ca-foot { min-height: 0; background: #081427; margin-block-start: 6rem }
+body:has(.ca-home) .ca.ca-foot { margin-block-start: 0 }
+.ca-foot-grid--site { grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr)) }
+.ca-foot-tag { color: var(--gold) }
+.ca-foot-blurb { max-width: 38ch; opacity: 0.8 }
+.ca-foot h2 { font-family: var(--f-t); font-weight: 600; font-size: 0.95rem; color: var(--gold); margin-block-end: 6px }
+.ca-foot-note { display: flex; flex-wrap: wrap; gap: 8px 32px; justify-content: space-between }
+.ca-foot-note p:last-child { max-width: 70ch }
+@media (max-width: 900px) {
+  .ca-foot-grid--site { grid-template-columns: repeat(3, minmax(0, 1fr)) }
+  .ca-foot-grid--site .ca-foot-brand { grid-column: 1 / -1 }
+}
+@media (max-width: 640px) {
+  .ca-foot-grid--site { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+}
+@media print { .ca-head-slot, .ca.ca-foot { display: none } }

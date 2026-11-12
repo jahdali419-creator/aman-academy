@@ -1,0 +1,1114 @@
+<title>Aman Academy Logos</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Aref+Ruqaa:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=El+Messiri:wght@500;700&family=IBM+Plex+Mono:wght@500&family=Lalezar&family=Marcellus&family=Rakkas&family=Reem+Kufi:wght@500;700&display=swap">
+<style>
+/* Layout: one board per logo. Left, the mark alone and moving. Right, the same mark doing real jobs: lockups, app icon, small sizes. */
+:root {
+  --bg: #f3f4f2; --fg: #14181a; --dim: #5b6466; --rule: #d5d9d6; --pick: #0b6b4a;
+  --ui: "Archivo", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #101314; --fg: #eef1ef; --dim: #9aa4a3; --rule: #2a3031; --pick: #6fd6ad; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #101314; --fg: #eef1ef; --dim: #9aa4a3; --rule: #2a3031; --pick: #6fd6ad; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--fg); font-family: var(--ui); font-size: 16px; line-height: 1.5 }
+.sheet { max-width: 1180px; margin-inline: auto; padding-block: 40px 72px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: flex; flex-direction: column; gap: 60px }
+.top h1 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.6rem); font-weight: 900; letter-spacing: -0.02em; line-height: 1.1 }
+.top p { margin: 8px 0 0; color: var(--dim); max-width: 62ch }
+.concept { display: flex; flex-direction: column; gap: 14px }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px }
+.head .tag { font: 500 0.8rem var(--mono); color: var(--pick); letter-spacing: 0.06em }
+.head h2 { margin: 0; font-size: 1.35rem; font-weight: 700 }
+.head p { margin: 0; color: var(--dim); flex: 1 1 320px; min-width: 0 }
+.board { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 10px }
+@media (max-width: 860px) { .board { grid-template-columns: 1fr } }
+.tile { border-radius: 6px; overflow: hidden; position: relative; display: grid; place-items: center; padding: 22px; min-width: 0; background: var(--c-bg); color: var(--c-fg) }
+.tile.inv { background: var(--c-inv); color: var(--c-invfg) }
+.cap { position: absolute; inset: 10px auto auto 12px; font: 500 0.66rem var(--mono); letter-spacing: 0.08em; opacity: 0.55 }
+.big { min-height: 420px }
+.big .m { width: min(62%, 300px) }
+.uses { display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: minmax(130px, 1fr); gap: 10px }
+.uses .wide { grid-column: 1 / -1 }
+.m { display: block; line-height: 0 }
+.m svg { width: 100%; height: auto; display: block; overflow: visible }
+.m .ac { fill: var(--c-ac) } .m .acs { stroke: var(--c-ac) }
+.lock { display: flex; align-items: center; gap: 16px; direction: rtl; max-width: 100% }
+.lock .m { width: var(--mw, 64px); flex: none }
+.lock .w { display: flex; flex-direction: column; min-width: 0 }
+.lock b { font-family: var(--f-ar); font-weight: var(--w-ar, 700); font-size: clamp(1.5rem, 3.4vw, 2.1rem); line-height: 1.25; white-space: nowrap }
+.lock i { font-family: var(--f-en); font-style: var(--s-en, normal); font-weight: var(--w-en, 500); font-size: 0.74rem; letter-spacing: var(--t-en, 0.3em); text-align: right; direction: ltr; white-space: nowrap; margin-top: 2px }
+.apps { display: flex; align-items: flex-end; gap: 14px }
+.app { width: 84px; height: 84px; border-radius: 22px; display: grid; place-items: center; box-shadow: 0 10px 24px -14px rgb(0 0 0 / 0.55) }
+.app .m { width: 62% }
+.app.a1 { background: var(--c-inv); color: var(--c-invfg) }
+.app.a2 { background: var(--c-ac); color: var(--c-acfg) }
+/* On the accent-coloured icon the mark is one colour. */
+.app.a2 .m { --c-ac: var(--c-acfg) }
+.app.sm { width: 44px; height: 44px; border-radius: 12px }
+.sizes { display: flex; align-items: flex-end; gap: 18px }
+.note { font-size: 0.92rem; color: var(--dim); max-width: 78ch; margin: 0 }
+.note b { color: var(--fg) }
+.round { margin: 0; font-size: 0.8rem; font-family: var(--mono); font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim); border-top: 1px solid var(--rule); padding-top: 16px }
+.end { border-top: 1px solid var(--rule); padding-top: 24px; color: var(--dim); max-width: 72ch }
+.end strong { color: var(--fg) }
+
+/* ---------- 1 · KUFIC BLOCKS ---------- */
+.k1 { --c-bg: #eef0ee; --c-fg: #101418; --c-ac: #00a35a; --c-acfg: #ffffff; --c-inv: #101418; --c-invfg: #f4f6f4; --f-ar: "Reem Kufi", sans-serif; --f-en: "Archivo", sans-serif; --w-en: 800; --t-en: 0.34em }
+.k1 .lock { --mw: 110px }
+.k1 .lock i { font-stretch: 125% }
+.k1 .big .m { width: min(78%, 420px) }
+.k1 .big .kb { transform-box: fill-box; transform-origin: 50% 100%; animation: k-rise 7s cubic-bezier(0.2, 0.9, 0.2, 1) infinite; animation-delay: calc(var(--i) * 0.11s) }
+@keyframes k-rise { 0% { transform: scaleY(0) } 9% { transform: scaleY(1.06) } 13%, 100% { transform: scaleY(1) } }
+.k1 .big .kd { transform-box: fill-box; transform-origin: center; animation: k-pop 7s cubic-bezier(0.3, 1.6, 0.4, 1) infinite; animation-delay: calc(var(--i) * 0.11s + 0.25s) }
+@keyframes k-pop { 0% { transform: scale(0) } 10%, 100% { transform: scale(1) } }
+
+/* ---------- 2 · HAMZA CHECK ---------- */
+.k2 { --c-bg: #f6f8fb; --c-fg: #0c2340; --c-ac: #12b07a; --c-acfg: #06281c; --c-inv: #0c2340; --c-invfg: #f6f8fb; --f-ar: "El Messiri", sans-serif; --f-en: "Marcellus", serif; --w-en: 400; --t-en: 0.32em }
+.k2 .big .m { width: min(40%, 190px) }
+.k2 .big .hc { stroke-dasharray: 70; animation: h-draw 6s cubic-bezier(0.6, 0, 0.2, 1) infinite }
+@keyframes h-draw { 0%, 8% { stroke-dashoffset: 70 } 22%, 100% { stroke-dashoffset: 0 } }
+.k2 .big .hb { transform-box: fill-box; transform-origin: 50% 100%; animation: h-bar 6s cubic-bezier(0.2, 0.9, 0.2, 1) infinite }
+@keyframes h-bar { 0% { transform: scaleY(0) } 9%, 100% { transform: scaleY(1) } }
+
+/* ---------- 3 · NOON CRADLE ---------- */
+.k3 { --c-bg: #e9f3fb; --c-fg: #0c3b47; --c-ac: #ff6a4d; --c-acfg: #ffffff; --c-inv: #0c3b47; --c-invfg: #e9f3fb; --f-ar: "Lalezar", sans-serif; --w-ar: 400; --f-en: "Archivo", sans-serif; --w-en: 700; --t-en: 0.3em }
+.k3 .big .m { width: min(52%, 250px) }
+.k3 .big .nd { transform-box: fill-box; transform-origin: center; animation: n-drop 3.4s cubic-bezier(0.5, 0, 0.5, 1) infinite }
+@keyframes n-drop { 0%, 100% { transform: translateY(0) } 18% { transform: translateY(-34px) } 36% { transform: translateY(5px) scale(1.12, 0.86) } 46% { transform: translateY(-9px) } 56% { transform: translateY(0) } }
+.k3 .big .nb { transform-box: fill-box; transform-origin: 50% 0%; animation: n-give 3.4s cubic-bezier(0.5, 0, 0.5, 1) infinite }
+@keyframes n-give { 0%, 30%, 52%, 100% { transform: scale(1) } 37% { transform: scale(1.04, 1.07) } }
+
+/* ---------- 4 · PULSE A ---------- */
+.k4 { --c-bg: #071318; --c-fg: #e9f1ee; --c-ac: #63e0b4; --c-acfg: #05231b; --c-inv: #e9f1ee; --c-invfg: #071318; --f-ar: "Aref Ruqaa", serif; --f-en: "Cormorant Garamond", serif; --s-en: italic; --t-en: 0.2em }
+.k4 .tile.inv, .k4 .app.a1 .m { --c-ac: #0e8c66 }
+.k4 .lock i { font-size: 0.95rem }
+.k4 .big .m { width: min(66%, 320px) }
+.k4 .big .pl { stroke-dasharray: 260; animation: p-draw 5s cubic-bezier(0.6, 0, 0.3, 1) infinite }
+@keyframes p-draw { 0% { stroke-dashoffset: 260 } 38%, 100% { stroke-dashoffset: 0 } }
+.k4 .big .pc { animation: p-bar 5s ease infinite }
+@keyframes p-bar { 0%, 34% { opacity: 0 } 44%, 100% { opacity: 1 } }
+
+/* ---------- 5 · STAR SEAL ---------- */
+.k5 { --c-bg: #0d2f25; --c-fg: #efe6d2; --c-ac: #d9b36a; --c-acfg: #0d2f25; --c-inv: #efe6d2; --c-invfg: #0d2f25; --f-ar: "Reem Kufi", sans-serif; --f-en: "Marcellus", serif; --w-en: 400; --t-en: 0.34em }
+.k5 .tile.inv, .k5 .app.a1 .m { --c-ac: #9a7428 }
+.k5 .big .m { width: min(58%, 290px) }
+.k5 .big .sr { transform-box: fill-box; transform-origin: center; animation: s-turn 36s linear infinite }
+.k5 .big .ss { transform-box: fill-box; transform-origin: center; animation: s-turn 60s linear infinite reverse }
+@keyframes s-turn { to { transform: rotate(360deg) } }
+.k5 .m text { font-family: "IBM Plex Mono", monospace; font-size: 7px; letter-spacing: 1.5px; fill: currentColor }
+.k5 .m .gl { font-family: "Reem Kufi", sans-serif; font-weight: 700; font-size: 40px; letter-spacing: 0; fill: var(--c-ac) }
+
+/* ---------- 6 · SIGNATURE ---------- */
+.k6 { --c-bg: #0b1b33; --c-fg: #f3ead7; --c-ac: #e0b65c; --c-acfg: #0b1b33; --c-inv: #f3ead7; --c-invfg: #0b1b33; --f-ar: "Aref Ruqaa", serif; --f-en: "Cormorant Garamond", serif; --s-en: italic; --t-en: 0.18em }
+.k6 .tile.inv, .k6 .app.a1 .m { --c-ac: #a97b1f }
+.k6 .lock i { font-size: 0.95rem }
+.k6 .big .m { width: min(80%, 430px) }
+.k6 .m text { font-family: "Aref Ruqaa", serif; font-weight: 700; font-size: 86px; fill: currentColor }
+.k6 .big .sw { stroke-dasharray: 220; animation: sg-draw 6s cubic-bezier(0.6, 0, 0.2, 1) infinite }
+@keyframes sg-draw { 0%, 6% { stroke-dashoffset: 220 } 30%, 100% { stroke-dashoffset: 0 } }
+.k6 .big .sd { transform-box: fill-box; transform-origin: center; animation: sg-dot 6s cubic-bezier(0.3, 1.6, 0.4, 1) infinite }
+@keyframes sg-dot { 0%, 28% { transform: scale(0) rotate(45deg) } 36%, 100% { transform: scale(1) rotate(45deg) } }
+.k6 .sd { transform-box: fill-box; transform-origin: center; transform: rotate(45deg) }
+
+/* ---------- 7 · TWIN PEAKS ---------- */
+.k7 { --c-bg: #f1f3f6; --c-fg: #111827; --c-ac: #ff5a1f; --c-acfg: #ffffff; --c-inv: #111827; --c-invfg: #f1f3f6; --f-ar: "Reem Kufi", sans-serif; --f-en: "Archivo", sans-serif; --w-en: 900; --t-en: 0.3em }
+.k7 .lock i { font-stretch: 125% }
+.k7 .big .m { width: min(64%, 320px) }
+.k7 .big .p2 { animation: tp-slide 5.5s cubic-bezier(0.2, 0.9, 0.2, 1) infinite }
+@keyframes tp-slide { 0% { transform: translateX(-32px); opacity: 0 } 14%, 100% { transform: translateX(0); opacity: 1 } }
+.k7 .big .p3 { stroke-dasharray: 64; animation: tp-bar 5.5s ease infinite }
+@keyframes tp-bar { 0%, 14% { stroke-dashoffset: 64 } 26%, 100% { stroke-dashoffset: 0 } }
+
+/* ---------- 8 · CHEVRON ---------- */
+.k8 { --c-bg: #101112; --c-fg: #f5f5f2; --c-ac: #e3f400; --c-acfg: #101112; --c-inv: #f5f5f2; --c-invfg: #101112; --f-ar: "Lalezar", sans-serif; --w-ar: 400; --f-en: "Archivo", sans-serif; --w-en: 800; --t-en: 0.3em }
+.k8 .tile.inv, .k8 .app.a1 .m { --c-ac: #101112 }
+.k8 .tile.inv .m .cv2 { stroke: #b7c400 }
+.k8 .big .m { width: min(46%, 230px) }
+.k8 .big .cv { animation: cv-up 2.4s ease-in-out infinite; animation-delay: calc(var(--i) * 0.22s) }
+@keyframes cv-up { 0%, 100% { opacity: 1; transform: translateY(0) } 40% { opacity: 0.25; transform: translateY(5px) } }
+
+/* ---------- 9 · TREFOIL ---------- */
+.k9 { --c-bg: #f6f6f3; --c-fg: #15171a; --c-ac: #0a8f5b; --c-acfg: #ffffff; --c-inv: #15171a; --c-invfg: #f6f6f3; --f-ar: "El Messiri", sans-serif; --f-en: "Archivo", sans-serif; --w-en: 700; --t-en: 0.3em }
+.k9 .m .t1 { fill: #0a8f5b } .k9 .m .t2 { fill: #e23b3b } .k9 .m .t3 { fill: #1f6fe0 }
+.k9 .m circle { mix-blend-mode: multiply }
+.k9 .tile.inv .m circle, .k9 .app.a1 .m circle { mix-blend-mode: screen }
+.k9 .m .tk { stroke: #fff }
+.k9 .app.a2 { background: #ffffff }
+.k9 .big .m { width: min(52%, 260px) }
+.k9 .big .tg { transform-box: fill-box; transform-origin: center; animation: s-turn 18s linear infinite }
+.k9 .big .tg circle { transform-box: fill-box; transform-origin: center; animation: tf-breathe 4s ease-in-out infinite; animation-delay: calc(var(--i) * -1.3s) }
+@keyframes tf-breathe { 0%, 100% { transform: scale(1) } 50% { transform: scale(1.1) } }
+
+/* ---------- 10 · VERIFIED SQUARE ---------- */
+.k10 { --c-bg: #eaf4f2; --c-fg: #06302e; --c-ac: #00a892; --c-acfg: #ffffff; --c-inv: #06302e; --c-invfg: #eaf4f2; --f-ar: "Reem Kufi", sans-serif; --f-en: "IBM Plex Mono", monospace; --w-en: 500; --t-en: 0.22em }
+.k10 .tile.inv, .k10 .app.a1 .m { --c-ac: #3fe0c8 }
+.k10 .big .m { width: min(46%, 230px) }
+.k10 .big .vc { stroke-dasharray: 60; animation: h-draw 5s cubic-bezier(0.6, 0, 0.2, 1) infinite }
+.k10 .big .vs { animation: vq-scan 5s cubic-bezier(0.5, 0, 0.5, 1) infinite }
+@keyframes vq-scan { 0% { transform: translateY(-34px); opacity: 0 } 4% { opacity: 0.9 } 16% { transform: translateY(34px); opacity: 0.9 } 20%, 100% { transform: translateY(34px); opacity: 0 } }
+
+/* ---------- 11 · DOORWAY ---------- */
+.k11 { --c-bg: #f2e8da; --c-fg: #57182b; --c-ac: #e08a1e; --c-acfg: #ffffff; --c-inv: #57182b; --c-invfg: #f2e8da; --f-ar: "Rakkas", serif; --w-ar: 400; --f-en: "Marcellus", serif; --w-en: 400; --t-en: 0.32em }
+.k11 .big .m { width: min(40%, 200px) }
+.k11 .big .da { stroke-dasharray: 230; animation: dw-arch 6s cubic-bezier(0.6, 0, 0.2, 1) infinite }
+@keyframes dw-arch { 0% { stroke-dashoffset: 230 } 22%, 100% { stroke-dashoffset: 0 } }
+.k11 .big .dd { animation: dw-in 6s cubic-bezier(0.3, 1.5, 0.4, 1) infinite }
+@keyframes dw-in { 0%, 20% { transform: translateY(34px); opacity: 0 } 34%, 100% { transform: translateY(0); opacity: 1 } }
+
+/* ============ ROUND 3: richer, dimensional, ornate ============ */
+.defs { position: absolute; width: 0; height: 0 }
+
+/* ---------- 12 · MEDALLION ---------- */
+.k12 { --c-bg: #0b1b33; --c-fg: #f3ead7; --c-ac: #e0b65c; --c-acfg: #0b1b33; --c-inv: #f3ead7; --c-invfg: #0b1b33; --gfill: url(#g-gold); --disc: #0b1b33; --f-ar: "Aref Ruqaa", serif; --f-en: "Marcellus", serif; --w-en: 400; --t-en: 0.32em }
+.k12 .tile.inv, .k12 .app.a1 { --gfill: url(#g-gold-d); --disc: #f3ead7 }
+.k12 .app.a2 { background: #0b1b33 }
+.k12 .big .m { width: min(62%, 320px) }
+.k12 .m .mt { font-family: "Aref Ruqaa", serif; font-weight: 700; font-size: 56px; fill: var(--gfill) }
+.k12 .m .ms { font-family: "Marcellus", serif; font-size: 10.500px; letter-spacing: 3.200px; fill: var(--gfill) }
+.k12 .m .gs { stroke: var(--gfill) } .k12 .m .dc { fill: var(--disc) }
+.k12 .big .mr { transform-box: fill-box; transform-origin: center; animation: s-turn 40s linear infinite }
+.k12 .big .msh { animation: md-shine 4.6s cubic-bezier(0.5, 0, 0.3, 1) infinite }
+@keyframes md-shine { 0% { transform: translateX(-80px) skewX(-18deg) } 55%, 100% { transform: translateX(300px) skewX(-18deg) } }
+.k12 .msh { transform: translateX(-80px) skewX(-18deg) }
+
+/* ---------- 13 · RIBBON A ---------- */
+.k13 { --c-bg: #f1f5f3; --c-fg: #0d1f1b; --c-ac: #06a57a; --c-acfg: #ffffff; --c-inv: #0d1f1b; --c-invfg: #f1f5f3; --f-ar: "El Messiri", sans-serif; --f-en: "Archivo", sans-serif; --w-en: 800; --t-en: 0.3em }
+.k13 .app.a2 { background: #ffffff }
+.k13 .big .m { width: min(50%, 250px); filter: drop-shadow(0 18px 18px rgb(4 60 48 / 0.28)) }
+.k13 .big .rl { transform-box: fill-box; transform-origin: 100% 0; animation: rb-l 5.5s cubic-bezier(0.2, 0.9, 0.2, 1) infinite }
+.k13 .big .rr { transform-box: fill-box; transform-origin: 0 0; animation: rb-r 5.5s cubic-bezier(0.2, 0.9, 0.2, 1) infinite }
+@keyframes rb-l { 0% { transform: rotate(-24deg); opacity: 0 } 14%, 100% { transform: rotate(0); opacity: 1 } }
+@keyframes rb-r { 0%, 6% { transform: rotate(24deg); opacity: 0 } 20%, 100% { transform: rotate(0); opacity: 1 } }
+.k13 .big .rc { transform-box: fill-box; transform-origin: 0 50%; animation: rb-c 5.5s cubic-bezier(0.2, 0.9, 0.2, 1) infinite }
+@keyframes rb-c { 0%, 18% { transform: scaleX(0) } 30%, 100% { transform: scaleX(1) } }
+
+/* ---------- 14 · NEON ---------- */
+.k14 { --c-bg: #0b0b12; --c-fg: #fff1dc; --c-ac: #3dffb0; --c-acfg: #0b0b12; --c-inv: #170f24; --c-invfg: #ffe6ee; --f-ar: "Lalezar", sans-serif; --w-ar: 400; --f-en: "Archivo", sans-serif; --w-en: 600; --t-en: 0.36em }
+.k14 .big { background: radial-gradient(60% 55% at 50% 50%, #12261f 0%, #0b0b12 75%) }
+.k14 .tile.inv { --c-ac: #ff5c8a }
+.k14 .app.a2 { background: #170f24 } .k14 .app.a2 .m { --c-ac: #ff5c8a }
+.k14 .big .m { width: min(74%, 400px) }
+.k14 .m .nt { font-family: "Lalezar", sans-serif; font-size: 84px; fill: none; stroke: var(--c-ac); stroke-width: 2.600; filter: drop-shadow(0 0 3px var(--c-ac)) drop-shadow(0 0 12px var(--c-ac)) }
+.k14 .m .nf { fill: none; stroke: currentColor; stroke-width: 2.600; opacity: 0.9; filter: drop-shadow(0 0 5px currentColor) }
+.k14 .big .nt { animation: nn-flick 5s linear infinite }
+@keyframes nn-flick { 0%, 6%, 8%, 11%, 100% { opacity: 1 } 7%, 10% { opacity: 0.25 } 52% { opacity: 1 } 53% { opacity: 0.6 } 54% { opacity: 1 } }
+
+/* ---------- 15 · FACETED SHIELD ---------- */
+.k15 { --c-bg: #edf5f1; --c-fg: #0c2a22; --c-ac: #0aa57b; --c-acfg: #ffffff; --c-inv: #0c2a22; --c-invfg: #edf5f1; --f-ar: "Reem Kufi", sans-serif; --f-en: "Archivo", sans-serif; --w-en: 800; --t-en: 0.3em }
+.k15 .app.a2 { background: #ffffff }
+.k15 .big .m { width: min(46%, 230px); filter: drop-shadow(0 20px 20px rgb(4 60 48 / 0.3)) }
+.k15 .big .fc { animation: fc-glint 4.800s ease-in-out infinite; animation-delay: calc(var(--i) * 0.8s) }
+@keyframes fc-glint { 0%, 100% { filter: brightness(1) } 12% { filter: brightness(1.55) } 24% { filter: brightness(1) } }
+
+/* ---------- 16 · FLOW ---------- */
+.k16 { --c-bg: #f7f7f9; --c-fg: #16181d; --c-ac: #ff5a1f; --c-acfg: #ffffff; --c-inv: #16181d; --c-invfg: #f7f7f9; --f-ar: "Lalezar", sans-serif; --w-ar: 400; --f-en: "Archivo", sans-serif; --w-en: 900; --t-en: 0.34em }
+.k16 .lock i { font-stretch: 125% }
+.k16 .app.a2 { background: #ffffff }
+.k16 .big .m { width: min(78%, 420px) }
+.k16 .m .ft { font-family: "Lalezar", sans-serif; font-size: 96px; fill: url(#g-flow) }
+.k16 .m .fe { font-family: "Archivo", sans-serif; font-weight: 900; font-stretch: 125%; font-size: 15px; letter-spacing: 14px; fill: currentColor }
+
+/* ---------- 17 · ROSETTE ---------- */
+.k17 { --c-bg: #111113; --c-fg: #efe7d6; --c-ac: #d8b56a; --c-acfg: #111113; --c-inv: #efe7d6; --c-invfg: #111113; --gfill: url(#g-gold); --f-ar: "Aref Ruqaa", serif; --f-en: "Cormorant Garamond", serif; --s-en: italic; --t-en: 0.2em }
+.k17 { --ros-disc: #111113 }
+.k17 .tile.inv, .k17 .app.a1 { --gfill: url(#g-gold-d); --ros-disc: #efe7d6 }
+.k17 .app.a2 { background: #111113 }
+.k17 .lock i { font-size: 0.95rem }
+.k17 .big .m { width: min(64%, 330px) }
+.k17 .m .rp { fill: none; stroke: var(--gfill); stroke-width: 0.700 }
+.k17 .m .rt { font-family: "Aref Ruqaa", serif; font-weight: 700; font-size: 60px; fill: var(--gfill) }
+.k17 .big .rg { transform-box: fill-box; transform-origin: center; animation: s-turn 50s linear infinite }
+.k17 .big .rg2 { transform-box: fill-box; transform-origin: center; animation: s-turn 70s linear infinite reverse }
+
+/* ============ ROUND 4: safety symbols ============ */
+.sf .app.a2 { background: #ffffff; color: var(--c-fg) }
+.k22 .app.a2 .m { --c-ac: #ff5d4d }
+.k23 .app.a1 { background: #141516 }
+.sf .m .ol { stroke: currentColor }
+.sf .big .sh { animation: md-shine 4.200s cubic-bezier(0.5, 0, 0.3, 1) infinite }
+.sf .sh { transform: translateX(-80px) skewX(-18deg) }
+
+/* ---------- 18 · HARD HAT ---------- */
+.k18 { --c-bg: #0c2340; --c-fg: #f4f6fa; --c-ac: #ffc62b; --c-acfg: #0c2340; --c-inv: #f4f6fa; --c-invfg: #0c2340; --f-ar: "Reem Kufi", sans-serif; --f-en: "Archivo", sans-serif; --w-en: 800; --t-en: 0.3em }
+.k18 .big .m { width: min(54%, 280px) }
+.k18 .m .ht { font-family: "Reem Kufi", sans-serif; font-weight: 700; font-size: 30px; fill: currentColor }
+.k18 .big .hh { animation: hh-drop 5s cubic-bezier(0.3, 1.5, 0.4, 1) infinite }
+@keyframes hh-drop { 0% { transform: translateY(-46px) rotate(-8deg); opacity: 0 } 12% { transform: translateY(3px) rotate(0); opacity: 1 } 17%, 100% { transform: translateY(0); opacity: 1 } }
+
+/* ---------- 19 · CONE A ---------- */
+.k19 { --c-bg: #f2f1ee; --c-fg: #1a1c1f; --c-ac: #ff6a13; --c-acfg: #ffffff; --c-inv: #1a1c1f; --c-invfg: #f2f1ee; --f-ar: "Lalezar", sans-serif; --w-ar: 400; --f-en: "Archivo", sans-serif; --w-en: 900; --t-en: 0.3em }
+.k19 .lock i { font-stretch: 125% }
+.k19 .big .m { width: min(42%, 220px); filter: drop-shadow(0 16px 14px rgb(120 50 0 / 0.25)) }
+.k19 .big .cn { transform-box: fill-box; transform-origin: 50% 100%; animation: cn-wob 4.500s cubic-bezier(0.4, 0, 0.3, 1) infinite }
+@keyframes cn-wob { 0%, 30%, 100% { transform: rotate(0) } 6% { transform: rotate(-7deg) } 13% { transform: rotate(5deg) } 20% { transform: rotate(-2.500deg) } }
+
+/* ---------- 20 · THREE-COURSE SHIELD ---------- */
+.k20 { --c-bg: #f5f6f8; --c-fg: #0e1b33; --c-ac: #0a8f5b; --c-acfg: #ffffff; --c-inv: #0e1b33; --c-invfg: #f5f6f8; --f-ar: "El Messiri", sans-serif; --f-en: "Marcellus", serif; --w-en: 400; --t-en: 0.32em }
+.k20 .big .m { width: min(42%, 220px); filter: drop-shadow(0 18px 16px rgb(14 27 51 / 0.25)) }
+.k20 .m .gap { stroke: var(--c-bg) } .k20 .tile.inv .m .gap, .k20 .app.a1 .m .gap { stroke: var(--c-inv) } .k20 .app.a2 .m .gap { stroke: #fff }
+.k20 .big .q { animation: fc-glint 5.400s ease-in-out infinite; animation-delay: calc(var(--i) * 1.200s) }
+
+/* ---------- 21 · LIFE RING ---------- */
+.k21 { --c-bg: #e4f1f8; --c-fg: #0b2a45; --c-ac: #e4342b; --c-acfg: #ffffff; --c-inv: #0b2a45; --c-invfg: #e4f1f8; --f-ar: "Aref Ruqaa", serif; --f-en: "Archivo", sans-serif; --w-en: 800; --t-en: 0.3em }
+.k21 .big .m { width: min(50%, 260px); filter: drop-shadow(0 16px 16px rgb(11 42 69 / 0.25)) }
+.k21 .m .lt { font-family: "Aref Ruqaa", serif; font-weight: 700; font-size: 27px; fill: currentColor }
+.k21 .big .lr { transform-box: fill-box; transform-origin: center; animation: s-turn 24s linear infinite }
+.k21 .big .m svg { animation: lr-bob 4s ease-in-out infinite }
+@keyframes lr-bob { 0%, 100% { transform: translateY(0) rotate(-2deg) } 50% { transform: translateY(-8px) rotate(2deg) } }
+
+/* ---------- 22 · GUARDING HANDS ---------- */
+.k22 { --c-bg: #eaf5ef; --c-fg: #0d4a3a; --c-ac: #ff5d4d; --c-acfg: #ffffff; --c-inv: #0d4a3a; --c-invfg: #eaf5ef; --f-ar: "El Messiri", sans-serif; --f-en: "Marcellus", serif; --w-en: 400; --t-en: 0.32em }
+.k22 .big .m { width: min(50%, 260px) }
+.k22 .big .hb2 { transform-box: fill-box; transform-origin: center; animation: hb-beat 1.600s ease-in-out infinite }
+@keyframes hb-beat { 0%, 100% { transform: scale(1) } 14% { transform: scale(1.16) } 28% { transform: scale(1) } 42% { transform: scale(1.1) } 56% { transform: scale(1) } }
+
+/* ---------- 23 · VEST ---------- */
+.k23 { --c-bg: #141516; --c-fg: #f5f5f2; --c-ac: #e3f400; --c-acfg: #141516; --c-inv: #f5f5f2; --c-invfg: #141516; --f-ar: "Lalezar", sans-serif; --w-ar: 400; --f-en: "Archivo", sans-serif; --w-en: 800; --t-en: 0.3em }
+.k23 .app.a2 { background: #f5f5f2; color: #141516 }
+.k23 .big .m { width: min(40%, 210px); filter: drop-shadow(0 16px 18px rgb(0 0 0 / 0.5)) }
+
+/* ============ ROUND 5: more safety symbols ============ */
+/* ---------- 24 · SAFETY PIN ---------- */
+.k24 { --c-bg: #f2f4f7; --c-fg: #1c2430; --c-ac: #e5383b; --c-acfg: #ffffff; --c-inv: #1c2430; --c-invfg: #f2f4f7; --f-ar: "Reem Kufi", sans-serif; --f-en: "Archivo", sans-serif; --w-en: 800; --t-en: 0.3em }
+.k24 .app.a2 .m { --c-ac: #e5383b }
+.k24 .big .m { width: min(70%, 380px) }
+.k24 .big .pw { transform-origin: 122px 35px; animation: pn-open 5s cubic-bezier(0.4, 0, 0.2, 1) infinite }
+@keyframes pn-open { 0%, 8% { transform: rotate(11deg) } 22%, 100% { transform: rotate(0) } }
+
+/* ---------- 25 · EXTINGUISHER ---------- */
+.k25 { --c-bg: #fbefec; --c-fg: #2a1010; --c-ac: #d7261e; --c-acfg: #ffffff; --c-inv: #2a1010; --c-invfg: #fbefec; --f-ar: "Lalezar", sans-serif; --w-ar: 400; --f-en: "Archivo", sans-serif; --w-en: 800; --t-en: 0.3em }
+.k25 .app.a2 .m { --c-ac: #d7261e }
+.k25 .big .m { width: min(28%, 150px); filter: drop-shadow(0 16px 14px rgb(120 20 10 / 0.3)) }
+.k25 .m .dk { fill: currentColor } .k25 .m .dks { stroke: currentColor }
+.k25 .big .m svg { animation: ex-shake 4s cubic-bezier(0.4, 0, 0.3, 1) infinite; transform-origin: 50% 100% }
+@keyframes ex-shake { 0%, 24%, 100% { transform: rotate(0) } 5% { transform: rotate(-6deg) } 11% { transform: rotate(5deg) } 17% { transform: rotate(-2deg) } }
+.k25 .big .pf { animation: ex-puff 4s ease-out infinite; animation-delay: calc(var(--i) * 0.14s + 0.9s) }
+@keyframes ex-puff { 0% { opacity: 0; transform: translate(0, 0) scale(0.4) } 12% { opacity: 0.9 } 40%, 100% { opacity: 0; transform: translate(16px, 14px) scale(1.5) } }
+.k25 .pf { opacity: 0; transform-box: fill-box; transform-origin: center }
+
+/* ---------- 26 · FIRST-AID CASE ---------- */
+.k26 { --c-bg: #eaf5ee; --c-fg: #0c3a2a; --c-ac: #0a8f5b; --c-acfg: #ffffff; --c-inv: #0c3a2a; --c-invfg: #eaf5ee; --f-ar: "El Messiri", sans-serif; --f-en: "Marcellus", serif; --w-en: 400; --t-en: 0.32em }
+.k26 .app.a2 .m { --c-ac: #0a8f5b }
+.k26 .tile.inv .m, .k26 .app.a1 .m { --c-ac: #1fc592 }
+.k26 .big .m { width: min(48%, 250px); filter: drop-shadow(0 16px 14px rgb(4 60 40 / 0.28)) }
+.k26 .big .kx { transform-box: fill-box; transform-origin: center; animation: hb-beat 1.800s ease-in-out infinite }
+
+/* ---------- 27 · ALARM BELL ---------- */
+.k27 { --c-bg: #1c0f12; --c-fg: #ffe9e4; --c-ac: #ff3b30; --c-acfg: #ffffff; --c-inv: #ffe9e4; --c-invfg: #1c0f12; --f-ar: "Lalezar", sans-serif; --w-ar: 400; --f-en: "Archivo", sans-serif; --w-en: 800; --t-en: 0.3em }
+.k27 .app.a2 { background: #ffe9e4; color: #1c0f12 } .k27 .app.a2 .m { --c-ac: #ff3b30 } .k27 .app.a1 { background: #1c0f12; color: #ffe9e4 }
+.k27 .big .m { width: min(52%, 270px) }
+.k27 .big .bl { transform-origin: 60px 55px; animation: bl-ring 2.600s ease-in-out infinite }
+@keyframes bl-ring { 0%, 40%, 100% { transform: rotate(0) } 5% { transform: rotate(-9deg) } 10% { transform: rotate(9deg) } 15% { transform: rotate(-7deg) } 20% { transform: rotate(7deg) } 25% { transform: rotate(-4deg) } 30% { transform: rotate(3deg) } }
+.k27 .big .wv { animation: bl-wave 2.600s ease-out infinite; animation-delay: calc(var(--i) * 0.16s) }
+@keyframes bl-wave { 0% { opacity: 0 } 10% { opacity: 1 } 45%, 100% { opacity: 0.15 } }
+
+/* ---------- 28 · SEATBELT ---------- */
+.k28 { --c-bg: #e8eef9; --c-fg: #0e2a5c; --c-ac: #ff8a00; --c-acfg: #ffffff; --c-inv: #0e2a5c; --c-invfg: #e8eef9; --f-ar: "Reem Kufi", sans-serif; --f-en: "Archivo", sans-serif; --w-en: 800; --t-en: 0.3em }
+.k28 .app.a2 .m { --c-ac: #ff8a00 }
+.k28 .big .m { width: min(44%, 230px) }
+.k28 .big .sb { transform-box: fill-box; transform-origin: 0 0; animation: sb-pull 4.500s cubic-bezier(0.6, 0, 0.2, 1) infinite }
+@keyframes sb-pull { 0% { opacity: 0; transform: translate(-12px, -14px) } 16%, 100% { opacity: 1; transform: translate(0, 0) } }
+.k28 .big .sk { transform-box: fill-box; transform-origin: center; animation: sb-click 4.500s cubic-bezier(0.3, 1.8, 0.4, 1) infinite }
+@keyframes sb-click { 0%, 14% { opacity: 0; transform: scale(0.4) } 24%, 100% { opacity: 1; transform: scale(1) } }
+
+/* ---------- 29 · GOLD SAFETY CREST ---------- */
+.k29 { --c-bg: #0b1b33; --c-fg: #f3ead7; --c-ac: #e0b65c; --c-acfg: #0b1b33; --c-inv: #f3ead7; --c-invfg: #0b1b33; --gfill: url(#g-gold); --disc: #0b1b33; --f-ar: "Aref Ruqaa", serif; --f-en: "Marcellus", serif; --w-en: 400; --t-en: 0.32em }
+.k29 .tile.inv, .k29 .app.a1 { --gfill: url(#g-gold-d); --disc: #f3ead7 }
+.k29 .app.a2 { background: #0b1b33 }
+.k29 .big .m { width: min(62%, 320px) }
+.k29 .m .mt { font-family: "Aref Ruqaa", serif; font-weight: 700; font-size: 40px; fill: var(--gfill) }
+.k29 .m .ms { font-family: "Marcellus", serif; font-size: 10px; letter-spacing: 3px; fill: var(--gfill) }
+.k29 .m .gs { stroke: var(--gfill) } .k29 .m .gf { fill: var(--gfill) } .k29 .m .dc { fill: var(--disc) }
+.k29 .big .mr { transform-box: fill-box; transform-origin: center; animation: s-turn 40s linear infinite }
+.k29 .big .msh { animation: md-shine 4.600s cubic-bezier(0.5, 0, 0.3, 1) infinite }
+.k29 .msh { transform: translateX(-80px) skewX(-18deg) }
+
+/* ============ ROUND 6 ============ */
+.k30 .app.a2 .m { --c-ac: #12b07a } .k31 .app.a2 .m { --c-ac: #19c37d } .k32 .app.a2 .m { --c-ac: #ff6a4d } .k33 .app.a2 .m { --c-ac: #0a9a5c }
+.k34 .app.a2, .k35 .app.a2 { background: var(--c-bg); color: var(--c-fg) } .k34 .app.a2 .m { --c-ac: #ffd23f } .k35 .app.a2 .m { --c-ac: #ffc400 }
+.k34 .app.a1, .k35 .app.a1 { background: var(--c-inv); color: var(--c-invfg) }
+
+/* ---------- 30 · PULSE SHIELD ---------- */
+.k30 { --c-bg: #eef2f7; --c-fg: #0c2340; --c-ac: #12b07a; --c-acfg: #ffffff; --c-inv: #0c2340; --c-invfg: #eef2f7; --f-ar: "Aref Ruqaa", serif; --f-en: "Marcellus", serif; --w-en: 400; --t-en: 0.32em }
+.k30 .tile.inv .m .sbd, .k30 .app.a1 .m .sbd { fill: #16365f }
+.k30 .m .sbd { fill: currentColor }
+.k30 .big .m { width: min(40%, 210px); filter: drop-shadow(0 18px 16px rgb(12 35 64 / 0.3)) }
+.k30 .big .spl { stroke-dasharray: 150; animation: ps-draw 3.200s cubic-bezier(0.5, 0, 0.3, 1) infinite }
+@keyframes ps-draw { 0% { stroke-dashoffset: 150 } 45%, 100% { stroke-dashoffset: 0 } }
+
+/* ---------- 31 · TRAFFIC LIGHT ---------- */
+.k31 { --c-bg: #f2f2ef; --c-fg: #1b1d21; --c-ac: #19c37d; --c-acfg: #ffffff; --c-inv: #1b1d21; --c-invfg: #f2f2ef; --f-ar: "Lalezar", sans-serif; --w-ar: 400; --f-en: "Archivo", sans-serif; --w-en: 800; --t-en: 0.3em }
+.k31 .tile.inv .m .tb, .k31 .app.a1 .m .tb { fill: #2c3037 }
+.k31 .m .tb { fill: currentColor }
+.k31 .big .m { width: min(24%, 130px); filter: drop-shadow(0 16px 14px rgb(0 0 0 / 0.28)) }
+.k31 .big .l1 { animation: tl-1 6s steps(1) infinite } .k31 .big .l2 { animation: tl-2 6s steps(1) infinite } .k31 .big .l3 { animation: tl-3 6s steps(1) infinite }
+@keyframes tl-1 { 0% { opacity: 1 } 22%, 100% { opacity: 0.18 } }
+@keyframes tl-2 { 0% { opacity: 0.18 } 22% { opacity: 1 } 38%, 100% { opacity: 0.18 } }
+@keyframes tl-3 { 0% { opacity: 0.18 } 38%, 100% { opacity: 1 } }
+.k31 .m .l1, .k31 .m .l2 { opacity: 0.18 }
+
+/* ---------- 32 · UMBRELLA ---------- */
+.k32 { --c-bg: #e8effa; --c-fg: #14315f; --c-ac: #ff6a4d; --c-acfg: #ffffff; --c-inv: #14315f; --c-invfg: #e8effa; --f-ar: "El Messiri", sans-serif; --f-en: "Archivo", sans-serif; --w-en: 700; --t-en: 0.3em }
+.k32 .big .m { width: min(48%, 250px) }
+.k32 .big .uc { transform-box: fill-box; transform-origin: 50% 100%; animation: um-open 5s cubic-bezier(0.3, 1.4, 0.4, 1) infinite }
+@keyframes um-open { 0% { transform: scale(0.25, 0.7) } 14%, 100% { transform: scale(1) } }
+.k32 .big .up { animation: F-bob2 2.800s ease-in-out infinite; animation-delay: calc(var(--i) * -0.7s) }
+@keyframes F-bob2 { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-3px) } }
+
+/* ---------- 33 · EXIT DOOR ---------- */
+.k33 { --c-bg: #e9f5ee; --c-fg: #0b3d2a; --c-ac: #0a9a5c; --c-acfg: #ffffff; --c-inv: #0b3d2a; --c-invfg: #e9f5ee; --f-ar: "Reem Kufi", sans-serif; --f-en: "Archivo", sans-serif; --w-en: 800; --t-en: 0.3em }
+.k33 .tile.inv .m, .k33 .app.a1 .m { --c-ac: #19c37d }
+.k33 .big .m { width: min(40%, 210px); filter: drop-shadow(0 16px 14px rgb(4 70 40 / 0.3)) }
+.k33 .big .ea { animation: ex-go 2.200s cubic-bezier(0.5, 0, 0.3, 1) infinite }
+@keyframes ex-go { 0% { transform: translateX(-12px); opacity: 0 } 25% { opacity: 1 } 70%, 100% { transform: translateX(4px); opacity: 1 } }
+
+/* ---------- 34 · LIGHTHOUSE ---------- */
+.k34 { --c-bg: #0b1730; --c-fg: #f2f5fb; --c-ac: #ffd23f; --c-acfg: #0b1730; --c-inv: #f2f5fb; --c-invfg: #0b1730; --f-ar: "Aref Ruqaa", serif; --f-en: "Cormorant Garamond", serif; --s-en: italic; --t-en: 0.2em }
+.k34 .lock i { font-size: 0.95rem }
+.k34 .big .m { width: min(54%, 280px) }
+.k34 .big .bm { transform-origin: 80px 44px; animation: lh-sweep 5s ease-in-out infinite }
+@keyframes lh-sweep { 0%, 100% { transform: rotate(-7deg); opacity: 0.9 } 50% { transform: rotate(7deg); opacity: 0.55 } }
+.k34 .tile.inv .m .bm, .k34 .app.a1 .m .bm { opacity: 0.85 }
+
+/* ---------- 35 · SAFE TRIANGLE ---------- */
+.k35 { --c-bg: #15171a; --c-fg: #f5f5f2; --c-ac: #ffc400; --c-acfg: #15171a; --c-inv: #f5f5f2; --c-invfg: #15171a; --f-ar: "Lalezar", sans-serif; --w-ar: 400; --f-en: "Archivo", sans-serif; --w-en: 900; --t-en: 0.3em }
+.k35 .lock i { font-stretch: 125% }
+.k35 .big .m { width: min(46%, 240px) }
+.k35 .big .tc { stroke-dasharray: 64; animation: h-draw 4.500s cubic-bezier(0.6, 0, 0.2, 1) infinite }
+
+/* ============ ROUND 7 ============ */
+.k36 .app.a2 { background: var(--c-bg); color: var(--c-fg) } .k36 .app.a1 { background: var(--c-inv); color: var(--c-invfg) } .k36 .app.a2 .m { --c-ac: #ffc62b }
+.k37 .app.a2 .m { --c-ac: #12b07a } .k40 .app.a2 .m { --c-ac: #e0a82e }
+
+/* ---------- 36 · GRADUATE HELMET ---------- */
+.k36 { --c-bg: #0c2340; --c-fg: #f4f6fa; --c-ac: #ffc62b; --c-acfg: #0c2340; --c-inv: #f4f6fa; --c-invfg: #0c2340; --f-ar: "Reem Kufi", sans-serif; --f-en: "Archivo", sans-serif; --w-en: 800; --t-en: 0.3em }
+.k36 .big .m { width: min(54%, 280px) }
+.k36 .big .ts { transform-origin: 104px 27px; animation: gh-swing 3s ease-in-out infinite }
+@keyframes gh-swing { 0%, 100% { transform: rotate(-9deg) } 50% { transform: rotate(9deg) } }
+
+/* ---------- 37 · BOOK SHIELD ---------- */
+.k37 { --c-bg: #f3f6f1; --c-fg: #17324d; --c-ac: #12b07a; --c-acfg: #ffffff; --c-inv: #17324d; --c-invfg: #f3f6f1; --f-ar: "El Messiri", sans-serif; --f-en: "Marcellus", serif; --w-en: 400; --t-en: 0.32em }
+.k37 .big .m { width: min(40%, 210px) }
+.k37 .big .pg1 { transform-box: fill-box; transform-origin: 100% 50%; animation: bk-l 4s ease-in-out infinite }
+.k37 .big .pg2 { transform-box: fill-box; transform-origin: 0 50%; animation: bk-l 4s ease-in-out infinite }
+@keyframes bk-l { 0%, 100% { transform: scaleX(1) } 50% { transform: scaleX(0.86) } }
+.k37 .big .bkc { stroke-dasharray: 40; animation: h-draw 4s cubic-bezier(0.6, 0, 0.2, 1) infinite }
+
+/* ---------- 38 · CALLIGRAPHY SHIELD ---------- */
+.k38 { --c-bg: #f0f5f2; --c-fg: #0d1f1b; --c-ac: #06a57a; --c-acfg: #ffffff; --c-inv: #0d1f1b; --c-invfg: #f0f5f2; --f-ar: "Aref Ruqaa", serif; --f-en: "Cormorant Garamond", serif; --s-en: italic; --t-en: 0.2em }
+.k38 .lock i { font-size: 0.95rem }
+.k38 .big .m { width: min(42%, 220px); filter: drop-shadow(0 20px 18px rgb(4 60 48 / 0.3)) }
+.k38 .m .cst { font-family: "Aref Ruqaa", serif; font-weight: 700; font-size: 36px; fill: #fff }
+
+/* ---------- 39 · THREE LINES ---------- */
+.k39 { --c-bg: #f6f6f3; --c-fg: #15171a; --c-ac: #0a8f5b; --c-acfg: #ffffff; --c-inv: #15171a; --c-invfg: #f6f6f3; --f-ar: "Reem Kufi", sans-serif; --f-en: "Archivo", sans-serif; --w-en: 700; --t-en: 0.3em }
+.k39 .big .m { width: min(46%, 240px) }
+.k39 .big .ln { stroke-dasharray: 110; animation: l3-draw 5s cubic-bezier(0.5, 0, 0.3, 1) infinite; animation-delay: calc(var(--i) * 0.5s) }
+@keyframes l3-draw { 0% { stroke-dashoffset: 110 } 24%, 100% { stroke-dashoffset: 0 } }
+
+/* ---------- 40 · AWARD RIBBON ---------- */
+.k40 { --c-bg: #edf2f8; --c-fg: #132f55; --c-ac: #e0a82e; --c-acfg: #ffffff; --c-inv: #132f55; --c-invfg: #edf2f8; --f-ar: "Aref Ruqaa", serif; --f-en: "Marcellus", serif; --w-en: 400; --t-en: 0.32em }
+.k40 .big .m { width: min(38%, 200px); filter: drop-shadow(0 16px 14px rgb(19 47 85 / 0.25)) }
+.k40 .big .rz { transform-box: fill-box; transform-origin: center; animation: s-turn 30s linear infinite }
+.k40 .big .rk { stroke-dasharray: 60; animation: h-draw 5s cubic-bezier(0.6, 0, 0.2, 1) infinite }
+
+/* ---------- 41 · PINWHEEL ---------- */
+.k41 { --c-bg: #f6f6f3; --c-fg: #15171a; --c-ac: #0a8f5b; --c-acfg: #ffffff; --c-inv: #15171a; --c-invfg: #f6f6f3; --f-ar: "Lalezar", sans-serif; --w-ar: 400; --f-en: "Archivo", sans-serif; --w-en: 800; --t-en: 0.3em }
+.k41 .big .m { width: min(46%, 240px) }
+.k41 .big .pwh { transform-box: fill-box; transform-origin: center; animation: s-turn 14s linear infinite }
+
+@media (prefers-reduced-motion: reduce) { .m * { animation: none !important } }
+
+@page { size: 13.333in 7.500in; margin: 0.350in }
+@media print {
+  * { animation: none !important; transition: none !important; -webkit-print-color-adjust: exact; print-color-adjust: exact }
+  body { background: #fff; color: #14181a }
+  .sheet { padding: 0; gap: 0; max-width: none }
+  .top { break-after: page; padding-top: 2.200in }
+  .top h1 { font-size: 3rem }
+  .concept { break-inside: avoid; break-after: page; padding-top: 0.100in }
+  .round { display: none }
+  .big { min-height: 4.600in }
+  .board { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr) !important }
+  .app { box-shadow: none !important }
+  .end { display: none }
+}
+</style>
+
+<svg class="defs" aria-hidden="true" focusable="false"><defs>
+  <linearGradient id="g-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6dc9a"/><stop offset="0.45" stop-color="#d7a94a"/><stop offset="0.7" stop-color="#f3d68b"/><stop offset="1" stop-color="#b98524"/></linearGradient>
+  <linearGradient id="g-gold-d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b98524"/><stop offset="0.5" stop-color="#8a5f12"/><stop offset="1" stop-color="#c9982f"/></linearGradient>
+  <linearGradient id="g-em1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3fe0a8"/><stop offset="1" stop-color="#06a57a"/></linearGradient>
+  <linearGradient id="g-em2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#078a67"/><stop offset="1" stop-color="#045a47"/></linearGradient>
+  <linearGradient id="g-flow" x1="0" y1="0" x2="1" y2="0" spreadMethod="reflect"><stop offset="0" stop-color="#ff5a1f"/><stop offset="0.5" stop-color="#ffb000"/><stop offset="1" stop-color="#00a878"/><animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="2 0" dur="6s" repeatCount="indefinite"/></linearGradient>
+  <linearGradient id="g-helm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe066"/><stop offset="1" stop-color="#f5a700"/></linearGradient>
+  <linearGradient id="g-cone" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ff8a3d"/><stop offset="0.55" stop-color="#ff6a13"/><stop offset="1" stop-color="#d94e00"/></linearGradient>
+  <linearGradient id="g-vis" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1fb5a"/><stop offset="1" stop-color="#c4d600"/></linearGradient>
+  <linearGradient id="g-silver" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b9bec0"/><stop offset="0.5" stop-color="#f2f4f5"/><stop offset="1" stop-color="#aeb4b6"/></linearGradient>
+</defs></svg>
+<div class="sheet">
+  <header class="top">
+    <h1>Forty-one logos for Aman Academy</h1>
+    <p>Each mark is drawn from the word أمان itself or from what the academy does, and is shown moving, then doing real jobs: bilingual lockup, dark background, app icon and tiny sizes. I kept the spelling from your brief, Aman (أمان, "safety"); tell me if it should read Amman.</p>
+  </header>
+
+  <h2 class="round">Round 7 — newest</h2>
+
+  <section class="concept sf k36">
+    <div class="head"><span class="tag">LOGO 36</span><h2>Graduate helmet</h2><p>A safety helmet wearing a graduation cap and tassel: safety and academy in one object.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="gradhelm"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:70px"><span class="m" data-mark="gradhelm"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON LIGHT</span><span class="m" data-mark="gradhelm" style="width:110px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="gradhelm" style="width:68%"></span></span><span class="app a2"><span class="m" data-mark="gradhelm" style="width:68%"></span></span><span class="app a1 sm"><span class="m" data-mark="gradhelm" style="width:68%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> the only mark so far that says both halves of your name. Witty, memorable, and the tassel swings.</p>
+  </section>
+
+  <section class="concept sf k37">
+    <div class="head"><span class="tag">LOGO 37</span><h2>Book shield</h2><p>A shield holding an open book, with a check above it: learning that protects.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="bookshield"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:46px"><span class="m" data-mark="bookshield"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="bookshield" style="width:72px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="bookshield" style="width:48%"></span></span><span class="app a2"><span class="m" data-mark="bookshield" style="width:48%"></span></span><span class="app a1 sm"><span class="m" data-mark="bookshield" style="width:48%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> the academic version of the safety shield. Calm and credible, suited to companies and certificates.</p>
+  </section>
+
+  <section class="concept sf k38">
+    <div class="head"><span class="tag">LOGO 38</span><h2>Calligraphy shield</h2><p>An emerald shield with the word أمان written across it in white calligraphy.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="callshield"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:48px"><span class="m" data-mark="callshield"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="callshield" style="width:76px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="callshield" style="width:52%"></span></span><span class="app a2"><span class="m" data-mark="callshield" style="width:52%"></span></span><span class="app a1 sm"><span class="m" data-mark="callshield" style="width:52%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> the safety shield and the fancy lettering together. The name is inside the protection, and it reads in one glance.</p>
+  </section>
+
+  <section class="concept sf k39">
+    <div class="head"><span class="tag">LOGO 39</span><h2>Three lines</h2><p>A circle holding three lines: a heartbeat, a flame wave and a road. One line for each course.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="lines3"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:52px"><span class="m" data-mark="lines3"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="lines3" style="width:84px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="lines3" style="width:58%"></span></span><span class="app a2"><span class="m" data-mark="lines3" style="width:58%"></span></span><span class="app a1 sm"><span class="m" data-mark="lines3" style="width:58%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> minimal and modern, and it tells the whole story of what you teach. The lines draw one after another.</p>
+  </section>
+
+  <section class="concept sf k40">
+    <div class="head"><span class="tag">LOGO 40</span><h2>Award ribbon</h2><p>A gold award rosette with navy ribbon tails and a check at its centre: the certificate you earn.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="award"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:44px"><span class="m" data-mark="award"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="award" style="width:70px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="award" style="width:46%"></span></span><span class="app a2"><span class="m" data-mark="award" style="width:46%"></span></span><span class="app a1 sm"><span class="m" data-mark="award" style="width:46%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> focuses on the result the learner wants. It can sit on every passed exam and certificate.</p>
+  </section>
+
+  <section class="concept sf k41">
+    <div class="head"><span class="tag">LOGO 41</span><h2>Pinwheel</h2><p>Three petals turning around one centre, green, red and blue for the three courses.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="pinwheel"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:52px"><span class="m" data-mark="pinwheel"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="pinwheel" style="width:84px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="pinwheel" style="width:58%"></span></span><span class="app a2"><span class="m" data-mark="pinwheel" style="width:58%"></span></span><span class="app a1 sm"><span class="m" data-mark="pinwheel" style="width:58%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> simple, colourful and always in motion. Friendly for individuals and easy to recognise at small sizes.</p>
+  </section>
+<h2 class="round">Round 6</h2>
+
+  <section class="concept sf k30">
+    <div class="head"><span class="tag">LOGO 30</span><h2>Pulse shield</h2><p>A navy shield with an emerald heartbeat running through it: protection and life in one mark.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="pshield"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:46px"><span class="m" data-mark="pshield"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="pshield" style="width:72px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="pshield" style="width:48%"></span></span><span class="app a2"><span class="m" data-mark="pshield" style="width:48%"></span></span><span class="app a1 sm"><span class="m" data-mark="pshield" style="width:48%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> the classic safety shield, in the navy and emerald of your original brief. Familiar, trustworthy, and the pulse draws itself.</p>
+  </section>
+
+  <section class="concept sf k31">
+    <div class="head"><span class="tag">LOGO 31</span><h2>Traffic light</h2><p>A traffic light whose three lamps are the three courses, settling on green: safe to go.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="tlight"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:26px"><span class="m" data-mark="tlight"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="tlight" style="width:40px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="tlight" style="width:26%"></span></span><span class="app a2"><span class="m" data-mark="tlight" style="width:26%"></span></span><span class="app a1 sm"><span class="m" data-mark="tlight" style="width:26%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> everyone reads it instantly, and green means أمان. The lamps cycle red, amber, green as a loader.</p>
+  </section>
+
+  <section class="concept sf k32">
+    <div class="head"><span class="tag">LOGO 32</span><h2>Umbrella</h2><p>One umbrella sheltering three people: a team protected together.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="umb"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:60px"><span class="m" data-mark="umb"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="umb" style="width:96px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="umb" style="width:62%"></span></span><span class="app a2"><span class="m" data-mark="umb" style="width:62%"></span></span><span class="app a1 sm"><span class="m" data-mark="umb" style="width:62%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> speaks directly to companies training their staff. Soft and friendly, and the umbrella opens as its animation.</p>
+  </section>
+
+  <section class="concept sf k33">
+    <div class="head"><span class="tag">LOGO 33</span><h2>Exit door</h2><p>The green emergency-exit sign: an arrow leading to an open door.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="exitd"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:46px"><span class="m" data-mark="exitd"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="exitd" style="width:72px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="exitd" style="width:60%"></span></span><span class="app a2"><span class="m" data-mark="exitd" style="width:60%"></span></span><span class="app a1 sm"><span class="m" data-mark="exitd" style="width:60%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> a sign people already trust with their lives. Green, simple, and it makes a perfect square app icon.</p>
+  </section>
+
+  <section class="concept sf k34">
+    <div class="head"><span class="tag">LOGO 34</span><h2>Lighthouse</h2><p>A lighthouse sweeping its beam across the dark: guidance toward safety.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="light"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:62px"><span class="m" data-mark="light"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON LIGHT</span><span class="m" data-mark="light" style="width:110px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="light" style="width:66%"></span></span><span class="app a2"><span class="m" data-mark="light" style="width:66%"></span></span><span class="app a1 sm"><span class="m" data-mark="light" style="width:66%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> more poetic than the equipment logos. It says we show you the way, and the beam is a natural animation.</p>
+  </section>
+
+  <section class="concept sf k35">
+    <div class="head"><span class="tag">LOGO 35</span><h2>Safe triangle</h2><p>The yellow warning triangle, with a check where the exclamation mark would be: danger understood and handled.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="tri"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:52px"><span class="m" data-mark="tri"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON LIGHT</span><span class="m" data-mark="tri" style="width:84px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="tri" style="width:56%"></span></span><span class="app a2"><span class="m" data-mark="tri" style="width:56%"></span></span><span class="app a1 sm"><span class="m" data-mark="tri" style="width:56%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> turns the most common hazard sign into a positive. Bold, modern and very visible.</p>
+  </section>
+<h2 class="round">Round 5</h2>
+
+  <section class="concept sf k24">
+    <div class="head"><span class="tag">LOGO 24</span><h2>Safety pin</h2><p>A safety pin, which in Arabic is literally called دبوس أمان. The object already carries your name.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="pin"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:92px"><span class="m" data-mark="pin"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="pin" style="width:130px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="pin" style="width:72%"></span></span><span class="app a2"><span class="m" data-mark="pin" style="width:72%"></span></span><span class="app a1 sm"><span class="m" data-mark="pin" style="width:72%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> a clever idea people remember and repeat. Simple line work, a red cap, and it clicks shut as its animation.</p>
+  </section>
+
+  <section class="concept sf k25">
+    <div class="head"><span class="tag">LOGO 25</span><h2>Extinguisher</h2><p>A red fire extinguisher with a check on its label, giving a short puff.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="ext"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:30px"><span class="m" data-mark="ext"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="ext" style="width:46px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="ext" style="width:30%"></span></span><span class="app a2"><span class="m" data-mark="ext" style="width:30%"></span></span><span class="app a1 sm"><span class="m" data-mark="ext" style="width:30%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> the most recognised piece of safety equipment there is. Strong for the fire course, though it leans the whole brand toward fire.</p>
+  </section>
+
+  <section class="concept sf k26">
+    <div class="head"><span class="tag">LOGO 26</span><h2>First-aid case</h2><p>The green first-aid case with its white cross, the international sign for help, with a gently pulsing cross.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="kit"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:62px"><span class="m" data-mark="kit"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="kit" style="width:96px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="kit" style="width:64%"></span></span><span class="app a2"><span class="m" data-mark="kit" style="width:64%"></span></span><span class="app a1 sm"><span class="m" data-mark="kit" style="width:64%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> calm and reassuring, and green means safe everywhere. Leans toward first aid in the same way the extinguisher leans toward fire.</p>
+  </section>
+
+  <section class="concept sf k27">
+    <div class="head"><span class="tag">LOGO 27</span><h2>Alarm bell</h2><p>A red alarm bell caught mid-ring, with sound waves on both sides.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="bell"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:70px"><span class="m" data-mark="bell"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON LIGHT</span><span class="m" data-mark="bell" style="width:110px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="bell" style="width:70%"></span></span><span class="app a2"><span class="m" data-mark="bell" style="width:70%"></span></span><span class="app a1 sm"><span class="m" data-mark="bell" style="width:70%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> urgent and energetic: it says be ready. The ring is a ready-made notification animation for the app.</p>
+  </section>
+
+  <section class="concept sf k28">
+    <div class="head"><span class="tag">LOGO 28</span><h2>Seatbelt</h2><p>A person wearing a seatbelt, the belt drawn in orange and clicked into its buckle.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="belt"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:50px"><span class="m" data-mark="belt"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="belt" style="width:76px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="belt" style="width:52%"></span></span><span class="app a2"><span class="m" data-mark="belt" style="width:52%"></span></span><span class="app a1 sm"><span class="m" data-mark="belt" style="width:52%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> a small everyday act of safety that everyone in Saudi Arabia knows. Friendly, and it makes a clear app icon.</p>
+  </section>
+
+  <section class="concept k29">
+    <div class="head"><span class="tag">LOGO 29</span><h2>Gold safety crest</h2><p>The gold medallion from round 3, now carrying a safety helmet above the calligraphic أمان.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="crest"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:76px"><span class="m" data-mark="crest"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON LIGHT</span><span class="m" data-mark="crest" style="width:120px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="crest" style="width:82%"></span></span><span class="app a2"><span class="m" data-mark="crest" style="width:82%"></span></span><span class="app a1 sm"><span class="m" data-mark="crest" style="width:82%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> the prestige of the gold seal with an unmistakable safety symbol. This is the one I would put on certificates.</p>
+  </section>
+<h2 class="round">Round 4</h2>
+
+  <section class="concept sf k18">
+    <div class="head"><span class="tag">LOGO 18</span><h2>Hard hat</h2><p>A yellow safety helmet sitting over the word أمان, as if the name itself is wearing protection.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="helmet"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:70px"><span class="m" data-mark="helmet"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON LIGHT</span><span class="m" data-mark="helmet" style="width:110px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="helmet" style="width:66%"></span></span><span class="app a2"><span class="m" data-mark="helmet" style="width:66%"></span></span><span class="app a1 sm"><span class="m" data-mark="helmet" style="width:66%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> nobody has to guess what the academy does. The helmet drops into place as its animation and works alone as the app icon.</p>
+  </section>
+
+  <section class="concept sf k19">
+    <div class="head"><span class="tag">LOGO 19</span><h2>Cone A</h2><p>A traffic safety cone that is also the letter A: its two reflective bands are the crossbars.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="cone"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:44px"><span class="m" data-mark="cone"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="cone" style="width:70px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="cone" style="width:48%"></span></span><span class="app a2"><span class="m" data-mark="cone" style="width:48%"></span></span><span class="app a1 sm"><span class="m" data-mark="cone" style="width:48%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> one familiar object, one letter, no explanation needed. Bright orange is visible from across a room.</p>
+  </section>
+
+  <section class="concept sf k20">
+    <div class="head"><span class="tag">LOGO 20</span><h2>Three-course shield</h2><p>A shield divided into the three courses: the first-aid cross, the flame, the steering wheel.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="shield3"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:50px"><span class="m" data-mark="shield3"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="shield3" style="width:78px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="shield3" style="width:52%"></span></span><span class="app a2"><span class="m" data-mark="shield3" style="width:52%"></span></span><span class="app a1 sm"><span class="m" data-mark="shield3" style="width:52%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> it says safety and shows the whole catalog in one mark. Each section lights up in turn and can be used alone for its course.</p>
+  </section>
+
+  <section class="concept sf k21">
+    <div class="head"><span class="tag">LOGO 21</span><h2>Life ring</h2><p>A red and white lifebuoy with the word أمان in its centre: the thing you reach for in an emergency.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="buoy"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:62px"><span class="m" data-mark="buoy"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="buoy" style="width:104px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="buoy" style="width:68%"></span></span><span class="app a2"><span class="m" data-mark="buoy" style="width:68%"></span></span><span class="app a1 sm"><span class="m" data-mark="buoy" style="width:68%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> a rescue symbol everyone understands, with the name protected inside it. It floats and turns gently.</p>
+  </section>
+
+  <section class="concept sf k22">
+    <div class="head"><span class="tag">LOGO 22</span><h2>Guarding hands</h2><p>Two hands cupped around a beating heart: care, protection, first aid.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="hands"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:60px"><span class="m" data-mark="hands"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="hands" style="width:96px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="hands" style="width:62%"></span></span><span class="app a2"><span class="m" data-mark="hands" style="width:62%"></span></span><span class="app a1 sm"><span class="m" data-mark="hands" style="width:62%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> the most human of the set. The heart beats, and the hands alone can hold other icons, such as a flame or a car, for each course.</p>
+  </section>
+
+  <section class="concept sf k23">
+    <div class="head"><span class="tag">LOGO 23</span><h2>Vest</h2><p>A hi-vis safety vest with reflective stripes that catch the light, and a check on the chest.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="vest"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:46px"><span class="m" data-mark="vest"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON LIGHT</span><span class="m" data-mark="vest" style="width:72px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="vest" style="width:46%"></span></span><span class="app a2"><span class="m" data-mark="vest" style="width:46%"></span></span><span class="app a1 sm"><span class="m" data-mark="vest" style="width:46%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> the uniform of safety turned into a badge. Loud, modern and impossible to miss on a phone screen.</p>
+  </section>
+<h2 class="round">Round 3</h2>
+
+  <section class="concept k12">
+    <div class="head"><span class="tag">LOGO 12</span><h2>Medallion</h2><p>A gold medal: the calligraphic word أمان on a navy disc, ringed with turning rays, with light sweeping across it.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="medal"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:76px"><span class="m" data-mark="medal"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON LIGHT</span><span class="m" data-mark="medal" style="width:120px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a2"><span class="m" data-mark="medal" style="width:82%"></span></span><span class="app a1"><span class="m" data-mark="medal" style="width:82%"></span></span><span class="app a2 sm"><span class="m" data-mark="medal" style="width:82%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> the most prestigious look so far. It reads as an award, which suits a certificate business, and the gold carries onto the certificate itself.</p>
+  </section>
+
+  <section class="concept k13">
+    <div class="head"><span class="tag">LOGO 13</span><h2>Ribbon A</h2><p>The letter A folded from a single emerald ribbon, with real depth: a lit side, a shaded side, a soft shadow.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="ribbon"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:52px"><span class="m" data-mark="ribbon"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="ribbon" style="width:84px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="ribbon" style="width:58%"></span></span><span class="app a2"><span class="m" data-mark="ribbon" style="width:58%"></span></span><span class="app a1 sm"><span class="m" data-mark="ribbon" style="width:58%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> dimensional where the earlier marks were flat. The fold suggests a certificate ribbon and unfolds as its animation.</p>
+  </section>
+
+  <section class="concept k14">
+    <div class="head"><span class="tag">LOGO 14</span><h2>Neon</h2><p>The word أمان as a glowing tube sign that flickers on, like a lit sign at night that says: safe here.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="neon"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:120px"><span class="m" data-mark="neon"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">SECOND COLOUR</span><span class="m" data-mark="neon" style="width:170px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="neon" style="width:80%"></span></span><span class="app a2"><span class="m" data-mark="neon" style="width:80%"></span></span><span class="app a1 sm"><span class="m" data-mark="neon" style="width:80%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> pure atmosphere, and unmistakable on social media and video. It only lives on dark backgrounds, so it needs a simpler partner for print.</p>
+  </section>
+
+  <section class="concept k15">
+    <div class="head"><span class="tag">LOGO 15</span><h2>Faceted shield</h2><p>A shield cut like a gemstone in emerald facets, each catching the light in turn, with a white check through it.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="facet"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:50px"><span class="m" data-mark="facet"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="facet" style="width:80px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="facet" style="width:56%"></span></span><span class="app a2"><span class="m" data-mark="facet" style="width:56%"></span></span><span class="app a1 sm"><span class="m" data-mark="facet" style="width:56%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> a familiar safety symbol made precious. It looks expensive, and it still works as a tiny app icon.</p>
+  </section>
+
+  <section class="concept k16">
+    <div class="head"><span class="tag">LOGO 16</span><h2>Flow</h2><p>A heavy brush-cut أمان filled with colour that never stops moving, from fire orange through amber to green.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="flow"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:120px"><span class="m" data-mark="flow"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="flow" style="width:170px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="flow" style="width:78%"></span></span><span class="app a2"><span class="m" data-mark="flow" style="width:78%"></span></span><span class="app a1 sm"><span class="m" data-mark="flow" style="width:78%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> the liveliest of all, and the three colours are the three courses. In print it settles into a fixed gradient.</p>
+  </section>
+
+  <section class="concept k17">
+    <div class="head"><span class="tag">LOGO 17</span><h2>Rosette</h2><p>Fine gold engraving lines woven into a turning rosette around the calligraphic word, like the security print on a banknote.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="ros"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:78px"><span class="m" data-mark="ros"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON LIGHT</span><span class="m" data-mark="ros" style="width:130px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a2"><span class="m" data-mark="ros" style="width:84%"></span></span><span class="app a1"><span class="m" data-mark="ros" style="width:84%"></span></span><span class="app a2 sm"><span class="m" data-mark="ros" style="width:84%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> luxury and security in one image. Hard to copy, which is exactly the point for a certificate issuer.</p>
+  </section>
+<h2 class="round">Round 2</h2>
+
+  <section class="concept k6">
+    <div class="head"><span class="tag">LOGO 6</span><h2>Signature</h2><p>The word أمان written as calligraphy, signed off with a gold flourish and a diamond point, like a signature on a certificate.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="sig"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:150px"><span class="m" data-mark="sig"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON LIGHT</span><span class="m" data-mark="sig" style="width:170px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a2"><span class="m" data-mark="sig" style="width:78%"></span></span><span class="app a1"><span class="m" data-mark="sig" style="width:78%"></span></span><span class="app a2 sm"><span class="m" data-mark="sig" style="width:78%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> the fanciest of the set. It is pure lettering, so the name is the logo; the flourish alone can underline headings and certificates.</p>
+  </section>
+
+  <section class="concept k7">
+    <div class="head"><span class="tag">LOGO 7</span><h2>Twin peaks</h2><p>Two letter A's, for Aman and Academy, overlapped into one sharp monogram with a shared crossbar. It also reads as two people side by side.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="twin"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:74px"><span class="m" data-mark="twin"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="twin" style="width:110px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="twin" style="width:66%"></span></span><span class="app a2"><span class="m" data-mark="twin" style="width:66%"></span></span><span class="app a1 sm"><span class="m" data-mark="twin" style="width:66%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> bold and architectural, in safety orange. Works as a single-colour stamp and at any size.</p>
+  </section>
+
+  <section class="concept k8">
+    <div class="head"><span class="tag">LOGO 8</span><h2>Chevron</h2><p>Hi-vis chevrons stacked into an upward A, taken from the markings on safety vehicles and vests.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="chev"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:50px"><span class="m" data-mark="chev"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON LIGHT</span><span class="m" data-mark="chev" style="width:70px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a2"><span class="m" data-mark="chev" style="width:50%"></span></span><span class="app a1"><span class="m" data-mark="chev" style="width:50%"></span></span><span class="app a2 sm"><span class="m" data-mark="chev" style="width:50%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> instantly says safety without a shield or a cross. The chevrons animate upward as a loader and repeat as a border pattern.</p>
+  </section>
+
+  <section class="concept k9">
+    <div class="head"><span class="tag">LOGO 9</span><h2>Trefoil</h2><p>Three overlapping circles, one for each course: first aid green, fire red, driving blue. Where they meet is the check mark.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="tref"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:64px"><span class="m" data-mark="tref"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="tref" style="width:96px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="tref" style="width:70%"></span></span><span class="app a2"><span class="m" data-mark="tref" style="width:70%"></span></span><span class="app a1 sm"><span class="m" data-mark="tref" style="width:70%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> it explains the academy in one picture, and gains a circle when a fourth course is added. Colourful where the others are restrained.</p>
+  </section>
+
+  <section class="concept k10">
+    <div class="head"><span class="tag">LOGO 10</span><h2>Verified square</h2><p>The corner square of a QR code with a check inside. It stands for the thing that makes these certificates different: anyone can verify them.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="veri"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:50px"><span class="m" data-mark="veri"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="veri" style="width:72px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="veri" style="width:50%"></span></span><span class="app a2"><span class="m" data-mark="veri" style="width:50%"></span></span><span class="app a1 sm"><span class="m" data-mark="veri" style="width:50%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> modern and digital. The scan line gives it a natural animation, and it doubles as the verification badge on every certificate.</p>
+  </section>
+
+  <section class="concept k11">
+    <div class="head"><span class="tag">LOGO 11</span><h2>Doorway</h2><p>A person, shown as a dot, standing inside a Najdi doorway arch: sheltered, safe, at home.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="door"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:44px"><span class="m" data-mark="door"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="door" style="width:62px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="door" style="width:40%"></span></span><span class="app a2"><span class="m" data-mark="door" style="width:40%"></span></span><span class="app a1 sm"><span class="m" data-mark="door" style="width:40%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> quiet and emotional, in date-maroon and saffron. The arch can frame photos, cards and the certificate itself.</p>
+  </section>
+<h2 class="round">Round 1</h2>
+
+  <section class="concept k1">
+    <div class="head"><span class="tag">LOGO 1</span><h2>Kufic blocks</h2><p>The word أمان built from square blocks, like a wall. Read right to left: أ, م, ا, ن. The two green squares are the hamza and the dot.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="kufic"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock"><span class="m" data-mark="kufic"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="kufic" style="width:150px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="kufic" style="width:74%"></span></span><span class="app a2"><span class="m" data-mark="kufic" style="width:74%"></span></span><span class="m" data-mark="kufic" style="width:44px"></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> it is the name itself, so nobody else can own it. It works as a stamp, a pattern, a loading animation, and stays sharp at favicon size.</p>
+  </section>
+
+  <section class="concept k2">
+    <div class="head"><span class="tag">LOGO 2</span><h2>Hamza check</h2><p>The first letter of both words, أ. Its hamza becomes a check mark: knowledge confirmed, person standing upright.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="hamza"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:40px"><span class="m" data-mark="hamza"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="hamza" style="width:58px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="hamza" style="width:38%"></span></span><span class="app a2"><span class="m" data-mark="hamza" style="width:38%"></span></span><span class="app a1 sm"><span class="m" data-mark="hamza" style="width:38%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> the simplest of the five, and the closest to your original navy and emerald. The check also marks "passed" and "verified" across the product.</p>
+  </section>
+
+  <section class="concept k3">
+    <div class="head"><span class="tag">LOGO 3</span><h2>Noon cradle</h2><p>The last letter of أمان, ن: a bowl holding a dot. It reads as something precious being caught and kept safe.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="noon"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:60px"><span class="m" data-mark="noon"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON DARK</span><span class="m" data-mark="noon" style="width:86px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a1"><span class="m" data-mark="noon" style="width:60%"></span></span><span class="app a2"><span class="m" data-mark="noon" style="width:60%"></span></span><span class="app a1 sm"><span class="m" data-mark="noon" style="width:60%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> warm and human, almost a smile. The dot can change colour per course and bounce as a loader.</p>
+  </section>
+
+  <section class="concept k4">
+    <div class="head"><span class="tag">LOGO 4</span><h2>Pulse A</h2><p>A heartbeat line whose spike forms the letter A. One continuous stroke that draws itself.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="pulse"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:78px"><span class="m" data-mark="pulse"></span><span class="w"><b>أكاديمية أمان</b><i>Aman Academy</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON LIGHT</span><span class="m" data-mark="pulse" style="width:120px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a2"><span class="m" data-mark="pulse" style="width:70%"></span></span><span class="app a1"><span class="m" data-mark="pulse" style="width:70%"></span></span><span class="app a2 sm"><span class="m" data-mark="pulse" style="width:70%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> it pairs with the "One line" website direction, where the same stroke continues into the flame and the road. Strongest in motion.</p>
+  </section>
+
+  <section class="concept k5">
+    <div class="head"><span class="tag">LOGO 5</span><h2>Star seal</h2><p>An eight-point star from Najdi geometry holding the letter أ, inside a turning ring, like the seal on a certificate.</p></div>
+    <div class="board">
+      <div class="tile big"><span class="cap">THE MARK</span><span class="m" data-mark="seal"></span></div>
+      <div class="uses">
+        <div class="tile wide"><span class="cap">LOCKUP</span><div class="lock" style="--mw:72px"><span class="m" data-mark="seal"></span><span class="w"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+        <div class="tile inv"><span class="cap">ON LIGHT</span><span class="m" data-mark="seal" style="width:104px"></span></div>
+        <div class="tile"><span class="cap">APP ICON · SMALL</span><div class="apps"><span class="app a2"><span class="m" data-mark="star" style="width:70%"></span></span><span class="app a1"><span class="m" data-mark="star" style="width:70%"></span></span><span class="app a2 sm"><span class="m" data-mark="star" style="width:70%"></span></span></div></div>
+      </div>
+    </div>
+    <p class="note"><b>Why it stands out:</b> the most Saudi and the most ceremonial. The full seal goes on certificates; the star alone is the app icon.</p>
+  </section>
+
+  <p class="end"><strong>Tell me a number, 1 to 41</strong>, and which website direction (A to F) it should live in. I will then refine the chosen mark properly, with exact proportions, spacing rules and final colours, and rebuild the site around it.</p>
+</div>
+
+<script>
+(function () {
+  var marks = {
+
+    sig: '<svg viewBox="0 0 220 130" role="img" aria-label="أمان"><text x="110" y="84" text-anchor="middle" direction="rtl">أمان</text><path class="acs sw" d="M22 108C70 88 128 122 198 98" fill="none" stroke-width="4" stroke-linecap="round"/><rect class="ac sd" x="202" y="88" width="9" height="9"/></svg>',
+    twin: '<svg viewBox="0 0 124 92" role="img" aria-label="AA"><path d="M8 84 44 10l36 74" fill="none" stroke="currentColor" stroke-width="13" stroke-linejoin="miter" stroke-miterlimit="8"/><path class="acs p2" d="M44 84 80 10l36 74" fill="none" stroke-width="13" stroke-linejoin="miter" stroke-miterlimit="8"/><path class="p3" d="M30 60h64" fill="none" stroke="currentColor" stroke-width="9"/></svg>',
+    chev: '<svg viewBox="0 0 100 100" role="img" aria-label="A"><path class="cv" style="--i:2" d="M32 30 50 12l18 18" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="square"/><path class="acs cv cv2" style="--i:1" d="M20 60 50 30l30 30" fill="none" stroke-width="12" stroke-linecap="square"/><path class="cv" style="--i:0" d="M8 90 50 48l42 42" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="square"/></svg>',
+    tref: '<svg viewBox="0 0 100 100" role="img" aria-label="Three courses"><g class="tg"><circle class="t1" style="--i:0" cx="50" cy="33" r="25"/><circle class="t2" style="--i:1" cx="34.500" cy="60" r="25"/><circle class="t3" style="--i:2" cx="65.500" cy="60" r="25"/></g><path class="tk" d="M42 51l6 6 11-13" fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    veri: '<svg viewBox="0 0 100 100" role="img" aria-label="Verified"><rect x="9" y="9" width="82" height="82" rx="20" fill="none" stroke="currentColor" stroke-width="12"/><path class="acs vc hc" d="M32 52l13 13 24-29" fill="none" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><path class="acs vs" d="M24 50h52" fill="none" stroke-width="3" stroke-linecap="round" opacity="0"/></svg>',
+    door: '<svg viewBox="0 0 100 110" role="img" aria-label="Doorway"><path class="da" d="M18 102V50C18 28 36 8 50 8s32 20 32 42v52" fill="none" stroke="currentColor" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><circle class="ac dd" cx="50" cy="66" r="12"/></svg>',
+    /* أمان in square Kufic on a 10-unit grid. Left to right: ن, ا, connector, م, أ. */
+    kufic: '<svg viewBox="0 0 120 50" role="img" aria-label="أمان"><g fill="currentColor">' +
+      '<rect class="kb" style="--i:6" x="0" y="20" width="10" height="30"/><rect class="kb" style="--i:5" x="0" y="40" width="40" height="10"/><rect class="kb" style="--i:4" x="30" y="20" width="10" height="30"/>' +
+      '<rect class="kb" style="--i:3" x="50" y="0" width="10" height="50"/><rect class="kb" style="--i:3" x="60" y="40" width="10" height="10"/>' +
+      '<path class="kb" style="--i:2" fill-rule="evenodd" d="M70 20h30v30H70zM80 30v10h10V30z"/>' +
+      '<rect class="kb" style="--i:0" x="110" y="13" width="10" height="37"/></g>' +
+      '<rect class="ac kd" style="--i:5" x="15" y="24" width="10" height="10"/><rect class="ac kd" style="--i:1" x="110" y="0" width="10" height="9"/></svg>',
+    hamza: '<svg viewBox="0 0 60 100" role="img" aria-label="أ"><rect class="hb" x="22" y="40" width="16" height="60" rx="8" fill="currentColor"/><path class="acs hc" d="M10 18l13 13L50 4" fill="none" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    noon: '<svg viewBox="0 0 100 80" role="img" aria-label="ن"><path class="nb" d="M10 30a40 40 0 0 0 80 0" fill="none" stroke="currentColor" stroke-width="14" stroke-linecap="round"/><circle class="ac nd" cx="50" cy="22" r="11"/></svg>',
+    pulse: '<svg viewBox="0 0 120 80" role="img" aria-label="A"><path class="acs pl" d="M4 58h26l7 9L60 8l23 59 7-9h26" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path class="pc" d="M47 44h26" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>',
+    star: '<svg viewBox="0 0 100 100" role="img" aria-label="أ"><path d="M50 6 61.500 22.200 81.100 18.900 77.800 38.500 94 50 77.800 61.500 81.100 81.100 61.500 77.800 50 94 38.500 77.800 18.900 81.100 22.200 61.500 6 50 22.200 38.500 18.900 18.900 38.500 22.200Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><text class="gl" x="50" y="64" text-anchor="middle">أ</text></svg>',
+    seal: '<svg viewBox="0 0 140 140" role="img" aria-label="Aman Academy seal"><defs><path id="ring" d="M70 70m-58 0a58 58 0 1 1 116 0a58 58 0 1 1-116 0"/></defs>' +
+      '<circle cx="70" cy="70" r="67" fill="none" stroke="currentColor" stroke-width="1.200"/><circle cx="70" cy="70" r="49" fill="none" stroke="currentColor" stroke-width="1.200"/>' +
+      '<g class="sr"><text><textPath href="#ring">AMAN ACADEMY · LIVE SAFETY TRAINING · VERIFIED CERTIFICATE ·</textPath></text></g>' +
+      '<g class="ss"><path class="acs" d="M70 27 79.900 46.100 100.400 39.600 93.900 60.100 113 70 93.900 79.900 100.400 100.400 79.900 93.900 70 113 60.100 93.900 39.600 100.400 46.100 79.900 27 70 46.100 60.100 39.600 39.600 60.100 46.100Z" fill="none" stroke-width="2.400" stroke-linejoin="round"/></g>' +
+      '<text class="gl" x="70" y="84" text-anchor="middle">أ</text></svg>'
+  };
+
+  (function () {
+    var rays = "", i, a;
+    for (i = 0; i < 48; i++) { a = (i / 48) * Math.PI * 2; rays += '<path class="gs" d="M' + (100 + Math.cos(a) * 79).toFixed(1) + " " + (100 + Math.sin(a) * 79).toFixed(1) + "L" + (100 + Math.cos(a) * (i % 2 ? 86 : 90)).toFixed(1) + " " + (100 + Math.sin(a) * (i % 2 ? 86 : 90)).toFixed(1) + '" stroke-width="1.6" fill="none"/>'; }
+    marks.medal = '<svg viewBox="0 0 200 200" role="img" aria-label="أمان"><defs><clipPath id="mclip"><circle cx="100" cy="100" r="94"/></clipPath><path id="marc" d="M42 104a58 58 0 0 0 116 0"/></defs>' +
+      '<circle class="dc" cx="100" cy="100" r="94"/><circle class="gs" cx="100" cy="100" r="94" fill="none" stroke-width="3.5"/><g class="mr">' + rays + '</g>' +
+      '<circle class="gs" cx="100" cy="100" r="75" fill="none" stroke-width="1.4"/><text class="mt" x="100" y="108" text-anchor="middle" direction="rtl">أمان</text>' +
+      '<text class="ms"><textPath href="#marc" startOffset="50%" text-anchor="middle">AMAN ACADEMY</textPath></text>' +
+      '<g clip-path="url(#mclip)"><rect class="msh" x="0" y="0" width="34" height="200" fill="#fff" opacity="0.28"/></g></svg>';
+    var petals = "", petals2 = "";
+    for (i = 0; i < 30; i++) petals += '<ellipse class="rp" cx="100" cy="100" rx="92" ry="34" transform="rotate(' + i * 6 + ' 100 100)"/>';
+    for (i = 0; i < 20; i++) petals2 += '<ellipse class="rp" cx="100" cy="100" rx="70" ry="52" transform="rotate(' + i * 9 + ' 100 100)"/>';
+    marks.ros = '<svg viewBox="0 0 200 200" role="img" aria-label="أمان"><g class="rg">' + petals + '</g><g class="rg2">' + petals2 + '</g><circle cx="100" cy="100" r="46" fill="var(--c-disc17, currentColor)" style="fill:var(--ros-disc)"/><text class="rt" x="100" y="112" text-anchor="middle" direction="rtl">أمان</text></svg>';
+    marks.ribbon = '<svg viewBox="0 0 120 104" role="img" aria-label="A"><polygon class="rr" points="50,6 70,6 108,98 84,98" fill="url(#g-em2)"/><polygon class="rc" points="38,58 86,58 91,74 33,74" fill="#04473a"/><polygon class="rl" points="50,6 70,6 36,98 12,98" fill="url(#g-em1)"/><polygon class="rl" points="50,6 70,6 66,17 46,17" fill="#eafff6" opacity="0.35"/></svg>';
+    marks.neon = '<svg viewBox="0 0 240 130" role="img" aria-label="أمان"><rect class="nf" x="7" y="7" width="226" height="116" rx="30"/><text class="nt" x="120" y="92" text-anchor="middle" direction="rtl">أمان</text></svg>';
+    marks.facet = '<svg viewBox="0 0 120 116" role="img" aria-label="Shield"><polygon class="fc" style="--i:0" points="60,54 20,14 60,6" fill="#35d6a0"/><polygon class="fc" style="--i:1" points="60,54 60,6 100,14" fill="#12b888"/><polygon class="fc" style="--i:2" points="60,54 100,14 100,60" fill="#0a9a72"/><polygon class="fc" style="--i:3" points="60,54 100,60 60,110" fill="#067a5b"/><polygon class="fc" style="--i:4" points="60,54 60,110 20,60" fill="#0b8f6a"/><polygon class="fc" style="--i:5" points="60,54 20,60 20,14" fill="#1fc592"/><path d="M42 56l13 13 25-29" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    marks.flow = '<svg viewBox="0 0 240 150" role="img" aria-label="أمان"><text class="ft" x="120" y="92" text-anchor="middle" direction="rtl">أمان</text><text class="fe" x="127" y="134" text-anchor="middle">AMAN</text></svg>';
+  })();
+
+  marks.helmet = '<svg viewBox="0 0 140 130" role="img" aria-label="Hard hat over أمان"><defs><clipPath id="hclip"><path d="M24 66a46 46 0 0 1 92 0z"/></clipPath></defs><g class="hh">' +
+    '<path d="M24 66a46 46 0 0 1 92 0z" fill="url(#g-helm)"/><path d="M62 21h16v45H62z" fill="#fff3b8" opacity="0.75"/><path d="M40 34c-6 8-9 19-9 32M100 34c6 8 9 19 9 32" fill="none" stroke="#d98a00" stroke-width="3" stroke-linecap="round"/>' +
+    '<g clip-path="url(#hclip)"><rect class="sh" x="0" y="10" width="20" height="70" fill="#fff" opacity="0.5"/></g>' +
+    '<rect x="12" y="64" width="116" height="13" rx="6.500" fill="#e09200"/></g>' +
+    '<text class="ht" x="70" y="116" text-anchor="middle" direction="rtl">أمان</text></svg>';
+  marks.cone = '<svg viewBox="0 0 110 110" role="img" aria-label="Cone A"><defs><clipPath id="cclip"><polygon points="48,8 62,8 86,88 24,88"/></clipPath></defs><g class="cn">' +
+    '<polygon points="48,8 62,8 86,88 24,88" fill="url(#g-cone)"/><g clip-path="url(#cclip)"><rect x="0" y="32" width="110" height="13" fill="#fff"/><rect x="0" y="58" width="110" height="13" fill="#fff"/><rect class="sh" x="0" y="0" width="16" height="100" fill="#fff" opacity="0.45"/></g>' +
+    '<rect x="8" y="88" width="94" height="13" rx="4" fill="#c64600"/></g></svg>';
+  marks.shield3 = '<svg viewBox="0 0 120 132" role="img" aria-label="Shield with first aid, fire and driving"><defs><clipPath id="sclip"><path d="M60 6 108 22v40c0 30-22 52-48 62C34 114 12 92 12 62V22z"/></clipPath></defs>' +
+    '<g clip-path="url(#sclip)"><rect class="q" style="--i:0" x="0" y="0" width="60" height="64" fill="#0a8f5b"/><rect class="q" style="--i:1" x="60" y="0" width="60" height="64" fill="#e23b3b"/><rect class="q" style="--i:2" x="0" y="64" width="120" height="70" fill="#1f6fe0"/></g>' +
+    '<path class="gap" d="M60 6v58M12 64h96" fill="none" stroke-width="5"/>' +
+    '<path d="M31 30h9v-9h9v9h9v9h-9v9h-9v-9h-9z" fill="#fff" transform="translate(-8 4) scale(0.95)"/>' +
+    '<path d="M12 2c2 4 6 6 6 11a6 6 0 0 1-12 0c0-2 1-3.500 2-5 .5 2 1.500 3 2.500 3C11 8 10 5 12 2z" fill="#fff" transform="translate(64 20) scale(1.5)"/>' +
+    '<g fill="none" stroke="#fff" stroke-width="4"><circle cx="60" cy="90" r="15"/><path d="M60 94v11M57 88l-11-4M63 88l11-4"/></g><circle cx="60" cy="90" r="4" fill="#fff"/>' +
+    '<path class="ol" d="M60 6 108 22v40c0 30-22 52-48 62C34 114 12 92 12 62V22z" fill="none" stroke-width="5" stroke-linejoin="round"/></svg>';
+  marks.buoy = '<svg viewBox="0 0 120 120" role="img" aria-label="Life ring with أمان"><g class="lr"><circle cx="60" cy="60" r="44" fill="none" stroke="#e4342b" stroke-width="22"/><circle cx="60" cy="60" r="44" fill="none" stroke="#ffffff" stroke-width="22" stroke-dasharray="34.560 34.560"/><circle cx="60" cy="60" r="55" fill="none" stroke="#b3221b" stroke-width="1.500"/><circle cx="60" cy="60" r="33" fill="none" stroke="#b3221b" stroke-width="1.500"/></g><text class="lt" x="60" y="68" text-anchor="middle" direction="rtl">أمان</text></svg>';
+  marks.hands = '<svg viewBox="0 0 120 112" role="img" aria-label="Hands guarding a heart"><path class="ol" d="M14 44c-2 32 18 56 42 58M106 44c2 32-18 56-42 58" fill="none" stroke-width="13" stroke-linecap="round"/><path class="ol" d="M30 36c2 14 8 24 16 32M90 36c-2 14-8 24-16 32" fill="none" stroke-width="9" stroke-linecap="round" opacity="0.55"/>' +
+    '<g class="hb2"><path class="ac" d="M60 62C42 48 40 30 51 26c5-2 9 2 9 6 0-4 4-8 9-6 11 4 9 22-9 36z"/><path d="M47 42h6l3-6 5 11 3-5h9" fill="none" stroke="#fff" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/></g></svg>';
+  marks.vest = '<svg viewBox="0 0 110 122" role="img" aria-label="Safety vest"><defs><clipPath id="vclip"><path d="M30 6h13l12 24 12-24h13l18 22-8 12v76H20V40l-8-12z"/></clipPath></defs>' +
+    '<path d="M30 6h13l12 24 12-24h13l18 22-8 12v76H20V40l-8-12z" fill="url(#g-vis)"/>' +
+    '<g clip-path="url(#vclip)"><rect x="0" y="66" width="110" height="11" fill="url(#g-silver)"/><rect x="0" y="88" width="110" height="11" fill="url(#g-silver)"/><path d="M30 0 42 66M80 0 68 66" stroke="url(#g-silver)" stroke-width="10" fill="none"/><rect class="sh" x="0" y="0" width="18" height="122" fill="#fff" opacity="0.55"/></g>' +
+    '<path d="M55 30v86" stroke="#9aa800" stroke-width="2" fill="none"/><path d="M66 48l5 5 9-11" fill="none" stroke="#141516" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  marks.pin = '<svg viewBox="0 0 150 70" role="img" aria-label="Safety pin"><g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"><path d="M30 46h88"/><circle cx="122" cy="35" r="11"/><path class="pw" d="M118 24.500H40l-12 2"/></g><rect class="ac" x="6" y="15" width="30" height="40" rx="14"/><circle cx="21" cy="35" r="4" fill="#fff" opacity="0.85"/></svg>';
+  marks.ext = '<svg viewBox="0 0 100 132" role="img" aria-label="Fire extinguisher"><path class="dks" d="M52 30c26 0 30 18 24 44" fill="none" stroke-width="5" stroke-linecap="round"/><rect class="dk" x="70" y="72" width="12" height="16" rx="3"/>' +
+    '<circle class="pf dk" style="--i:0" cx="84" cy="96" r="4"/><circle class="pf dk" style="--i:1" cx="90" cy="104" r="5"/><circle class="pf dk" style="--i:2" cx="80" cy="108" r="3.500"/>' +
+    '<rect class="ac" x="18" y="38" width="44" height="86" rx="12"/><rect x="18" y="38" width="12" height="86" rx="6" fill="#fff" opacity="0.22"/><rect class="dk" x="32" y="26" width="16" height="14"/><path class="dks" d="M24 20h34l10-9" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '<rect x="18" y="66" width="44" height="26" fill="#fff"/><path d="M31 79l6 6 12-13" fill="none" stroke="#d7261e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  marks.kit = '<svg viewBox="0 0 120 100" role="img" aria-label="First-aid case"><path class="ol" d="M44 28v-9a7 7 0 0 1 7-7h18a7 7 0 0 1 7 7v9" fill="none" stroke-width="7"/><rect class="ac" x="8" y="26" width="104" height="66" rx="13"/><rect x="8" y="26" width="104" height="14" rx="7" fill="#fff" opacity="0.2"/>' +
+    '<circle cx="60" cy="60" r="24" fill="#fff"/><path class="ac kx" d="M54 44h12v10h10v12H66v10H54V66H44V54h10z"/></svg>';
+  marks.bell = '<svg viewBox="0 0 120 110" role="img" aria-label="Alarm bell"><g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"><path class="wv" style="--i:0" d="M22 38a26 26 0 0 0 0 34"/><path class="wv" style="--i:1" d="M10 28a42 42 0 0 0 0 54"/><path class="wv" style="--i:0" d="M98 38a26 26 0 0 1 0 34"/><path class="wv" style="--i:1" d="M110 28a42 42 0 0 1 0 54"/></g>' +
+    '<g class="bl"><circle class="ac" cx="60" cy="55" r="30"/><circle cx="60" cy="55" r="30" fill="none" stroke="#000" stroke-opacity="0.18" stroke-width="5"/><circle cx="60" cy="55" r="17" fill="#000" opacity="0.14"/><circle cx="60" cy="55" r="6" fill="#fff"/><path d="M40 39a26 26 0 0 1 16-9" fill="none" stroke="#fff" stroke-opacity="0.6" stroke-width="4" stroke-linecap="round"/></g>' +
+    '<rect x="54" y="88" width="12" height="12" rx="3" fill="currentColor"/></svg>';
+  marks.belt = '<svg viewBox="0 0 110 110" role="img" aria-label="Person wearing a seatbelt"><defs><clipPath id="bclip"><path d="M18 104c0-30 16-46 37-46s37 16 37 46z"/></clipPath></defs><circle cx="55" cy="30" r="17" fill="currentColor"/><path d="M18 104c0-30 16-46 37-46s37 16 37 46z" fill="currentColor"/>' +
+    '<g clip-path="url(#bclip)"><polygon class="ac sb" points="24,52 40,52 92,110 76,110"/></g><rect class="sk" x="66" y="86" width="18" height="14" rx="3" fill="#fff" stroke="currentColor" stroke-width="3"/></svg>';
+  (function () {
+    var rays = "", i, a;
+    for (i = 0; i < 48; i++) { a = (i / 48) * Math.PI * 2; rays += '<path class="gs" d="M' + (100 + Math.cos(a) * 79).toFixed(1) + " " + (100 + Math.sin(a) * 79).toFixed(1) + "L" + (100 + Math.cos(a) * (i % 2 ? 86 : 90)).toFixed(1) + " " + (100 + Math.sin(a) * (i % 2 ? 86 : 90)).toFixed(1) + '" stroke-width="1.6" fill="none"/>'; }
+    marks.crest = '<svg viewBox="0 0 200 200" role="img" aria-label="Gold crest with helmet and أمان"><defs><clipPath id="cclip2"><circle cx="100" cy="100" r="94"/></clipPath><path id="carc" d="M42 108a58 58 0 0 0 116 0"/></defs>' +
+      '<circle class="dc" cx="100" cy="100" r="94"/><circle class="gs" cx="100" cy="100" r="94" fill="none" stroke-width="3.5"/><g class="mr">' + rays + '</g><circle class="gs" cx="100" cy="100" r="75" fill="none" stroke-width="1.4"/>' +
+      '<g transform="translate(58 30) scale(0.6)"><path class="gf" d="M24 66a46 46 0 0 1 92 0z"/><path class="dc" d="M62 22h16v44H62z" opacity="0.35"/><rect class="gf" x="12" y="68" width="116" height="12" rx="6"/></g>' +
+      '<text class="mt" x="100" y="124" text-anchor="middle" direction="rtl">أمان</text><text class="ms"><textPath href="#carc" startOffset="50%" text-anchor="middle">AMAN ACADEMY</textPath></text>' +
+      '<g clip-path="url(#cclip2)"><rect class="msh" x="0" y="0" width="34" height="200" fill="#fff" opacity="0.28"/></g></svg>';
+  })();
+
+  marks.pshield = '<svg viewBox="0 0 120 132" role="img" aria-label="Shield with heartbeat"><path class="sbd" d="M60 6 108 22v40c0 30-22 52-48 62C34 114 12 92 12 62V22z"/><path d="M60 16 99 29v33c0 25-18 43-39 52-21-9-39-27-39-52V29z" fill="none" stroke="#fff" stroke-opacity="0.22" stroke-width="2"/><path class="acs spl" d="M20 68h22l8-18 13 38 10-27 5 7h22" fill="none" stroke-width="6.500" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  marks.tlight = '<svg viewBox="0 0 70 130" role="img" aria-label="Traffic light on green"><rect class="tb" x="10" y="5" width="50" height="120" rx="20"/><circle class="l1" cx="35" cy="31" r="14" fill="#ff4d3d"/><circle class="l2" cx="35" cy="65" r="14" fill="#ffb300"/><circle class="ac l3" cx="35" cy="99" r="14"/><circle cx="30" cy="94" r="4" fill="#fff" opacity="0.55"/></svg>';
+  marks.umb = '<svg viewBox="0 0 120 112" role="img" aria-label="Umbrella over three people"><path d="M60 50v34" stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none"/><g class="uc"><path class="ac" d="M10 56a50 50 0 0 1 100 0q-16.650-13-33.300 0-16.700-13-33.400 0-16.650-13-33.300 0z"/><circle class="ac" cx="60" cy="6" r="4"/></g><circle class="up" style="--i:0" cx="36" cy="94" r="9" fill="currentColor"/><circle class="up" style="--i:1" cx="60" cy="98" r="9" fill="currentColor"/><circle class="up" style="--i:2" cx="84" cy="94" r="9" fill="currentColor"/></svg>';
+  marks.exitd = '<svg viewBox="0 0 110 110" role="img" aria-label="Emergency exit"><rect class="ac" x="5" y="5" width="100" height="100" rx="20"/><rect x="62" y="24" width="28" height="62" rx="3" fill="#fff"/><circle cx="68" cy="56" r="3" fill="#0a9a5c"/><path class="ea" d="M18 55h28M36 42l13 13-13 13" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  marks.light = '<svg viewBox="0 0 160 136" role="img" aria-label="Lighthouse"><defs><clipPath id="lclip"><polygon points="68,56 92,56 100,122 60,122"/></clipPath></defs><g class="bm"><polygon class="ac" points="80,44 4,22 4,62" opacity="0.5"/><polygon class="ac" points="80,44 156,22 156,62" opacity="0.5"/></g>' +
+    '<polygon points="68,56 92,56 100,122 60,122" fill="#fff"/><g clip-path="url(#lclip)"><rect x="50" y="70" width="60" height="13" fill="#e23b3b"/><rect x="50" y="97" width="60" height="13" fill="#e23b3b"/></g>' +
+    '<rect class="ac" x="69" y="36" width="22" height="20" rx="2"/><path d="M64 36 80 22l16 14z" fill="currentColor"/><rect x="52" y="122" width="56" height="8" rx="3" fill="currentColor"/></svg>';
+  marks.tri = '<svg viewBox="0 0 124 112" role="img" aria-label="Triangle with check"><path class="ac acs" d="M62 12 112 98H12z" stroke-width="14" stroke-linejoin="round"/><path class="tc hc" d="M42 68l14 14 27-32" fill="none" stroke="#15171a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  marks.gradhelm = '<svg viewBox="0 0 140 112" role="img" aria-label="Helmet with graduation cap"><path d="M24 92a46 46 0 0 1 92 0z" fill="url(#g-helm)"/><path d="M62 48h16v44H62z" fill="#fff3b8" opacity="0.7"/><rect x="12" y="90" width="116" height="13" rx="6.500" fill="#e09200"/>' +
+    '<polygon points="70,6 116,24 70,42 24,24" fill="currentColor"/><path d="M48 34v10c6 6 38 6 44 0V34" fill="currentColor" opacity="0.8"/>' +
+    '<g class="ts"><path class="acs" d="M70 24 104 27v20" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect class="ac" x="100" y="46" width="8" height="13" rx="2"/></g></svg>';
+  marks.bookshield = '<svg viewBox="0 0 120 132" role="img" aria-label="Shield with open book"><path d="M60 6 108 22v40c0 30-22 52-48 62C34 114 12 92 12 62V22z" fill="none" stroke="currentColor" stroke-width="7" stroke-linejoin="round"/>' +
+    '<path class="ac pg1" d="M58 58C48 50 36 50 28 54v34c8-4 20-4 30 4z"/><path class="ac pg2" d="M62 58c10-8 22-8 30-4v34c-8-4-20-4-30 4z"/><path class="acs bkc hc" d="M49 36l8 8 15-17" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  marks.callshield = '<svg viewBox="0 0 120 132" role="img" aria-label="Shield with أمان"><defs><clipPath id="csclip"><path d="M60 6 108 22v40c0 30-22 52-48 62C34 114 12 92 12 62V22z"/></clipPath></defs><g clip-path="url(#csclip)"><rect x="0" y="0" width="60" height="132" fill="url(#g-em1)"/><rect x="60" y="0" width="60" height="132" fill="url(#g-em2)"/><rect class="sh" x="0" y="0" width="18" height="132" fill="#fff" opacity="0.4"/></g>' +
+    '<path d="M60 16 99 29v33c0 25-18 43-39 52-21-9-39-27-39-52V29z" fill="none" stroke="#fff" stroke-opacity="0.35" stroke-width="1.600"/><text class="cst" x="60" y="76" text-anchor="middle" direction="rtl">أمان</text></svg>';
+  marks.lines3 = '<svg viewBox="0 0 110 110" role="img" aria-label="Heartbeat, flame and road"><circle cx="55" cy="55" r="49" fill="none" stroke="currentColor" stroke-width="6"/><g fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><path class="ln" style="--i:0" d="M20 37h18l5-10 9 20 6-13 3 3h29" stroke="#0a8f5b"/><path class="ln" style="--i:1" d="M20 60c7 0 8-11 14-11s7 11 14 11 8-11 14-11 7 11 14 11h14" stroke="#e23b3b"/><path d="M20 81h70" stroke="#1f6fe0" stroke-dasharray="10 8"/></g></svg>';
+  (function () {
+    var pts = [], i, a, r;
+    for (i = 0; i < 32; i++) { a = (i / 32) * Math.PI * 2; r = i % 2 ? 38 : 44; pts.push((55 + Math.cos(a) * r).toFixed(1) + "," + (48 + Math.sin(a) * r).toFixed(1)); }
+    marks.award = '<svg viewBox="0 0 110 130" role="img" aria-label="Award ribbon"><polygon points="34,72 24,126 42,114 54,126 56,84" fill="currentColor"/><polygon points="76,72 86,126 68,114 56,126 54,84" fill="currentColor" opacity="0.8"/><polygon class="ac rz" points="' + pts.join(" ") + '"/><circle cx="55" cy="48" r="28" fill="#fff"/><path class="acs rk hc" d="M43 49l9 9 16-19" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  })();
+  marks.pinwheel = '<svg viewBox="0 0 110 110" role="img" aria-label="Three courses"><g class="pwh"><path d="M55 55C38 40 42 14 55 6c13 8 17 34 0 49z" fill="#0a8f5b"/><path d="M55 55C38 40 42 14 55 6c13 8 17 34 0 49z" fill="#e23b3b" transform="rotate(120 55 55)"/><path d="M55 55C38 40 42 14 55 6c13 8 17 34 0 49z" fill="#1f6fe0" transform="rotate(240 55 55)"/></g><circle cx="55" cy="55" r="5" fill="#fff"/></svg>';
+  document.querySelectorAll("[data-mark]").forEach(function (el) { el.innerHTML = marks[el.getAttribute("data-mark")] || ""; });
+})();
+</script>

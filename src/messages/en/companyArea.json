@@ -1,0 +1,185 @@
+{
+  "meta": { "title": "Company dashboard" },
+  "layout": {
+    "eyebrow": "Company dashboard",
+    "tabsLabel": "Company sections",
+    "tabs": {
+      "overview": "Overview",
+      "employees": "Employees",
+      "seats": "Seats",
+      "reports": "Reports",
+      "details": "Company details"
+    }
+  },
+  "overview": {
+    "title": "Overview",
+    "lead": "Your team's training at a glance: seats, assignments and certificates.",
+    "stats": {
+      "employees": "Team members",
+      "employeesHint": "People linked to your company account",
+      "purchased": "Seats purchased",
+      "assigned": "Seats assigned",
+      "remaining": "Seats remaining",
+      "remainingHint": "Ready to assign to employees",
+      "certificates": "Certificates earned"
+    },
+    "seats": {
+      "title": "Seats by course",
+      "caption": "Purchased, assigned and remaining seats for each course",
+      "course": "Course",
+      "purchased": "Purchased",
+      "assigned": "Assigned",
+      "remaining": "Remaining",
+      "actions": "Actions",
+      "buy": "Buy seats",
+      "assign": "Assign",
+      "emptyTitle": "No seats purchased yet",
+      "emptyBody": "Buy seats for a course, then assign them to your employees on the session dates that suit them."
+    },
+    "next": {
+      "title": "Next step",
+      "buyTitle": "Buy your first seats",
+      "buyBody": "Choose a course and the number of seats you need. Seats can be used on any upcoming session of that course.",
+      "buyCta": "Buy seats",
+      "inviteTitle": "Invite your employees",
+      "inviteBody": "You have seats ready. Invite your employees so that you can assign seats to them.",
+      "inviteCta": "Invite employees",
+      "assignTitle": "Assign your seats",
+      "assignBody": "{count, plural, one {You have 1 seat that has not been assigned yet.} other {You have # seats that have not been assigned yet.}} Choose an employee and a session date.",
+      "assignCta": "Assign a seat",
+      "remindTitle": "Follow up on pending invitations",
+      "remindBody": "{count, plural, one {1 invitation has not been accepted yet.} other {# invitations have not been accepted yet.}} Remind your colleagues to check their email, or send a new invitation if the link has been lost.",
+      "remindCta": "View invitations",
+      "doneTitle": "Everything is on track",
+      "doneBody": "Your seats are assigned and there are no pending invitations. Follow your team's progress in the report.",
+      "doneCta": "Open the report"
+    }
+  },
+  "employees": {
+    "title": "Employees",
+    "lead": "Invite your employees, then follow their training from booking to certificate.",
+    "invite": {
+      "title": "Invite an employee",
+      "body": "We email a personal link. Once the employee creates an account with the same email address, they appear in your team.",
+      "name": "Full name",
+      "email": "Work email",
+      "submit": "Send invitation"
+    },
+    "invitations": {
+      "title": "Invitations",
+      "caption": "Invitations sent to employees",
+      "name": "Name",
+      "email": "Email",
+      "sent": "Sent",
+      "expires": "Valid until",
+      "status": "Status",
+      "actions": "Actions",
+      "revoke": "Revoke",
+      "revokeConfirm": "Revoke this invitation? The link in the email will stop working.",
+      "emptyTitle": "No invitations yet",
+      "emptyBody": "Invitations you send will be listed here with their status."
+    },
+    "team": {
+      "title": "Team",
+      "caption": "Employees and their training progress",
+      "employee": "Employee",
+      "training": "Training",
+      "manager": "Manager",
+      "attendance": "Attendance",
+      "attendanceValue": "{status} · {percent}%",
+      "certificate": "Certificate",
+      "viewCertificate": "View certificate",
+      "downloadPdf": "Download PDF",
+      "noEnrollments": "No training assigned yet.",
+      "assign": "Assign a seat",
+      "emptyTitle": "No employees yet",
+      "emptyBody": "Invite your first employee using the form above."
+    }
+  },
+  "seats": {
+    "title": "Seats",
+    "lead": "Buy seats for a course, then assign each seat to an employee on a session date.",
+    "summary": {
+      "title": "Your seats",
+      "line": "{remaining} of {purchased} remaining"
+    },
+    "buy": {
+      "title": "Buy seats",
+      "body": "Seats are bought per course and can be used on any upcoming session of that course.",
+      "course": "Course",
+      "courseOption": "{title} · {price} per seat",
+      "quantity": "Number of seats",
+      "quantityHint": "Between 1 and 200 seats per order.",
+      "vatNote": "Prices exclude VAT. VAT is calculated and shown at checkout before you pay.",
+      "submit": "Continue to checkout",
+      "noCourses": "No courses are available for purchase at the moment."
+    },
+    "assign": {
+      "title": "Assign a seat",
+      "body": "The employee receives access to the session and its joining details in their own account.",
+      "employee": "Employee",
+      "session": "Session",
+      "sessionOption": "{course} · {date} · {time} · {language} · {seats}",
+      "zoneNote": "Session times are shown in {zone}.",
+      "submit": "Assign seat",
+      "noSeatsTitle": "No seats available to assign",
+      "noSeatsBody": "All purchased seats are assigned, or no seats have been bought yet. Buy seats to continue.",
+      "noSessionsTitle": "No upcoming sessions",
+      "noSessionsBody": "There are no upcoming sessions with free places for the courses you hold seats for. New dates are added regularly."
+    },
+    "current": {
+      "title": "Upcoming assignments",
+      "body": "A seat can be released until the session starts, and then assigned to someone else.",
+      "caption": "Seats assigned for upcoming sessions",
+      "employee": "Employee",
+      "course": "Course",
+      "session": "Session",
+      "actions": "Actions",
+      "release": "Release seat",
+      "releaseConfirm": "Release this seat? The employee will lose their place in the session and the seat returns to your balance.",
+      "emptyTitle": "No upcoming assignments",
+      "emptyBody": "Seats you assign for future sessions will be listed here."
+    }
+  },
+  "reports": {
+    "title": "Reports",
+    "lead": "Training progress for every employee your company has sponsored.",
+    "download": "Download CSV",
+    "downloadHint": "The file opens in Excel and includes Arabic text.",
+    "caption": "Training progress report",
+    "emptyTitle": "Nothing to report yet",
+    "emptyBody": "Once you assign seats to employees, their progress will appear here.",
+    "notAttempted": "Not attempted",
+    "columns": {
+      "employee": "Employee",
+      "employeeAr": "Employee (Arabic)",
+      "email": "Email",
+      "courseCode": "Course code",
+      "course": "Course",
+      "session": "Session date",
+      "sessionTime": "Session time (Saudi time)",
+      "language": "Language",
+      "attendance": "Attendance",
+      "attendancePercent": "Attendance %",
+      "attempts": "Exam attempts",
+      "bestScore": "Best score %",
+      "status": "Status",
+      "certificate": "Certificate number"
+    },
+    "unauthenticated": "Sign in to download this report.",
+    "forbidden": "Only company managers can download this report."
+  },
+  "details": {
+    "title": "Company details",
+    "lead": "These details appear on your orders and invoices.",
+    "name": "Company name",
+    "contactName": "Contact person",
+    "contactEmail": "Work email",
+    "phone": "Mobile number",
+    "phoneHint": "Saudi mobile number, for example 05X XXX XXXX.",
+    "crNumber": "Commercial registration number",
+    "crHint": "10 digits.",
+    "vatNumber": "VAT registration number",
+    "vatHint": "15 digits, as shown on your VAT certificate."
+  }
+}

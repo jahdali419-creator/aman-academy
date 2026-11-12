@@ -1,0 +1,61 @@
+{
+  "meta": "My learning",
+  "tabs": { "label": "My learning", "overview": "Overview", "certificates": "Certificates", "settings": "Settings" },
+  "greeting": "Hello, {name}",
+  "lead": "Your sessions, exams and certificates in one place.",
+  "next": {
+    "label": "Your next step",
+    "exam_in_progress": { "title": "Continue your exam", "body": "You have an exam in progress for {course}. The timer is still running." },
+    "exam_available": { "title": "Your exam is ready", "body": "Your attendance for {course} is confirmed. You can take the exam now." },
+    "session_upcoming": { "title": "Get ready for your live session", "body": "{course} starts on {date}. Open the joining instructions and test your audio beforehand." },
+    "attendance_pending": { "title": "Waiting for your attendance to be recorded", "body": "The instructor records attendance for {course} after the session. Your exam opens as soon as it is confirmed." },
+    "action_required": { "title": "Something needs your attention", "body": "There is an issue with {course}. Open the details to see what to do." },
+    "passed": { "title": "Well done — all complete", "body": "You have completed your courses. Your certificates are ready to download." }
+  },
+  "actions": { "continueExam": "Continue exam", "startExam": "Go to exam", "joining": "Joining instructions", "details": "View details", "certificate": "View certificate", "contact": "Contact support", "browse": "Browse courses" },
+  "enrollments": "My courses",
+  "empty": { "title": "You are not enrolled in a course yet", "body": "Choose a live session to get started. Your joining instructions, exam and certificate will appear here." },
+  "row": { "session": "Session", "attendance": "Attendance", "exam": "Exam", "attempts": "{used} of {max} attempts used", "notStarted": "Not started", "bestScore": "Best score {score}%", "certificate": "Certificate", "sponsored": "Seat provided by your company" },
+  "detail": {
+    "back": "Back to my learning",
+    "joinTitle": "Joining the live session",
+    "joinLead": "These details are private to you. Please do not share the link.",
+    "joinButton": "Join on {provider}",
+    "joinPending": "The meeting link has not been added yet. It will appear here before the session starts.",
+    "joinEnded": "This session has ended.",
+    "instructions": "Instructions",
+    "instructor": "Instructor",
+    "when": "Date and time",
+    "requirements": "Your progress",
+    "step": {
+      "attendance": "Attend the live session",
+      "attendanceNeed": "At least {percent}% attendance, recorded by the instructor.",
+      "attendanceGot": "Recorded: {status} · {percent}%",
+      "exam": "Pass the online exam",
+      "examNeed": "Pass mark {pass}%. Up to {max, plural, one {1 attempt} other {# attempts}}.",
+      "examLocked": "Opens after your attendance is confirmed.",
+      "certificate": "Receive your certificate",
+      "certificateNeed": "Issued automatically when both steps above are complete.",
+      "done": "Done",
+      "current": "Current step",
+      "locked": "Locked",
+      "issue": "Needs attention"
+    },
+    "attempts": "Exam attempts",
+    "attemptN": "Attempt {n}",
+    "score": "Score",
+    "result": "Result",
+    "passed": "Passed",
+    "notPassed": "Not passed",
+    "date": "Date",
+    "noAttempts": "No attempts yet."
+  },
+  "certificates": {
+    "title": "My certificates",
+    "lead": "Download your certificates or share the verification link.",
+    "empty": { "title": "No certificates yet", "body": "A certificate appears here when you have attended the session and passed the exam." },
+    "issued": "Issued {date}",
+    "expires": "Valid until {date}",
+    "noExpiry": "No expiry date"
+  }
+}

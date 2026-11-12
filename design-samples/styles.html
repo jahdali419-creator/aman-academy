@@ -1,0 +1,220 @@
+<title>Aman Academy Brand Styles</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Aref+Ruqaa:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=El+Messiri:wght@500;700&family=IBM+Plex+Mono:wght@500&family=Lalezar&family=Marcellus&family=Reem+Kufi:wght@500;700&display=swap">
+<style>
+/* Layout: the brief from the module first, then three complete brand styles, each a board where every element is seen working together. */
+:root {
+  --bg: #f3f4f2; --fg: #14181a; --dim: #5b6466; --rule: #d5d9d6; --panel: #ffffff; --pick: #0b6b4a;
+  --ui: "Archivo", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #101314; --fg: #eef1ef; --dim: #9aa4a3; --rule: #2a3031; --panel: #181c1d; --pick: #6fd6ad; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #101314; --fg: #eef1ef; --dim: #9aa4a3; --rule: #2a3031; --panel: #181c1d; --pick: #6fd6ad; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--fg); font-family: var(--ui); font-size: 16px; line-height: 1.5 }
+.defs { position: absolute; width: 0; height: 0 }
+.sheet { max-width: 1180px; margin-inline: auto; padding-block: 40px 72px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: flex; flex-direction: column; gap: 56px }
+.top h1 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.6rem); font-weight: 900; letter-spacing: -0.02em; line-height: 1.1 }
+.top p { margin: 8px 0 0; color: var(--dim); max-width: 64ch }
+h2 { margin: 0; font-size: 1.35rem; font-weight: 700 }
+.tag { font: 500 0.8rem var(--mono); color: var(--pick); letter-spacing: 0.06em }
+
+/* the brief */
+.brief { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0; border: 1px solid var(--rule); border-radius: 6px; background: var(--panel); overflow: hidden }
+.brief div { padding: 16px 18px; border-bottom: 1px solid var(--rule); border-inline-end: 1px solid var(--rule); min-width: 0 }
+.brief b { display: block; font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--pick) }
+.brief i { display: block; font-style: normal; color: var(--dim); font-size: 0.88rem; margin-top: 4px }
+.brief span { display: block; margin-top: 6px; font-weight: 500 }
+
+/* style boards */
+.style { display: flex; flex-direction: column; gap: 14px }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px }
+.head p { margin: 0; color: var(--dim); flex: 1 1 320px; min-width: 0 }
+.board { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 10px; font-family: var(--f-ar) }
+.t { border-radius: 6px; position: relative; overflow: hidden; padding: 22px; min-width: 0; background: var(--paper); color: var(--ink) }
+.cap { position: absolute; inset: 10px auto auto 12px; font: 500 0.64rem var(--mono); letter-spacing: 0.08em; opacity: 0.6; direction: ltr }
+.hero { grid-column: span 7; grid-row: span 2; background: var(--own); color: var(--on); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 14px; min-height: 420px; direction: rtl }
+.hero .mk { width: min(40%, 200px) } .mk svg { display: block; width: 100%; height: auto; overflow: visible }
+.hero .nm { font-family: var(--f-dis); font-weight: var(--w-dis, 700); font-size: clamp(2rem, 4.6vw, 3.2rem); line-height: 1.25 }
+.hero .en { font-family: var(--f-en); font-weight: var(--w-en, 500); font-style: var(--s-en, normal); letter-spacing: var(--t-en, 0.3em); font-size: 0.82rem; direction: ltr }
+.hero .tl { margin-top: 6px; font-size: 1.2rem; font-family: var(--f-ar) } .hero .tl small { display: block; font: var(--s-en, normal) 500 0.86rem var(--f-en); opacity: 0.8; direction: ltr; margin-top: 2px }
+.own { grid-column: span 5; background: var(--own); color: var(--on); display: flex; flex-direction: column; justify-content: flex-end; min-height: 200px; font-family: var(--ui) }
+.own strong { font-size: 1.5rem; font-weight: 900; letter-spacing: -0.01em } .own code { font: 500 0.8rem var(--mono); opacity: 0.8 } .own p { margin: 8px 0 0; font-size: 0.86rem; max-width: 36ch }
+.own .dots { position: absolute; inset: 16px 16px auto auto; display: flex; gap: 6px } .own .dots i { width: 22px; height: 22px; border-radius: 50%; border: 1px solid rgb(255 255 255 / 0.4) }
+.pack { grid-column: span 5; display: grid; place-items: center; background: var(--paper2); min-height: 210px }
+.cert { width: min(100%, 300px); aspect-ratio: 1.42; background: #fff; color: var(--certink); border: 2px solid var(--own-d); outline: 1px solid var(--own-d); outline-offset: -7px; padding: 16px 18px; display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; overflow: hidden; direction: rtl; box-shadow: 0 14px 26px -16px rgb(0 0 0 / 0.5) }
+.cert .mk { width: 34px } .cert h4 { margin: 4px 0 0; font-family: var(--f-dis); font-weight: var(--w-dis, 700); font-size: 1.05rem } .cert .who { font-family: var(--f-dis); font-size: 1.2rem; font-weight: var(--w-dis, 700); margin-top: 6px; color: var(--own-d) }
+.cert .ln { width: 60%; height: 1px; background: currentColor; opacity: 0.25; margin: 5px 0 } .cert .crs { font-size: 0.78rem }
+.cert .ft { margin-top: auto; width: 100%; display: flex; align-items: flex-end; justify-content: space-between; font: 500 0.56rem var(--mono); direction: ltr }
+.cert .qr { width: 26px; height: 26px; background: conic-gradient(currentColor 25%, transparent 0 50%, currentColor 0 75%, transparent 0) 0 0 / 8.670px 8.670px; outline: 2px solid currentColor; outline-offset: 1px }
+.cert::after { content: ""; position: absolute; inset: 0; width: 30%; background: linear-gradient(100deg, transparent, rgb(255 255 255 / 0.85), transparent); animation: sheen 5s cubic-bezier(0.5, 0, 0.3, 1) infinite; transform: translateX(-120%) }
+@keyframes sheen { 0% { transform: translateX(-120%) } 55%, 100% { transform: translateX(460%) } }
+.courses { grid-column: span 7; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; background: none; padding: 0; overflow: visible }
+.crd { border-radius: 6px; background: var(--paper); color: var(--ink); padding: 16px; direction: rtl; border-top: 5px solid var(--c); display: flex; flex-direction: column; gap: 4px; min-width: 0 }
+.crd b { font-family: var(--f-dis); font-weight: var(--w-dis, 700); font-size: 1.1rem; line-height: 1.3 } .crd small { font: 500 0.66rem var(--mono); direction: ltr; text-align: right; opacity: 0.7 }
+.crd span { font-size: 0.8rem; opacity: 0.8 }
+.cues { grid-column: span 5; display: flex; flex-wrap: wrap; align-content: center; gap: 8px; direction: rtl }
+.cue { border-radius: 999px; padding: 7px 14px; font-size: 0.86rem; background: var(--own); color: var(--on); display: inline-flex; align-items: center; gap: 7px }
+.cue.o { background: transparent; color: var(--ink); border: 1.500px solid currentColor } .cue i { width: 8px; height: 8px; border-radius: 50%; background: currentColor; animation: blink 1.400s steps(2, jump-none) infinite }
+@keyframes blink { 50% { opacity: 0.2 } }
+.apps { grid-column: span 12; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; background: var(--paper2) }
+.app { width: 76px; height: 76px; border-radius: 20px; display: grid; place-items: center; background: var(--own); color: var(--on); flex: none } .app .mk { width: 62% } .app.w { background: #fff; color: var(--ink); border: 1px solid rgb(0 0 0 / 0.08) } .app.s { width: 40px; height: 40px; border-radius: 11px }
+.lock { display: flex; align-items: center; gap: 14px; direction: rtl; margin-inline-start: auto } .lock .mk { width: 54px } .lock b { font-family: var(--f-dis); font-weight: var(--w-dis, 700); font-size: 1.6rem; display: block; line-height: 1.2 } .lock i { font: var(--s-en, normal) var(--w-en, 500) 0.7rem var(--f-en); letter-spacing: var(--t-en, 0.3em); direction: ltr; display: block; text-align: right }
+.why { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px 26px; font-size: 0.9rem; color: var(--dim); border-top: 1px solid var(--rule); padding-top: 12px; font-family: var(--ui) }
+.why b { color: var(--fg); display: block; font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase }
+@media (max-width: 860px) { .hero, .own, .pack, .courses, .cues { grid-column: span 12 } .courses { grid-template-columns: 1fr } .lock { margin-inline-start: 0 } }
+
+/* S1 — emerald: calm, trusted */
+.s1 { --own: #06845f; --own-d: #045a47; --on: #ffffff; --paper: #f1f6f3; --paper2: #e3efe9; --ink: #0d1f1b; --certink: #0d1f1b; --f-dis: "Aref Ruqaa", serif; --f-ar: "El Messiri", sans-serif; --f-en: "Marcellus", serif; --w-en: 400; --t-en: 0.32em }
+.s1 .hero { background: radial-gradient(90% 80% at 50% 20%, #0b9d73, #06845f 60%, #045a47) }
+.s1 .mk .st { font-family: "Aref Ruqaa", serif; font-weight: 700; font-size: 36px; fill: var(--own-d) }
+.s1 .hero .sh, .s1 .app .sh { animation: sheen2 4.600s cubic-bezier(0.5, 0, 0.3, 1) infinite }
+@keyframes sheen2 { 0% { transform: translateX(-40px) skewX(-18deg) } 55%, 100% { transform: translateX(170px) skewX(-18deg) } }
+.s1 .sh { transform: translateX(-40px) skewX(-18deg) }
+
+/* S2 — hi-vis: loud, modern */
+.s2 { --own: #e3f400; --own-d: #111213; --on: #111213; --paper: #f6f6f2; --paper2: #111213; --ink: #111213; --certink: #111213; --f-dis: "Lalezar", sans-serif; --w-dis: 400; --f-ar: "El Messiri", sans-serif; --f-en: "Archivo", sans-serif; --w-en: 900; --t-en: 0.3em }
+.s2 .hero .en, .s2 .lock i { font-stretch: 125% }
+.s2 .hero::before { content: ""; position: absolute; inset: auto 0 0 0; height: 26px; background: repeating-linear-gradient(90deg, #b9bec0 0 3px, #dfe2e3 3px 6px); border-top: 10px solid #111213 }
+.s2 .apps { color: #f6f6f2 } .s2 .apps .lock b { color: #e3f400 }
+.s2 .hero .tsl, .s2 .lock .tsl { transform-origin: 104px 27px; animation: swing 3s ease-in-out infinite }
+@keyframes swing { 0%, 100% { transform: rotate(-9deg) } 50% { transform: rotate(9deg) } }
+.s2 .cert { border-color: #111213 } .s2 .cert .who { color: #111213; background: #e3f400; padding: 0 10px }
+
+/* S3 — navy and gold: document-grade */
+.s3 { --own: #0b1b33; --own-d: #8a5f12; --on: #f3ead7; --paper: #f6f1e6; --paper2: #ece3d0; --ink: #0b1b33; --certink: #0b1b33; --gold: url(#gg); --f-dis: "Aref Ruqaa", serif; --f-ar: "El Messiri", sans-serif; --f-en: "Cormorant Garamond", serif; --s-en: italic; --t-en: 0.2em }
+.s3 .hero .en, .s3 .lock i { font-size: 0.98rem }
+.s3 .hero .nm { color: #e6c477 }
+.s3 .mk .gs { stroke: var(--gold) } .s3 .mk .gf { fill: var(--gold) } .s3 .mk .dc { fill: #0b1b33 }
+.s3 .mk .mt { font-family: "Aref Ruqaa", serif; font-weight: 700; font-size: 40px; fill: var(--gold) }
+.s3 .hero .mk { width: min(46%, 230px) }
+.s3 .hero .ry { transform-box: fill-box; transform-origin: center; animation: turn 40s linear infinite }
+@keyframes turn { to { transform: rotate(360deg) } }
+.s3 .cert { border-color: #b98524; outline-color: #b98524 } .s3 .cue { color: #e6c477 } .s3 .cue.o { color: #0b1b33 }
+.s3 .app.w { background: #f3ead7 }
+
+/* taglines */
+.tg { width: 100%; border-collapse: collapse; background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; font-size: 0.95rem }
+.tg th, .tg td { padding: 12px 16px; border-bottom: 1px solid var(--rule); text-align: start; vertical-align: top }
+.tg th { font-size: 0.74rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dim); font-weight: 700 }
+.tg td:nth-child(2) { font-family: "El Messiri", sans-serif; font-size: 1.15rem; font-weight: 700; direction: rtl; text-align: right }
+.tg td small { display: block; color: var(--dim) }
+.scroll { overflow-x: auto }
+.end { border-top: 1px solid var(--rule); padding-top: 24px; color: var(--dim); max-width: 74ch }
+.end strong { color: var(--fg) }
+
+@media (prefers-reduced-motion: reduce) { .board *, .board *::after { animation: none !important } }
+@page { size: 13.333in 7.500in; margin: 0.350in }
+@media print {
+  * { animation: none !important; -webkit-print-color-adjust: exact; print-color-adjust: exact }
+  body { background: #fff; color: #14181a }
+  .sheet { padding: 0; gap: 0; max-width: none }
+  .top { padding-top: 0.400in } .intro { break-after: page; display: flex; flex-direction: column; gap: 18px }
+  .style { break-inside: avoid; break-after: page; zoom: 0.700 }
+  .hero, .own, .pack, .courses, .cues { grid-column: revert }
+  .hero { grid-column: span 7 !important } .own, .pack, .cues { grid-column: span 5 !important } .courses { grid-column: span 7 !important; grid-template-columns: repeat(3, minmax(0, 1fr)) !important }
+  .cert { box-shadow: none } .cert::after { display: none }
+  .end { display: none }
+}
+</style>
+
+<svg class="defs" aria-hidden="true" focusable="false"><defs>
+  <linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6dc9a"/><stop offset="0.45" stop-color="#d7a94a"/><stop offset="0.7" stop-color="#f3d68b"/><stop offset="1" stop-color="#b98524"/></linearGradient>
+  <clipPath id="shc"><path d="M60 6 108 22v40c0 30-22 52-48 62C34 114 12 92 12 62V22z"/></clipPath>
+</defs></svg>
+
+<div class="sheet">
+  <div class="intro">
+    <header class="top">
+      <h1>Three brand styles for Aman Academy</h1>
+      <p>Built from your Wharton Module 4 notes. The module's main point is that brand elements must work in unison, so each style below is shown as a whole: name, logo, one owned colour, tagline, the certificate as packaging, and trust cues.</p>
+    </header>
+    <section class="brief" aria-label="What the module says and what it changed">
+      <div><b>The name is the anchor</b><i>Easy to process, meaningful, hard to change later.</i><span>أمان is a real word that says the benefit. Every style puts the name itself in or beside the mark.</span></div>
+      <div><b>Own one colour</b><i>Tiffany blue, Mary Kay pink. Few brands manage it.</i><span>Each style commits to a single colour and uses it everywhere, with small dots only to tell courses apart.</span></div>
+      <div><b>People read the picture first</b><i>The Gap logo failed on visuals, not words.</i><span>The symbol carries the meaning without the text: a shield, a helmet, a seal.</span></div>
+      <div><b>Round beats sharp</b><i>The same detergent was rated better in the box with circles.</i><span>Marks sit in circles and soft shields. No hard triangles.</span></div>
+      <div><b>The package sells</b><i>People judge the product by its box.</i><span>Your package is the certificate and the course card, so both are designed with the logo.</span></div>
+      <div><b>Give shortcuts and reasons</b><i>Central route for buyers who think; cues for the rest.</i><span>Verified-certificate and live-instructor cues are built in. Seat counts appear only when real.</span></div>
+    </section>
+  </div>
+
+  <!-- ============ STYLE 1 ============ -->
+  <section class="style s1">
+    <div class="head"><span class="tag">STYLE 1</span><h2>Aman Green</h2><p>Calm and trusted. One deep emerald, a shield with the name written inside it, calligraphic lettering.</p></div>
+    <div class="board">
+      <div class="t hero"><span class="cap">LOGO · NAME · TAGLINE</span><span class="mk" data-mark="shield"></span><div class="nm">أكاديمية أمان</div><div class="en">AMAN ACADEMY</div><div class="tl">معرفة تحمي، وثقة للتصرف<small>Confidence to act. Knowledge to protect.</small></div></div>
+      <div class="t own"><span class="cap">OWNED COLOUR</span><span class="dots" aria-hidden="true"><i style="background:#0a8f5b"></i><i style="background:#e23b3b"></i><i style="background:#1f6fe0"></i></span><strong>Aman Green</strong><code>#06845F</code><p>Green is calming and reads as safe and healthy. Used on every surface; the three dots only separate the courses.</p></div>
+      <div class="t pack"><span class="cap">PACKAGE · CERTIFICATE (SAMPLE)</span><div class="cert"><span class="mk" data-mark="shield"></span><h4>شهادة إتمام</h4><div class="who">نورة الحربي</div><div class="ln"></div><div class="crs">الإسعافات الأولية</div><div class="ft"><span>AMN-2026-2LTZA59T</span><span class="qr"></span></div></div></div>
+      <div class="courses"><div class="crd" style="--c:#0a8f5b"><small>FA-101</small><b>الإسعافات الأولية</b><span>مباشر · ٤ ساعات</span></div><div class="crd" style="--c:#e23b3b"><small>FF-201</small><b>مكافحة الحرائق</b><span>مباشر · ٥ ساعات</span></div><div class="crd" style="--c:#1f6fe0"><small>DD-301</small><b>القيادة الوقائية</b><span>مباشر · ٤ ساعات</span></div></div>
+      <div class="t cues"><span class="cap">TRUST CUES</span><span class="cue">شهادة قابلة للتحقق</span><span class="cue o"><i></i>مباشر مع مدرب</span><span class="cue o">بقي ٤ مقاعد · مثال</span></div>
+      <div class="t apps"><span class="cap">APP ICON · LOCKUP</span><span class="app"><span class="mk" data-mark="shieldw"></span></span><span class="app w"><span class="mk" data-mark="shield"></span></span><span class="app s"><span class="mk" data-mark="shieldw"></span></span><div class="lock"><span class="mk" data-mark="shield"></span><span><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+    </div>
+    <div class="why"><div><b>Memorable</b>A shield with the word inside: one image, one idea.</div><div><b>Meaningful</b>Descriptive (safety) and persuasive (protected, verified).</div><div><b>Congruent</b>Green, shield and calm lettering all say the same thing.</div><div><b>Risk</b>Green is common in Saudi brands, so the exact shade and the shield must do the differentiating.</div></div>
+  </section>
+
+  <!-- ============ STYLE 2 ============ -->
+  <section class="style s2">
+    <div class="head"><span class="tag">STYLE 2</span><h2>Hi-Vis</h2><p>Loud and modern. The yellow of the safety vest, a helmet wearing a graduation cap, heavy brush lettering.</p></div>
+    <div class="board">
+      <div class="t hero"><span class="cap">LOGO · NAME · TAGLINE</span><span class="mk" data-mark="helmet"></span><div class="nm">أكاديمية أمان</div><div class="en">AMAN ACADEMY</div><div class="tl">تعلّم. اختبر. احمِ.<small>Learn it. Prove it. Protect.</small></div></div>
+      <div class="t own"><span class="cap">OWNED COLOUR</span><span class="dots" aria-hidden="true"><i style="background:#0a8f5b"></i><i style="background:#e23b3b"></i><i style="background:#1f6fe0"></i></span><strong>Hi-Vis Yellow</strong><code>#E3F400</code><p>Yellow is bright, energetic and attention-getting, and it already means safety. Hardly any training brand uses it, so it can be owned.</p></div>
+      <div class="t pack"><span class="cap">PACKAGE · CERTIFICATE (SAMPLE)</span><div class="cert"><span class="mk" data-mark="helmet"></span><h4>شهادة إتمام</h4><div class="who">نورة الحربي</div><div class="ln"></div><div class="crs">مكافحة الحرائق</div><div class="ft"><span>AMN-2026-2LTZA59T</span><span class="qr"></span></div></div></div>
+      <div class="courses"><div class="crd" style="--c:#0a8f5b"><small>FA-101</small><b>الإسعافات الأولية</b><span>مباشر · ٤ ساعات</span></div><div class="crd" style="--c:#e23b3b"><small>FF-201</small><b>مكافحة الحرائق</b><span>مباشر · ٥ ساعات</span></div><div class="crd" style="--c:#1f6fe0"><small>DD-301</small><b>القيادة الوقائية</b><span>مباشر · ٤ ساعات</span></div></div>
+      <div class="t cues"><span class="cap">TRUST CUES</span><span class="cue">شهادة قابلة للتحقق</span><span class="cue o"><i></i>مباشر مع مدرب</span><span class="cue o">بقي ٤ مقاعد · مثال</span></div>
+      <div class="t apps"><span class="cap">APP ICON · LOCKUP</span><span class="app"><span class="mk" data-mark="helmet"></span></span><span class="app w"><span class="mk" data-mark="helmet"></span></span><span class="app s"><span class="mk" data-mark="helmet"></span></span><div class="lock"><span class="mk" data-mark="helmetl"></span><span><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span></div></div>
+    </div>
+    <div class="why"><div><b>Memorable</b>The only mark that says both safety and academy. High arousal colour.</div><div><b>Likable</b>Witty, with an imperative tagline in three beats.</div><div><b>Protectable</b>A colour nobody near you owns, plus a distinctive object.</div><div><b>Risk</b>Yellow needs black beside it to stay readable, and feels less formal for certificates.</div></div>
+  </section>
+
+  <!-- ============ STYLE 3 ============ -->
+  <section class="style s3">
+    <div class="head"><span class="tag">STYLE 3</span><h2>The Seal</h2><p>Document-grade. Navy and gold, the colours that cue quality, with a gold seal carrying a helmet above the calligraphic name.</p></div>
+    <div class="board">
+      <div class="t hero"><span class="cap">LOGO · NAME · TAGLINE</span><span class="mk" data-mark="seal"></span><div class="nm">أكاديمية أمان</div><div class="en">Aman Academy</div><div class="tl">جاهز حين يلزم؟<small>Ready when it counts?</small></div></div>
+      <div class="t own"><span class="cap">OWNED COLOUR</span><span class="dots" aria-hidden="true"><i style="background:#0a8f5b"></i><i style="background:#e23b3b"></i><i style="background:#1f6fe0"></i></span><strong>Seal Navy + Gold</strong><code>#0B1B33 · #D7A94A</code><p>Blue is the colour of trust; gold cues value. Together they make the certificate feel worth earning.</p></div>
+      <div class="t pack"><span class="cap">PACKAGE · CERTIFICATE (SAMPLE)</span><div class="cert"><span class="mk" data-mark="seal"></span><h4>شهادة إتمام</h4><div class="who">نورة الحربي</div><div class="ln"></div><div class="crs">القيادة الوقائية</div><div class="ft"><span>AMN-2026-2LTZA59T</span><span class="qr"></span></div></div></div>
+      <div class="courses"><div class="crd" style="--c:#0a8f5b"><small>FA-101</small><b>الإسعافات الأولية</b><span>مباشر · ٤ ساعات</span></div><div class="crd" style="--c:#e23b3b"><small>FF-201</small><b>مكافحة الحرائق</b><span>مباشر · ٥ ساعات</span></div><div class="crd" style="--c:#1f6fe0"><small>DD-301</small><b>القيادة الوقائية</b><span>مباشر · ٤ ساعات</span></div></div>
+      <div class="t cues"><span class="cap">TRUST CUES</span><span class="cue">شهادة قابلة للتحقق</span><span class="cue o"><i></i>مباشر مع مدرب</span><span class="cue o">بقي ٤ مقاعد · مثال</span></div>
+      <div class="t apps"><span class="cap">APP ICON · LOCKUP</span><span class="app"><span class="mk" data-mark="seal"></span></span><span class="app w"><span class="mk" data-mark="seal"></span></span><span class="app s"><span class="mk" data-mark="seal"></span></span><div class="lock"><span class="mk" data-mark="seal"></span><span><b>أكاديمية أمان</b><i>Aman Academy</i></span></div></div>
+    </div>
+    <div class="why"><div><b>Meaningful</b>Persuasive: it looks like an award, which is what the learner is buying.</div><div><b>Congruent</b>Seal, calligraphy and certificate are one visual family.</div><div><b>Extendable</b>The seal carries new courses and company awards without change.</div><div><b>Risk</b>Fine detail is lost at very small sizes, so the app icon needs a simplified version.</div></div>
+  </section>
+
+  <section class="style" style="gap:14px">
+    <div class="head"><span class="tag">TAGLINES</span><h2>Four types from the module</h2><p>Short, differentiated, easy to say, and tested for unwanted meanings in both languages before use.</p></div>
+    <div class="scroll"><table class="tg">
+      <thead><tr><th>Type</th><th>Arabic</th><th>English</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Descriptive</td><td>معرفة تحمي، وثقة للتصرف</td><td>Confidence to act. Knowledge to protect.</td><td><small>Your current line. Adds meaning to the name.</small></td></tr>
+        <tr><td>Imperative</td><td>تعلّم. اختبر. احمِ.</td><td>Learn it. Prove it. Protect.</td><td><small>Three beats that follow the journey: class, exam, real life.</small></td></tr>
+        <tr><td>Provocative</td><td>جاهز حين يلزم؟</td><td>Ready when it counts?</td><td><small>Makes people think about the moment they will need it.</small></td></tr>
+        <tr><td>Superlative</td><td>أوضح طريق إلى شهادة سلامة</td><td>The clearest path to a safety certificate.</td><td><small>Use only if you can back the claim; superlatives invite challenge.</small></td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <p class="end"><strong>The module's Gap lesson applies here:</strong> test before committing. Pick two styles, and I will prepare a simple side-by-side you can show to five to ten real learners and one or two company buyers, then build the site in the one they respond to.</p>
+</div>
+
+<script>
+(function () {
+  var shieldBody = '<g clip-path="url(#shc)"><rect x="0" y="0" width="120" height="132" fill="FILL"/><rect class="sh" x="0" y="0" width="16" height="132" fill="#fff" opacity="0.5"/></g><path d="M60 16 99 29v33c0 25-18 43-39 52-21-9-39-27-39-52V29z" fill="none" stroke="STK" stroke-opacity="0.4" stroke-width="1.6"/><text class="st" x="60" y="76" text-anchor="middle" direction="rtl" style="fill:TXT">أمان</text>';
+  var rays = "", i, a;
+  for (i = 0; i < 48; i++) { a = (i / 48) * Math.PI * 2; rays += '<path class="gs" d="M' + (100 + Math.cos(a) * 79).toFixed(1) + " " + (100 + Math.sin(a) * 79).toFixed(1) + "L" + (100 + Math.cos(a) * (i % 2 ? 86 : 90)).toFixed(1) + " " + (100 + Math.sin(a) * (i % 2 ? 86 : 90)).toFixed(1) + '" stroke-width="1.6" fill="none"/>'; }
+  function helmet(cap, dome, brim) {
+    return '<svg viewBox="0 0 140 112" role="img" aria-label="Helmet with graduation cap"><path d="M24 92a46 46 0 0 1 92 0z" fill="' + dome + '"/><rect x="12" y="90" width="116" height="13" rx="6.5" fill="' + brim + '"/><polygon points="70,6 116,24 70,42 24,24" fill="' + cap + '"/><path d="M48 34v10c6 6 38 6 44 0V34" fill="' + cap + '" opacity="0.8"/><g class="tsl"><path d="M70 24 104 27v20" fill="none" stroke="' + brim + '" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="100" y="46" width="8" height="13" rx="2" fill="' + brim + '"/></g></svg>';
+  }
+  var marks = {
+    /* white shield, green lettering: sits on the owned colour */
+    shieldw: '<svg viewBox="0 0 120 132" role="img" aria-label="أمان">' + shieldBody.replace("FILL", "#ffffff").replace("STK", "#06845f").replace("TXT", "#045a47") + "</svg>",
+    /* green shield, white lettering: sits on paper */
+    shield: '<svg viewBox="0 0 120 132" role="img" aria-label="أمان">' + shieldBody.replace("FILL", "#06845f").replace("STK", "#ffffff").replace("TXT", "#ffffff") + "</svg>",
+    helmet: helmet("#111213", "#111213", "#111213"),
+    helmetl: helmet("#f6f6f2", "#e3f400", "#e3f400"),
+    seal: '<svg viewBox="0 0 200 200" role="img" aria-label="Seal with helmet and أمان"><circle class="dc" cx="100" cy="100" r="94"/><circle class="gs" cx="100" cy="100" r="94" fill="none" stroke-width="3.5"/><g class="ry">' + rays + '</g><circle class="gs" cx="100" cy="100" r="75" fill="none" stroke-width="1.4"/><g transform="translate(58 30) scale(0.6)"><path class="gf" d="M24 66a46 46 0 0 1 92 0z"/><rect class="gf" x="12" y="68" width="116" height="12" rx="6"/></g><text class="mt" x="100" y="130" text-anchor="middle" direction="rtl">أمان</text></svg>'
+  };
+  document.querySelectorAll("[data-mark]").forEach(function (el) { el.innerHTML = marks[el.getAttribute("data-mark")] || ""; });
+  /* on the emerald hero and app tile the shield is the white version */
+  document.querySelectorAll(".s1 .hero [data-mark], .s1 .cert [data-mark]").forEach(function (el, n) { if (el.closest(".hero")) el.innerHTML = marks.shieldw; });
+})();
+</script>

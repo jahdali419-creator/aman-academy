@@ -1,0 +1,355 @@
+{
+  "title": "Administration",
+  "eyebrow": "Admin area",
+  "tabsLabel": "Administration sections",
+  "tabs": {
+    "overview": "Overview",
+    "courses": "Courses",
+    "sessions": "Sessions",
+    "enrollments": "Enrolments",
+    "certificates": "Certificates",
+    "companies": "Companies",
+    "inquiries": "Inquiries",
+    "audit": "Audit log",
+    "outbox": "Email outbox"
+  },
+  "shared": {
+    "actions": "Actions",
+    "none": "—"
+  },
+  "overview": {
+    "title": "Overview",
+    "lead": "A snapshot of the academy today: catalogue, schedule, learners and certificates.",
+    "refundsTitle": "{count, plural, one {1 order needs a refund} other {# orders need a refund}}",
+    "refundsBody": "These orders were paid but could not be fulfilled, for example because the session filled up first. Refund them through your payment provider.",
+    "shortcuts": "Go to",
+    "stats": {
+      "courses": "Courses",
+      "upcomingSessions": "Upcoming sessions",
+      "activeEnrollments": "Active enrolments",
+      "validCertificates": "Valid certificates",
+      "organizations": "Companies",
+      "openInquiries": "Open inquiries"
+    },
+    "links": {
+      "courses": "Edit course content, prices and exams.",
+      "sessions": "Schedule live sessions and record attendance.",
+      "enrollments": "Follow each learner's progress.",
+      "certificates": "Review, revoke or reissue certificates.",
+      "inquiries": "Reply to messages from the website.",
+      "audit": "See who changed what, and when."
+    }
+  },
+  "courses": {
+    "title": "Courses",
+    "lead": "The course catalogue. Only published courses appear on the public site.",
+    "new": "New course",
+    "back": "All courses",
+    "newTitle": "New course",
+    "newLead": "Add the course in both languages. A default exam is created with it, ready for you to add questions.",
+    "editLead": "Changes apply immediately to the public site and to new bookings.",
+    "manageExam": "Exam and questions",
+    "viewPublic": "View public page",
+    "created": "The course has been created. Next, schedule a session and add exam questions.",
+    "published": "Published",
+    "exam": "Exam",
+    "empty": {
+      "title": "No courses yet",
+      "body": "Create your first course to start scheduling sessions."
+    },
+    "col": {
+      "code": "Code",
+      "title": "Title",
+      "duration": "Duration",
+      "price": "Price",
+      "status": "Status"
+    }
+  },
+  "courseForm": {
+    "enLabel": "{label} (English)",
+    "arLabel": "{label} (Arabic)",
+    "sections": {
+      "identity": "Identity",
+      "content": "Content",
+      "delivery": "Delivery, price and certificate"
+    },
+    "code": "Course code",
+    "codeHint": "Short and unique, for example FA-101.",
+    "slug": "Web address",
+    "slugHint": "Lowercase English letters, numbers and hyphens, for example first-aid-essentials.",
+    "titleField": "Title",
+    "icon": "Icon",
+    "icons": {
+      "heart": "Heart (first aid)",
+      "flame": "Flame (fire safety)",
+      "car": "Car (road safety)",
+      "shield": "Shield (general safety)"
+    },
+    "summary": "Short summary",
+    "overview": "Overview",
+    "listHint": "For the lists below, write one item per line in each language.",
+    "outcomes": "Learning outcomes",
+    "audience": "Who it is for",
+    "prerequisites": "Prerequisites",
+    "practicalNote": "Practical training note",
+    "practicalNoteHint": "Explains what this online course does not replace.",
+    "syllabusNote": "{count, plural, =0 {This course has no syllabus modules yet.} one {The existing syllabus (1 module) is kept exactly as it is.} other {The existing syllabus (# modules) is kept exactly as it is.}} Syllabus editing is not part of this release.",
+    "syllabusNoteNew": "The course is created without a syllabus. Syllabus editing is not part of this release.",
+    "duration": "Duration (minutes)",
+    "durationHint": "Total live teaching time.",
+    "price": "Price (SAR)",
+    "priceHint": "Per learner, in Saudi riyals. Enter 0 for a free course.",
+    "minAttendance": "Minimum attendance (%)",
+    "minAttendanceHint": "Learners below this cannot sit the exam or receive a certificate.",
+    "validity": "Certificate validity (months)",
+    "validityHint": "Leave empty if the certificate never expires.",
+    "published": "Published: show this course on the public site and allow bookings",
+    "create": "Create course"
+  },
+  "exam": {
+    "title": "Exam: {course}",
+    "lead": "Exam rules and the question bank for this course. Correct answers are visible on this page only, to administrators.",
+    "editCourse": "Edit course",
+    "reviewTitle": "Assessment content must be reviewed by qualified people",
+    "reviewBody": "Questions marked “Sample” are placeholders for demonstration. Real safety assessments must be written and reviewed by qualified course owners before they are used with learners.",
+    "config": {
+      "title": "Exam rules",
+      "lead": "These rules apply to attempts started after you save.",
+      "duration": "Time limit (minutes)",
+      "passingScore": "Pass mark (%)",
+      "maxAttempts": "Attempts allowed",
+      "questionsPerAttempt": "Questions per attempt",
+      "questionsPerAttemptHint": "Active questions in the bank: {count}.",
+      "cooldown": "Wait before a retake (hours)",
+      "cooldownHint": "Enter 0 to allow an immediate retake.",
+      "shuffleQuestions": "Shuffle the order of questions for each attempt",
+      "shuffleOptions": "Shuffle the order of answer options"
+    },
+    "bank": {
+      "title": "Question bank",
+      "summary": "Questions: {total} · Active: {active} · Sample: {sample}",
+      "tooFew": "Only {active} active questions are available, but each attempt needs {needed}. Add or activate questions, or lower the number of questions per attempt.",
+      "number": "Question {n}",
+      "active": "Active",
+      "inactive": "Inactive",
+      "activate": "Activate",
+      "deactivate": "Deactivate",
+      "correct": "(correct answer)",
+      "edit": "Edit this question",
+      "empty": {
+        "title": "No questions yet",
+        "body": "Add the first question below. Learners cannot sit the exam until the bank has enough active questions."
+      }
+    },
+    "question": {
+      "newTitle": "Add a question",
+      "newLead": "Every question has four options in both languages and exactly one correct answer.",
+      "textEn": "Question (English)",
+      "textAr": "Question (Arabic)",
+      "options": "Answer options",
+      "optionsHint": "Fill in all four options and select the correct one.",
+      "markCorrect": "Option {n} is the correct answer",
+      "optionEn": "Option {n} (English)",
+      "optionAr": "Option {n} (Arabic)",
+      "isSample": "Sample question: placeholder content that has not been reviewed by a qualified course owner",
+      "add": "Add question"
+    }
+  },
+  "sessions": {
+    "title": "Sessions",
+    "lead": "Every live session, newest first. Open a session to edit it, add the joining link and record attendance.",
+    "new": "New session",
+    "back": "All sessions",
+    "newTitle": "New session",
+    "newLead": "Schedule a live online session for a course.",
+    "created": "The session has been scheduled.",
+    "manage": "Manage",
+    "unassigned": "Not assigned",
+    "linkSet": "Link added",
+    "linkMissing": "No link yet",
+    "empty": {
+      "title": "No sessions yet",
+      "body": "Schedule the first live session so learners can book."
+    },
+    "needCourse": {
+      "title": "Create a course first",
+      "body": "A session belongs to a course. Add a course, then come back to schedule it."
+    },
+    "col": {
+      "course": "Course",
+      "when": "Date and time",
+      "instructor": "Instructor",
+      "seats": "Enrolled / seats",
+      "status": "Status",
+      "joinLink": "Joining link"
+    }
+  },
+  "sessionForm": {
+    "sections": {
+      "schedule": "Schedule",
+      "joining": "Joining details"
+    },
+    "course": "Course",
+    "chooseCourse": "Choose a course",
+    "instructor": "Instructor",
+    "instructorHint": "The assigned instructor can see the roster and record attendance.",
+    "noInstructor": "Not assigned yet",
+    "startsAt": "Starts",
+    "endsAt": "Ends",
+    "maxSeats": "Seats",
+    "maxSeatsHint": "Cannot be lower than the number of people already enrolled.",
+    "status": "Status",
+    "statusHint": "A cancelled session asks its learners to take action. It does not refund them automatically.",
+    "joiningLead": "Shown only to enrolled learners, the assigned instructor and administrators.",
+    "provider": "Meeting platform",
+    "joinUrl": "Joining link",
+    "joinUrlHint": "Create the meeting in Teams or Zoom, then paste its link here. It must start with https://. Meetings are not created automatically.",
+    "joinInstructionsEn": "Joining instructions (English)",
+    "joinInstructionsAr": "Joining instructions (Arabic)",
+    "create": "Schedule session"
+  },
+  "roster": {
+    "title": "Roster and attendance ({count})",
+    "lead": "Attendance is recorded manually. Learners need at least {percent}% attendance to sit the exam.",
+    "auditNote": "Every attendance entry and correction is written to the audit log with the previous and new values.",
+    "notStarted": "Attendance can be recorded once the session has started.",
+    "status": "Attendance",
+    "percent": "Attended (%)",
+    "note": "Note",
+    "record": "Record",
+    "update": "Update",
+    "empty": {
+      "title": "Nobody is enrolled yet",
+      "body": "Learners will appear here as soon as they book this session."
+    }
+  },
+  "enrollments": {
+    "title": "Enrolments",
+    "lead": "Every booking with its attendance, exam progress and certificate.",
+    "cancel": "Cancel enrolment",
+    "cancelConfirm": "Cancel the enrolment of {name}? This cannot be undone from here.",
+    "cancelNote": "Cancelling an enrolment is written to the audit log. It does not refund any payment automatically.",
+    "enrol": {
+      "title": "Enrol a learner",
+      "lead": "Add an existing account to an upcoming session without payment, for example after a bank transfer.",
+      "email": "Learner's email",
+      "emailHint": "The learner must already have an account.",
+      "session": "Session",
+      "chooseSession": "Choose a session",
+      "submit": "Enrol",
+      "success": "The learner has been enrolled.",
+      "noSessions": "There are no upcoming sessions to enrol into."
+    },
+    "empty": {
+      "title": "No enrolments yet",
+      "body": "Bookings will appear here when learners enrol."
+    },
+    "col": {
+      "learner": "Learner",
+      "course": "Course",
+      "session": "Session",
+      "attendance": "Attendance",
+      "progress": "Progress",
+      "certificate": "Certificate"
+    }
+  },
+  "certificates": {
+    "title": "Certificates",
+    "lead": "Every certificate issued, newest first.",
+    "verify": "Verification page",
+    "pdf": "PDF",
+    "noExpiry": "Does not expire",
+    "revokedOn": "Revoked on {date}",
+    "reasonLabel": "Reason:",
+    "revokeOpen": "Revoke or reissue",
+    "reissueOpen": "Issue replacement",
+    "reason": "Reason",
+    "reasonHint": "Required. Kept on the certificate record and in the audit log.",
+    "reissueHint": "Required. A new certificate with a new number will be issued if the learner still meets the requirements.",
+    "revoke": "Revoke",
+    "replace": "Revoke and reissue",
+    "reissue": "Issue replacement",
+    "done": "Done. The certificate list has been updated.",
+    "note": "A revoked certificate shows as revoked on the public verification page straight away. Reissuing creates a new certificate with a new number.",
+    "empty": {
+      "title": "No certificates yet",
+      "body": "Certificates are issued automatically when a learner meets the attendance minimum and passes the exam."
+    },
+    "col": {
+      "number": "Number",
+      "learner": "Learner",
+      "course": "Course",
+      "issued": "Issued",
+      "expires": "Expires",
+      "status": "Status"
+    }
+  },
+  "companies": {
+    "title": "Companies",
+    "lead": "Organisations that train their employees with the academy.",
+    "cr": "CR",
+    "vat": "VAT",
+    "seatsAssigned": "{assigned} assigned of {seats} purchased",
+    "seatsRemaining": "Remaining: {count}",
+    "empty": {
+      "title": "No companies yet",
+      "body": "Companies appear here once they register."
+    },
+    "col": {
+      "name": "Company",
+      "contact": "Contact",
+      "members": "Members",
+      "seats": "Seats",
+      "registered": "Registered"
+    }
+  },
+  "inquiries": {
+    "title": "Inquiries",
+    "lead": "Messages sent from the contact and company forms. Open: {count}.",
+    "kind": {
+      "contact": "General",
+      "company": "Company training"
+    },
+    "open": "Open",
+    "handled": "Handled",
+    "headcount": "Team size:",
+    "markHandled": "Mark as handled",
+    "reopen": "Reopen",
+    "empty": {
+      "title": "No inquiries yet",
+      "body": "Messages from the website will appear here."
+    }
+  },
+  "audit": {
+    "title": "Audit log",
+    "lead": "A permanent record of sensitive actions. Showing the latest {count} entries.",
+    "system": "System",
+    "empty": {
+      "title": "Nothing recorded yet",
+      "body": "Sensitive actions will be listed here as they happen."
+    },
+    "col": {
+      "time": "Time",
+      "actor": "By",
+      "action": "Action",
+      "entity": "Record",
+      "details": "Details"
+    }
+  },
+  "outbox": {
+    "title": "Email outbox",
+    "lead": "The latest 100 messages generated by the platform.",
+    "demoTitle": "Emails are stored, not sent",
+    "demoBody": "In this demonstration no email leaves the platform. Each message is saved here so you can read exactly what the recipient would have received.",
+    "to": "To:",
+    "showBody": "Show message",
+    "locale": {
+      "ar": "Arabic",
+      "en": "English"
+    },
+    "empty": {
+      "title": "No emails yet",
+      "body": "Messages will appear here when the platform generates them."
+    }
+  }
+}

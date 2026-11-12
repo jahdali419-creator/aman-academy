@@ -1,0 +1,43 @@
+{
+  "draftTitle": "Draft — requires business and legal review",
+  "draftBody": "This text is a working draft prepared for the demonstration site. It is not legal advice and must be reviewed and approved by the business and qualified legal counsel before publication.",
+  "onThisPage": "On this page",
+  "docs": {
+    "privacy": {
+      "title": "Privacy policy",
+      "lead": "How Aman Academy collects, uses and protects personal data.",
+      "sections": [
+        { "h": "What we collect", "p": ["Account details: your name in English and, if you provide it, in Arabic (for certificates), email address, mobile number and password (stored only in hashed form).", "Company accounts: company name, contact person and, optionally, commercial registration and VAT numbers.", "Training records: enrolments, attendance recorded by the instructor, exam attempts and results, and certificates issued to you.", "We do not ask for national ID or Iqama numbers by default."] },
+        { "h": "How we use it", "p": ["To provide the training you book, give you joining instructions, record attendance, run exams and issue certificates.", "To let a company that paid for your seat see your enrolment, attendance, exam outcome and certificate. Your exam answers are not shared with your company.", "To send you service emails such as confirmations and password resets."] },
+        { "h": "Certificate verification", "p": ["Anyone with a certificate number can see the holder's name, the course, the issue and expiry dates and the certificate's status. No contact details or exam information are shown."] },
+        { "h": "Sharing", "p": ["[To be completed: list of service providers such as hosting, email delivery, payment processing and video-meeting platforms, and the countries where data is processed.]"] },
+        { "h": "Retention", "p": ["[To be completed: retention periods for accounts, training records, certificates and payment records.]"] },
+        { "h": "Your rights", "p": ["[To be completed with reference to the Saudi Personal Data Protection Law (PDPL): access, correction, deletion and how to make a request.]"] },
+        { "h": "Contact", "p": ["[To be completed: data controller identity and contact details.]"] }
+      ]
+    },
+    "terms": {
+      "title": "Terms of use",
+      "lead": "The terms that apply when you use Aman Academy and book training.",
+      "sections": [
+        { "h": "The service", "p": ["Aman Academy provides live, instructor-led online training sessions, online knowledge exams and digital certificates.", "Courses are delivered online and assess knowledge. They do not include hands-on practical assessment and do not by themselves satisfy any qualification required by a regulator or employer unless expressly stated."] },
+        { "h": "Accounts", "p": ["You are responsible for keeping your sign-in details secure and for the accuracy of the name you provide, which is printed on certificates.", "Company managers are responsible for inviting only people they are authorised to enrol."] },
+        { "h": "Attendance and exams", "p": ["Attendance is recorded by the instructor. You must attend under your own name.", "Exams must be taken by the enrolled learner without assistance. Attempt limits, time limits and pass marks are shown on each course page."] },
+        { "h": "Certificates", "p": ["A certificate is issued when the attendance and exam requirements are met. Aman Academy may revoke a certificate issued in error or obtained through dishonesty, and will record the reason."] },
+        { "h": "Payments", "p": ["Prices are shown in Saudi riyals. VAT, where applicable, is shown at checkout.", "[To be completed: payment provider, invoicing and tax terms.]"] },
+        { "h": "Liability and governing law", "p": ["[To be completed by legal counsel.]"] }
+      ]
+    },
+    "refunds": {
+      "title": "Cancellation and refund policy",
+      "lead": "What happens if you, or we, need to cancel or change a booking.",
+      "sections": [
+        { "h": "If you cancel", "p": ["[To be decided by the business: for example, full refund up to a set number of hours before the session, and free rescheduling within a set period.]"] },
+        { "h": "If you miss the session", "p": ["[To be decided by the business: whether a missed session can be rescheduled and on what terms.]"] },
+        { "h": "If we cancel or reschedule", "p": ["If Aman Academy cancels a session, you will be offered another date or a full refund."] },
+        { "h": "Company seats", "p": ["Unassigned seats remain available to assign to any scheduled session of the same course. A seat can be released and reassigned before the session starts.", "[To be decided by the business: refund terms and validity period for unused seats.]"] },
+        { "h": "How refunds are paid", "p": ["[To be completed once the payment provider is selected: refund method and timing.]"] }
+      ]
+    }
+  }
+}

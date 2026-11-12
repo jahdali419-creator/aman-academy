@@ -1,0 +1,15 @@
+*, *::before, *::after { box-sizing: border-box }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth }
+body { margin: 0; overflow-x: clip }
+img, svg { max-width: 100%; display: block }
+a { color: inherit }
+button { font: inherit; color: inherit; cursor: pointer }
+h1, h2, h3, p, ul, ol, dl, dd { margin: 0; padding: 0 }
+ul, ol { list-style: none }
+.pv-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap }
+.pv-skip { position: fixed; inset-block-start: 12px; inset-inline-start: 12px; z-index: 200; padding: 12px 18px; background: #111; color: #fff; border-radius: 6px; transform: translateY(-200%) }
+.pv-skip:focus { transform: none }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important }
+}

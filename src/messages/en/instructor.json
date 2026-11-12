@@ -1,0 +1,77 @@
+{
+  "meta": { "title": "Instructor area" },
+  "layout": {
+    "eyebrow": "Instructor area",
+    "title": "Your sessions",
+    "lead": "Prepare joining details, record attendance and follow your learners' progress."
+  },
+  "noProfile": {
+    "title": "No instructor profile on this account",
+    "body": "This area lists the sessions assigned to an instructor profile. Your account is not linked to one, so there is nothing to show here."
+  },
+  "list": {
+    "upcoming": "Upcoming sessions",
+    "past": "Past sessions",
+    "captionUpcoming": "Upcoming sessions assigned to you",
+    "captionPast": "Past sessions assigned to you",
+    "course": "Course",
+    "when": "Date and time",
+    "language": "Language",
+    "provider": "Platform",
+    "enrolled": "Enrolled",
+    "enrolledValue": "{enrolled} of {max}",
+    "status": "Status",
+    "open": "Open session",
+    "noJoinLink": "No meeting link yet",
+    "emptyTitle": "No sessions assigned yet",
+    "emptyBody": "When the academy assigns you to a session, it will appear here.",
+    "noUpcoming": "You have no upcoming sessions.",
+    "noPast": "You have no past sessions yet."
+  },
+  "session": {
+    "back": "All sessions",
+    "facts": {
+      "title": "Session details",
+      "course": "Course",
+      "code": "Course code",
+      "date": "Date",
+      "time": "Time",
+      "language": "Language",
+      "provider": "Platform",
+      "enrolled": "Enrolled",
+      "enrolledValue": "{enrolled} of {max} seats",
+      "status": "Status"
+    },
+    "join": {
+      "title": "Joining details",
+      "body": "Learners see these details in their own account once they are enrolled. They are never shown publicly.",
+      "missing": "No meeting link has been added yet. Learners cannot join until you add one.",
+      "url": "Meeting link",
+      "urlHint": "Create the meeting in Teams or Zoom, then paste its link here. The link must start with https://",
+      "instructionsEn": "Joining instructions (English)",
+      "instructionsAr": "Joining instructions (Arabic)",
+      "instructionsHint": "For example: join five minutes early and keep your camera on.",
+      "submit": "Save joining details"
+    },
+    "attendance": {
+      "title": "Attendance and progress",
+      "noticeTitle": "Attendance is recorded manually",
+      "notice": "You record each learner's attendance yourself; nothing is tracked automatically. A learner needs at least {min}% attendance on this course to take the exam. Every entry and every correction is kept in an audit trail.",
+      "notStartedTitle": "The session has not started yet",
+      "notStarted": "Attendance can be recorded once the session has started. The forms below are disabled until then.",
+      "caption": "Learners enrolled in this session",
+      "learner": "Learner",
+      "progress": "Progress",
+      "recorded": "Recorded attendance",
+      "recordedValue": "{status} · {percent}%",
+      "record": "Record attendance",
+      "status": "Status",
+      "percent": "Attended %",
+      "note": "Note",
+      "forLearner": "for {name}",
+      "submit": "Save",
+      "emptyTitle": "No learners enrolled yet",
+      "emptyBody": "Learners will appear here as soon as they are enrolled in this session."
+    }
+  }
+}

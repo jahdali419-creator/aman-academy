@@ -1,0 +1,129 @@
+<title>Aman Academy Fonts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zain:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Beiruti:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&family=EB+Garamond:wght@400;600&family=Fraunces:wght@400;700&family=Gulzar&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600&family=Marcellus&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mada:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Changa:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kufam:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fustat:wght@400;600&display=swap">
+<style>
+/* Layout: one board per pairing. Navy tile = headline voice in both languages; cream tile = reading and interface text; strip = certificate line. */
+:root {
+  --bg: #f3f2ee; --fg: #14181a; --dim: #5d6364; --rule: #d8d6cf; --pick: #8a6316;
+  --navy: #0b1b33; --cream: #f3ead7; --gold: #e0b65c; --goldd: #8f6520;
+  --ui: "IBM Plex Sans", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #0f1215; --fg: #eef0ee; --dim: #9ba3a4; --rule: #2a2f33; --pick: #e4bd66; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #0f1215; --fg: #eef0ee; --dim: #9ba3a4; --rule: #2a2f33; --pick: #e4bd66; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--fg); font-family: var(--ui); font-size: 16px; line-height: 1.5 }
+.sheet { max-width: 1180px; margin-inline: auto; padding-block: 40px 72px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: flex; flex-direction: column; gap: 56px }
+h1 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; text-wrap: balance }
+.top p { margin: 8px 0 0; color: var(--dim); max-width: 66ch }
+section { display: flex; flex-direction: column; gap: 14px }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px }
+.head .tag { font: 500 0.8rem var(--mono); color: var(--pick); letter-spacing: 0.06em }
+.head h2 { margin: 0; font-size: 1.3rem; font-weight: 600 }
+.head p { margin: 0; color: var(--dim); flex: 1 1 320px; min-width: 0 }
+.rec { font: 500 0.68rem var(--mono); letter-spacing: 0.08em; background: var(--pick); color: var(--bg); padding: 2px 8px; border-radius: 3px }
+.spec { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 6px 20px; font-size: 0.86rem; margin: 0 }
+.spec div { border-top: 1px solid var(--rule); padding-top: 6px; min-width: 0 }
+.spec dt { font: 500 0.66rem var(--mono); letter-spacing: 0.08em; color: var(--dim) }
+.spec dd { margin: 0; font-weight: 600 }
+.board { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px }
+@media (max-width: 860px) { .board { grid-template-columns: 1fr } }
+.tile { border-radius: 6px; position: relative; padding: 40px 26px 26px; min-width: 0; background: var(--navy); color: var(--cream); display: flex; flex-direction: column; gap: 22px; overflow: hidden }
+.tile.inv { background: var(--cream); color: var(--navy) }
+.tile.cert { grid-column: 1 / -1; background: #fbf6ea; color: var(--navy); border: 1px solid #d9c690; align-items: center; text-align: center; gap: 8px; padding-top: 34px }
+.cap { position: absolute; inset: 10px auto auto 12px; font: 500 0.66rem var(--mono); letter-spacing: 0.08em; opacity: 0.55 }
+.ar { direction: rtl; text-align: right }
+.en { direction: ltr; text-align: left }
+.lock { display: flex; align-items: center; gap: 14px; direction: rtl }
+.lock svg { width: 62px; height: 62px; flex: none }
+.lock b { display: block; font-family: "Aref Ruqaa", serif; font-size: 1.6rem; line-height: 1.3; color: var(--gold) }
+.lock i { display: block; font-family: "Marcellus", serif; font-style: normal; font-size: 0.62rem; letter-spacing: 0.3em; direction: ltr; text-align: center }
+.hd { margin: 0; font-family: var(--dis); font-weight: var(--disw, 700); line-height: 1.25; text-wrap: balance }
+.ar .hd, .hd.ar { font-family: var(--disar); font-weight: var(--disarw, 700); font-size: calc(clamp(1.9rem, 4.2vw, 2.7rem) * var(--k, 1)); line-height: 1.5 }
+.hd.en { font-size: clamp(1.7rem, 3.8vw, 2.4rem); letter-spacing: var(--dist, 0) }
+.hd em { font-style: normal; color: var(--gold) }
+.tx { margin: 0; font-size: 1rem; line-height: 1.7; max-width: 46ch }
+.tx.ar { font-family: var(--txar); line-height: 1.95 }
+.tx.en { font-family: var(--tx) }
+.navy .tx { opacity: 0.82 }
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px }
+.btn { font-size: 0.92rem; font-weight: 600; padding: 9px 18px; border-radius: 4px; background: var(--navy); color: var(--cream) }
+.btn.g { background: transparent; color: var(--navy); outline: 1px solid currentColor; outline-offset: -1px }
+.chip { font-size: 0.78rem; font-weight: 500; padding: 3px 10px; border-radius: 99px; background: rgb(11 27 51 / 0.09) }
+.card { border-top: 1px solid rgb(11 27 51 / 0.2); padding-top: 14px; display: flex; flex-direction: column; gap: 8px }
+.card h3 { margin: 0; font-size: 1.15rem; font-weight: 600 }
+.card .meta { font-size: 0.86rem; opacity: 0.75 }
+.price { font-size: 1.25rem; font-weight: 600; font-variant-numeric: tabular-nums }
+.arf { font-family: var(--txar) } .enf { font-family: var(--tx) }
+.cert .k { font: 500 0.66rem var(--mono); letter-spacing: 0.2em; color: var(--goldd) }
+.cert .ct { font-family: var(--disar); font-weight: var(--disarw, 700); font-size: clamp(1.5rem, 3.4vw, 2rem); line-height: 1.5; direction: rtl }
+.cert .ce { font-family: var(--dis); font-weight: var(--disw, 700); font-size: clamp(1.1rem, 2.4vw, 1.4rem); letter-spacing: var(--dist, 0) }
+.cert .nm { font-family: var(--txar); font-size: 0.95rem; direction: rtl; opacity: 0.8 }
+.cert .no { font: 500 0.78rem var(--mono); color: var(--goldd) }
+.note { font-size: 0.92rem; color: var(--dim); max-width: 78ch; margin: 0 }
+.note b { color: var(--fg) }
+.end { border-top: 1px solid var(--rule); padding-top: 24px; color: var(--dim); max-width: 72ch }
+.end strong { color: var(--fg) }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 10px }
+.grid .arf, .grid .tx.ar { zoom: var(--z, 1) }
+.grid .tile { padding: 44px 22px 22px; gap: 14px }
+.grid .lab { position: absolute; inset: 10px 12px auto auto; font: 500 0.7rem var(--mono); letter-spacing: 0.06em; opacity: 0.7 }
+.grid .cap { font-size: 0.9rem; opacity: 1; color: var(--goldd); font-weight: 500 }
+.grid .why { font-family: var(--ui); font-size: 0.82rem; opacity: 0.7; margin: 0; direction: ltr; text-align: left }
+.tile.navy { align-items: stretch }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 28px }
+@media (max-width: 760px) { .pair { grid-template-columns: 1fr } }
+</style>
+<div class="sheet" style="--disar:'Gulzar',serif;--disarw:400;--k:0.8;--dis:'Fraunces',serif;--tx:'EB Garamond',serif">
+  <header class="top">
+    <h1>Fonts for Aman Academy</h1>
+    <p>Three of the four fonts are now locked from Pairing 11. Only the Arabic reading and interface font is open: twenty-one options below (K to U are new), each on the same course card and paragraph. All text is sample content.</p>
+    <dl class="spec" style="margin-top:16px"><div><dt>ARABIC HEADLINES · LOCKED</dt><dd>Gulzar</dd></div><div><dt>ENGLISH HEADLINES · LOCKED</dt><dd>Fraunces</dd></div><div><dt>ENGLISH TEXT · LOCKED</dt><dd>EB Garamond</dd></div><div><dt>ARABIC TEXT · OPEN</dt><dd>Choose A to U</dd></div></dl>
+  </header>
+  <section>
+    <div class="head"><span class="tag">LOCKED</span><h2>Headlines and English</h2></div>
+    <div class="tile navy"><span class="cap">AS CHOSEN</span><div class="pair">
+      <div><h3 class="hd ar">معرفة <em>تحمي</em>، وثقة للتصرف</h3></div>
+      <div><h3 class="hd en">Confidence to act. <em>Knowledge</em> to protect.</h3><p class="tx en" style="margin-top:12px">Live training with an instructor, an online exam, and a digital certificate anyone can verify.</p></div>
+    </div></div>
+  </section>
+  <section>
+    <div class="head"><span class="tag">OPEN</span><h2>Arabic reading and interface</h2><p>The headline above each card is the locked Gulzar, so you can judge how the two sit together.</p></div>
+    <div class="grid" id="out"></div>
+  </section>
+  <p class="end"><strong>Next:</strong> choose a letter, A to U, for the Arabic reading font.</p>
+</div>
+<script>
+(function () {
+  var O = [["A", "IBM Plex Sans Arabic", "IBM+Plex+Sans+Arabic:wght@400;600", "Neutral and precise. Very clear in tables and forms."], ["B", "Tajawal", "Tajawal:wght@400;700", "Light, open and modern. Widely used on Saudi sites."], ["C", "Almarai", "Almarai:wght@400;700", "Compact and sturdy. Strong at small sizes."], ["D", "Readex Pro", "Readex+Pro:wght@400;600", "Soft, rounded and wide. Friendly and easy."], ["E", "Noto Sans Arabic", "Noto+Sans+Arabic:wght@400;600", "The safe standard. Plain and dependable."], ["F", "Cairo", "Cairo:wght@400;700", "Geometric with a confident, slightly wide stance."], ["G", "Zain", "Zain:wght@400;700", "Warm and humanist, with a little calligraphic feel."], ["H", "Vazirmatn", "Vazirmatn:wght@400;600", "Crisp screen font, excellent for dense dashboards."], ["I", "Alexandria", "Alexandria:wght@400;600", "Clean geometric shapes with generous spacing."], ["J", "Beiruti", "Beiruti:wght@400;700", "Contemporary with character; closer to the headline's energy."], ["K", "Rubik", "Rubik:wght@400;600", "Slightly rounded corners. Modern and approachable."], ["L", "Mada", "Mada:wght@400;600", "Simple and narrow, inspired by road signage."], ["M", "Noto Kufi Arabic", "Noto+Kufi+Arabic:wght@400;600", "Modern Kufi. The official Saudi corporate look."], ["N", "El Messiri", "El+Messiri:wght@400;600", "Curved and elegant, with more personality."], ["O", "Markazi Text", "Markazi+Text:wght@400;600", "Tall newspaper Naskh. Classical but sharper than the one you rejected."], ["P", "Amiri", "Amiri:wght@400;700", "Traditional book Naskh. Formal and literary."], ["Q", "Harmattan", "Harmattan:wght@400;700", "Light, simple Naskh with open shapes."], ["R", "Changa", "Changa:wght@400;600", "Squared and technical."], ["S", "Kufam", "Kufam:wght@400;600", "Distinctive geometric Kufi."], ["T", "Baloo Bhaijaan 2", "Baloo+Bhaijaan+2:wght@400;600", "Rounded and soft. The friendliest of the set."], ["U", "Fustat", "Fustat:wght@400;600", "A recent Kufi-based sans, wide and calm."]], h = "";
+  O.forEach(function (o) {
+    h += '<div class="tile inv" style="--txar:\'' + o[1] + '\',sans-serif;--z:' + (({"Markazi Text":1.2,"Harmattan":1.15,"Amiri":1.05})[o[1]] || 1) + '"><span class="cap">' + o[0] + '</span><span class="lab">' + o[1].toUpperCase() + '</span>' +
+      '<h3 class="hd ar" style="font-size:1.5rem">دوراتنا القادمة</h3>' +
+      '<div class="card ar arf"><h3>الإسعافات الأولية</h3><span class="meta">جلسة مباشرة · 14 ديسمبر 2026 · 6 ساعات</span><div class="row"><span class="price">450 ر.س</span><span class="chip">مقاعد متاحة (نموذج)</span></div><div class="row"><span class="btn">سجّل الآن</span><span class="btn g">تفاصيل الدورة</span></div></div>' +
+      '<p class="tx ar" style="font-size:0.95rem">بعد اجتياز الاختبار تصدر شهادتك برقم فريد ورمز للتحقق. يمكنك تنزيلها أو مشاركة رابطها مع جهة عملك.</p>' +
+      '<p class="why">' + o[3] + '</p></div>';
+  });
+  document.getElementById("out").innerHTML = h;
+})();
+</script>

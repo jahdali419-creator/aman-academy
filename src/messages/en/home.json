@@ -1,0 +1,97 @@
+{
+  "meta": { "title": "Live safety training in Saudi Arabia" },
+  "hero": {
+    "eyebrow": "Live safety training · Saudi Arabia",
+    "title": "Confidence to act. Knowledge to protect.",
+    "lead": "Join a live class led by an instructor, in Arabic or English. Take a short online exam afterwards and receive a digital certificate anyone can verify.",
+    "points": ["Live with an instructor on Teams or Zoom", "Online exam after the class", "Verifiable digital certificate"],
+    "illustration": {
+      "live": "Live",
+      "session": "First Aid · Live session",
+      "instructor": "Instructor",
+      "you": "You",
+      "exam": "Exam passed",
+      "certificate": "Certificate",
+      "verify": "Scan to verify",
+      "note": "Illustration"
+    }
+  },
+  "courses": {
+    "eyebrow": "Courses",
+    "title": "Three essentials, taught live",
+    "lead": "Each course is a single live session with time for questions, followed by an online exam.",
+    "next": "Next session",
+    "none": "New dates soon",
+    "from": "Price per person"
+  },
+  "journey": {
+    "eyebrow": "How it works",
+    "title": "From booking to certificate in five clear steps",
+    "steps": [
+      { "title": "Choose a session", "body": "Pick a course, a date and the teaching language that suits you." },
+      { "title": "Register and pay", "body": "Create your account and reserve your seat in Saudi riyals." },
+      { "title": "Attend the live class", "body": "Join from your dashboard on Microsoft Teams or Zoom. The instructor records attendance." },
+      { "title": "Take the exam", "body": "Once your attendance is confirmed, the online exam opens in your dashboard." },
+      { "title": "Receive your certificate", "body": "Pass the exam and download a certificate with a QR code for verification." }
+    ]
+  },
+  "benefits": {
+    "eyebrow": "Who it's for",
+    "title": "Built for people, and for the teams that rely on them",
+    "individuals": {
+      "title": "For individuals",
+      "items": [
+        "Learn from home in an evening, in Arabic or English",
+        "Ask the instructor questions in real time",
+        "Know exactly what is required to earn the certificate",
+        "Keep your certificates in one place and share a verification link"
+      ]
+    },
+    "companies": {
+      "title": "For companies",
+      "items": [
+        "Buy seats once and assign them to employees as schedules allow",
+        "Invite employees by email — no spreadsheets to maintain",
+        "See enrolment, attendance and exam outcomes at a glance",
+        "Download employee certificates and progress reports"
+      ],
+      "cta": "See how company training works"
+    }
+  },
+  "instructors": {
+    "eyebrow": "Instructors",
+    "title": "Credentials you can check, not just claims",
+    "lead": "Every course is taught live by an instructor. We publish an instructor's qualifications only after we have verified the original documents, and we show the issuing body next to each one.",
+    "points": [
+      "Credentials are shown only once verified",
+      "The issuing body is named for each qualification",
+      "Instructor details appear on the course page before you book"
+    ],
+    "sampleNote": "The profiles below are samples for demonstration. Real instructor profiles and verified credentials will replace them before launch.",
+    "pending": "Verification pending"
+  },
+  "sessions": {
+    "eyebrow": "Upcoming sessions",
+    "title": "Find a date that works",
+    "empty": { "title": "No sessions are scheduled right now", "body": "New dates are added regularly. Contact us and we will let you know when the next session opens." }
+  },
+  "faq": {
+    "eyebrow": "Questions",
+    "title": "Good to know before you book",
+    "items": [
+      { "q": "Is the training really live?", "a": "Yes. Every session is delivered in real time by an instructor on Microsoft Teams or Zoom. You can ask questions and take part in the discussion. Sessions are not pre-recorded videos." },
+      { "q": "Does the online course include practical, hands-on training?", "a": "No. Our online courses build and assess knowledge. Skills such as CPR, using a fire extinguisher or on-road driving need supervised in-person practice. If your employer or a regulator requires a practical qualification, check what they accept before you enrol." },
+      { "q": "What do I need to receive a certificate?", "a": "Two things: the instructor must record that you attended at least the minimum share of the live session, and you must pass the online exam within the allowed number of attempts. Each course page lists the exact requirements." },
+      { "q": "How is attendance recorded?", "a": "The instructor records attendance manually during and after the session. Join with the same full name as on your account so you can be identified." },
+      { "q": "Can someone check that my certificate is genuine?", "a": "Yes. Each certificate has a unique number and a QR code that open our verification page, which shows the holder's name, the course, the issue date and whether the certificate is valid." },
+      { "q": "Which language are courses taught in?", "a": "Each session is taught in either Arabic or English. The teaching language is shown next to every date. The exam is available in both languages." },
+      { "q": "Can I pay for several employees at once?", "a": "Yes. Create a company account, buy the number of seats you need, and assign them to employees. You can track everyone's progress from the company dashboard." }
+    ]
+  },
+  "cta": {
+    "title": "Ready when you are",
+    "lead": "Choose a session today, or talk to us about training your team.",
+    "primary": "Explore courses",
+    "secondary": "Train your team"
+  }
+}

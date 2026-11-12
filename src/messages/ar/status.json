@@ -1,0 +1,24 @@
+{
+  "progress": {
+    "session_upcoming": "الموعد قادم",
+    "attendance_pending": "بانتظار تسجيل الحضور",
+    "exam_available": "الاختبار متاح",
+    "exam_in_progress": "الاختبار جارٍ",
+    "passed": "ناجح",
+    "action_required": "يتطلب إجراء",
+    "cancelled": "ملغى",
+    "enrolled": "مسجَّل"
+  },
+  "reason": {
+    "attendance_insufficient": "نسبة الحضور المسجلة أقل من الحد الأدنى للدورة.",
+    "no_attempts_left": "استُنفدت جميع محاولات الاختبار.",
+    "session_cancelled": "أُلغي هذا الموعد.",
+    "certificate_revoked": "أُلغيت شهادة هذه الدورة."
+  },
+  "attendance": { "present": "حاضر", "partial": "حضور جزئي", "absent": "غائب", "pending": "لم يُسجَّل بعد" },
+  "certificate": { "valid": "سارية", "revoked": "ملغاة", "expired": "منتهية" },
+  "order": { "pending": "بانتظار الدفع", "paid": "مدفوع", "failed": "فشل الدفع", "cancelled": "ملغى", "refunded": "يتطلب استرداداً" },
+  "session": { "scheduled": "مجدول", "completed": "منتهٍ", "cancelled": "ملغى" },
+  "invitation": { "pending": "بانتظار القبول", "accepted": "مقبولة", "revoked": "ملغاة", "expired": "منتهية" },
+  "attempt": { "in_progress": "جارية", "submitted": "مُسلَّمة", "expired": "انتهى الوقت" }
+}

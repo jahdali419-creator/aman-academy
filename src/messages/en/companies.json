@@ -1,0 +1,46 @@
+{
+  "meta": "Training for companies",
+  "hero": {
+    "eyebrow": "For companies",
+    "title": "Safety training your whole team can attend, and you can track",
+    "lead": "Buy seats for the courses you need, invite your employees, and follow enrolment, attendance and exam outcomes from one dashboard.",
+    "primary": "Create a company account",
+    "secondary": "Ask about larger groups"
+  },
+  "how": {
+    "title": "How company training works",
+    "steps": [
+      { "title": "Create your company account", "body": "One manager account for your organisation. Commercial registration and VAT details are optional and can be added later." },
+      { "title": "Buy seats", "body": "Purchase seats per course in Saudi riyals. Seats can be used on any scheduled session of that course." },
+      { "title": "Invite and assign employees", "body": "Invite employees by email, then assign each person to the session and language that suits them." },
+      { "title": "Follow progress", "body": "See who is enrolled, whose attendance was recorded, who passed the exam, and download their certificates." }
+    ]
+  },
+  "features": {
+    "title": "What you can manage",
+    "items": [
+      { "title": "Seats", "body": "Purchased, assigned and remaining seats for every course, always up to date." },
+      { "title": "Employees and invitations", "body": "A simple employee list with invitation status. Employees create their own accounts." },
+      { "title": "Progress", "body": "Enrolment, attendance and exam outcome for each employee, without exposing their exam answers." },
+      { "title": "Certificates and reports", "body": "Open employee certificates and download a progress report as a spreadsheet file." }
+    ]
+  },
+  "privacy": {
+    "title": "Your company's data stays yours",
+    "body": "Each company sees only its own employees and records. Managers see what they need to manage training: names, work emails, progress and certificates."
+  },
+  "inquiry": {
+    "title": "Larger teams or custom requirements",
+    "lead": "Need private sessions, a specific schedule, or training for a large group? Tell us what you need and we will reply by email.",
+    "name": "Your name",
+    "email": "Work email",
+    "phone": "Mobile number",
+    "company": "Company name",
+    "headcount": "Number of employees to train",
+    "headcountOptions": { "1-10": "1–10", "11-50": "11–50", "51-200": "51–200", "200+": "More than 200" },
+    "choose": "Choose…",
+    "message": "What do you need?",
+    "messageHint": "For example: courses, preferred dates, teaching language, number of people.",
+    "submit": "Send inquiry"
+  }
+}

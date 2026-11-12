@@ -1,0 +1,22 @@
+{
+  "meta": "Certificate",
+  "title": "Certificate of completion",
+  "certifies": "This is to certify that",
+  "attended": "attended the live online course and passed its knowledge assessment",
+  "completed": "Completion date",
+  "number": "Certificate number",
+  "expires": "Valid until",
+  "noExpiry": "No expiry date",
+  "instructor": "Instructor",
+  "issuer": "Issued by",
+  "scan": "Scan to verify",
+  "download": "Download PDF",
+  "verifyLink": "Open public verification page",
+  "share": "Share this link so others can verify your certificate:",
+  "back": "Back",
+  "revokedTitle": "This certificate has been revoked",
+  "revokedReason": "Reason: {reason}",
+  "expiredTitle": "This certificate has expired",
+  "sample": "Sample certificate from the demonstration site",
+  "disclaimer": "This certificate confirms attendance and a passed knowledge assessment. It is not a practical skills qualification."
+}

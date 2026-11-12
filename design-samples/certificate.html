@@ -1,0 +1,278 @@
+<title>Aman Academy Certificates</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=El+Messiri:wght@400;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Gulzar&family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600&family=Marcellus&display=swap">
+<style>
+/* Layout: each certificate is an A4-landscape sheet that scales with its width (all inner sizes are in cqw). English sits left, Arabic right, mirrored around a centre rule. */
+:root {
+  --bg: #e9e7e1; --fg: #14181a; --dim: #5d6364; --rule: #cfccc3; --pick: #8a6316;
+  --ui: "IBM Plex Sans", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #0f1215; --fg: #eef0ee; --dim: #9ba3a4; --rule: #2a2f33; --pick: #e4bd66; color-scheme: dark } }
+:root[data-theme="dark"] { --bg: #0f1215; --fg: #eef0ee; --dim: #9ba3a4; --rule: #2a2f33; --pick: #e4bd66; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--fg); font-family: var(--ui); font-size: 16px; line-height: 1.5 }
+.sheet { max-width: 1120px; margin-inline: auto; padding-block: 40px 72px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: flex; flex-direction: column; gap: 56px }
+h1 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.1 }
+.top p { margin: 8px 0 0; color: var(--dim); max-width: 66ch }
+section { display: flex; flex-direction: column; gap: 14px }
+.head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px }
+.head .tag { font: 500 0.8rem var(--mono); color: var(--pick); letter-spacing: 0.06em }
+.head h2 { margin: 0; font-size: 1.3rem; font-weight: 600 }
+.head p { margin: 0; color: var(--dim); flex: 1 1 320px; min-width: 0 }
+.note { font-size: 0.92rem; color: var(--dim); max-width: 78ch; margin: 0 }
+.note b { color: var(--fg) }
+.end { border-top: 1px solid var(--rule); padding-top: 24px; color: var(--dim); max-width: 72ch }
+.end strong { color: var(--fg) }
+
+.pairs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px }
+@media (max-width: 900px) { .pairs { grid-template-columns: 1fr } }
+.lbl { font: 500 0.68rem var(--mono); letter-spacing: 0.08em; color: var(--dim); margin: 0 0 6px }
+.wrap { container-type: inline-size; box-shadow: 0 30px 60px -40px rgb(0 0 0 / 0.6), 0 2px 6px rgb(0 0 0 / 0.12) }
+.cert { position: relative; aspect-ratio: 297 / 210; overflow: hidden;
+  --paper: #fbf6e9; --ink: #0b1b33; --soft: #3d4a60; --g1: #c9983f; --g2: #8f6520; --g3: #5f400d; --line: #b98a35;
+  background: var(--paper); color: var(--ink) }
+.cert.ar { direction: rtl; font-family: "El Messiri", sans-serif }
+.cert.en { direction: ltr; font-family: "EB Garamond", serif }
+.cert.navy { --paper: #0b1b33; --ink: #f3ead7; --soft: #c3c2bb; --g1: #fbeab0; --g2: #e4bd66; --g3: #b08030; --line: #e0b65c;
+  background: radial-gradient(120% 90% at 50% 40%, #13294a, #0b1b33 60%, #07132a) }
+.cert.minimal { --paper: #fffdf8 }
+.cert .orn { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none }
+.cert .in { position: absolute; inset: 5.4cqw 7cqw 5.2cqw; display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center }
+.foil { background: linear-gradient(115deg, var(--g1), var(--g2) 45%, var(--g3) 75%, var(--g2)); -webkit-background-clip: text; background-clip: text; color: transparent }
+.mk { display: block; line-height: 0 } .mk svg { width: 100%; height: auto; display: block }
+.c-hd { display: flex; flex-direction: column; align-items: center }
+.c-hd .mk { width: 9.4cqw }
+.ttl { margin: 0 }
+.ar .ttl { font-family: "Gulzar", serif; font-size: 4.7cqw; line-height: 1.7 }
+.en .ttl { font-family: "Fraunces", serif; font-weight: 400; font-size: 4.3cqw; line-height: 1.25; margin-top: 0.8cqw }
+.en .ttl small { display: block; font-size: 1.25cqw; font-weight: 600; letter-spacing: 0.44em; margin-right: -0.44em; margin-top: 0.5cqw }
+.c-bd { display: flex; flex-direction: column; align-items: inherit; gap: 0.3cqw }
+.lead { margin: 0; font-size: 1.75cqw; line-height: 1.6; color: var(--soft) }
+.ar .lead { font-size: 1.62cqw; line-height: 1.8 }
+.name { margin: 0; font-family: "Fraunces", serif; font-style: italic; font-size: 4.5cqw; line-height: 1.3 }
+.ar .name { font-family: "Gulzar", serif; font-style: normal; font-size: 4cqw; line-height: 1.85 }
+.course { margin: 0; font-family: "Fraunces", serif; font-weight: 600; font-size: 2.9cqw; line-height: 1.3 }
+.ar .course { font-family: "El Messiri", sans-serif; font-size: 2.9cqw; line-height: 1.5 }
+.c-ft { display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; gap: 2.4cqw; width: 100%; text-align: start }
+.sig { display: flex; flex-direction: column; gap: 0.5cqw; width: 17cqw; font-size: 1.3cqw; color: var(--soft) }
+.sig .ln { height: 3cqw; border-bottom: 1px solid var(--line) }
+.meta { display: flex; gap: 2.4cqw; text-align: center }
+.meta div { display: flex; flex-direction: column; gap: 0.15cqw }
+.meta .k { font-size: 1.05cqw; color: var(--soft); white-space: nowrap }
+.en .meta .k { letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.95cqw }
+.meta .v { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.45cqw; white-space: nowrap }
+.ar .meta .v { font-family: "El Messiri", sans-serif }
+.qr { justify-self: end; display: flex; align-items: flex-end; gap: 1cqw; color: var(--soft); text-align: end }
+.qr svg { width: 7.4cqw; height: 7.4cqw; display: block; flex: none }
+.qr .tx { display: flex; flex-direction: column; gap: 0.1cqw }
+.qr .tx b { font-weight: 600; font-size: 1.2cqw; color: var(--ink) }
+.qr .tx em { font: 500 0.82cqw var(--mono); font-style: normal; color: var(--g2); direction: ltr }
+/* band */
+.cert.band .in { inset-inline: 32cqw 5.4cqw }
+.cert.band .sig { width: 13cqw } .cert.band .meta { gap: 1.5cqw } .cert.band .meta .v { font-size: 1.25cqw }
+.cert.band .name { font-size: 3.9cqw } .cert.band.ar .name { font-size: 3.5cqw }
+.bnd { position: absolute; inset-block: 0; inset-inline-start: 0; width: 27cqw; background: radial-gradient(130% 80% at 50% 30%, #14294b, #0b1b33 65%, #07132a); color: #f3ead7; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 6cqw 2cqw 4.6cqw; text-align: center; border-inline-end: 0.5cqw solid #e0b65c }
+.bnd .mk { width: 15cqw }
+.bnd .nm b { display: block; font-family: "Aref Ruqaa", serif; font-size: 2.5cqw; line-height: 1.4; color: #e4bd66 }
+.bnd .nm i { display: block; font-family: "Marcellus", serif; font-style: normal; font-size: 0.95cqw; letter-spacing: 0.34em; margin-right: -0.34em }
+.bnd .qr { flex-direction: column-reverse; align-items: center; text-align: center; color: #c3c2bb; gap: 0.8cqw }
+.bnd .qr .tx b { color: #f3ead7 } .bnd .qr .tx em { color: #e4bd66 }
+/* ribbon */
+.cert.ribbon .rb { position: absolute; inset: 0 0 auto; height: 14cqw; background: linear-gradient(#0b1b33, #10254a); border-bottom: 0.45cqw solid #e0b65c }
+.cert.ribbon .rb .mk { position: absolute; left: 50%; top: 5.6cqw; width: 14cqw; transform: translateX(-50%); border-radius: 50%; box-shadow: 0 0 0 0.9cqw var(--paper) }
+.cert.ribbon .rb span { position: absolute; top: 5.6cqw; font-family: "Marcellus", serif; font-size: 1.1cqw; letter-spacing: 0.34em; color: #e4bd66 }
+.cert.ribbon .rb .l { left: 6cqw } .cert.ribbon .rb .r { right: 6cqw; font-family: "Aref Ruqaa", serif; font-size: 1.9cqw; letter-spacing: 0; top: 4.6cqw }
+.cert.ribbon .in { inset: 21.5cqw 6.5cqw 6cqw }
+.cert.ribbon .ttl { font-size: 3.7cqw } .cert.ribbon.ar .ttl { font-size: 3.9cqw; line-height: 1.6 }
+.cert.ribbon .name { font-size: 4cqw } .cert.ribbon.ar .name { font-size: 3.6cqw; line-height: 1.75 }
+.cert.ribbon::after { content: ""; position: absolute; inset: auto 0 0; height: 2.2cqw; background: #0b1b33; border-top: 0.3cqw solid #e0b65c }
+/* minimal */
+.cert.minimal .in { align-items: flex-start; text-align: start; inset: 6.4cqw 8cqw 6cqw }
+.cert.minimal .c-hd { flex-direction: row; align-items: center; gap: 1.4cqw }
+.cert.minimal .c-hd .mk { width: 7.4cqw }
+.cert.minimal .c-hd b { font-family: "Aref Ruqaa", serif; font-size: 2.2cqw; color: var(--g2) }
+.cert.minimal.en .c-hd b { font-family: "Marcellus", serif; font-weight: 400; font-size: 1.25cqw; letter-spacing: 0.34em }
+.cert.minimal .ttl { font-size: 4.2cqw; margin-bottom: 1.2cqw } .cert.minimal .c-bd { gap: 0.7cqw } .cert.minimal.en .ttl small { display: inline; font-size: inherit; letter-spacing: 0; font-weight: 400; font-style: italic; margin: 0; text-transform: lowercase }
+.cert.minimal .name { font-size: 5cqw } .cert.minimal.ar .name { font-size: 4.5cqw }
+
+/* cards: CR80, 85.6 x 54 mm */
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 880px }
+.cards.tall { max-width: 520px }
+@media (max-width: 560px) { .cards:not(.tall) { grid-template-columns: 1fr } }
+.cw { container-type: inline-size; filter: drop-shadow(0 16px 22px rgb(0 0 0 / 0.28)) }
+.card { position: relative; aspect-ratio: 85.6 / 54; border-radius: 3.6cqw; overflow: hidden; direction: ltr; font-family: "EB Garamond", serif; background: radial-gradient(130% 100% at 30% 20%, #15294b, #0b1b33 60%, #07132a); color: #f3ead7; --gold: #e4bd66 }
+.card.tallc { aspect-ratio: 54 / 85.6; border-radius: 5.6cqw }
+.card.iv { background: #fbf6e9; color: #0b1b33; --gold: #93681f }
+.card .p { position: absolute; inset: 6cqw 6.5cqw; display: flex; flex-direction: column; justify-content: space-between }
+.card .fr { position: absolute; inset: 2.6cqw; border: 0.25cqw solid var(--gold); border-radius: 2.2cqw; opacity: 0.7 }
+.card .top { display: flex; align-items: center; gap: 3cqw }
+.card .top .mk { width: 17cqw; flex: none }
+.card .org { font-family: "Marcellus", serif; font-size: 3.5cqw; letter-spacing: 0.3em; color: var(--gold) }
+.card .org small { display: block; font-family: "EB Garamond", serif; font-size: 2.7cqw; letter-spacing: 0.22em; color: inherit; opacity: 0.8; margin-top: 0.4cqw }
+.card .nm { font-family: "Fraunces", serif; font-style: italic; font-size: 6.6cqw; line-height: 1.15; color: var(--gold) }
+.card .crs { font-family: "Fraunces", serif; font-weight: 600; font-size: 4.6cqw; margin-top: 0.6cqw }
+.card .row { display: flex; gap: 6cqw }
+.card .kv { display: flex; flex-direction: column; font-size: 2.5cqw; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.85 }
+.card .kv b { font-family: "Fraunces", serif; font-weight: 600; font-size: 3.3cqw; letter-spacing: 0.02em; text-transform: none; opacity: 1 }
+.card .ring { position: absolute; width: 96cqw; right: -36cqw; top: 50%; transform: translateY(-50%); opacity: 0.5 }
+.card .bk { display: grid; grid-template-columns: auto 1fr; gap: 5cqw; align-items: center }
+.card .bk svg { width: 27cqw; height: 27cqw; display: block; border-radius: 1.2cqw }
+.card .bk h4 { margin: 0 0 1cqw; font-family: "Fraunces", serif; font-weight: 600; font-size: 4.4cqw; line-height: 1.2 }
+.card .bk p { margin: 0; font-size: 3.1cqw; line-height: 1.35; opacity: 0.85 }
+.card .bk em { display: block; font: 500 2.5cqw var(--mono); font-style: normal; color: var(--gold); margin-top: 1.4cqw }
+.card .fine { font-size: 2.45cqw; line-height: 1.35; opacity: 0.7; border-top: 0.2cqw solid var(--gold); padding-top: 1.6cqw }
+.card .hb { position: absolute; inset: 0 0 auto; height: 34%; background: linear-gradient(#0b1b33, #10254a); border-bottom: 0.9cqw solid #e0b65c }
+.card.iv .hb + .p .org { color: #e4bd66 }
+.card .strip { position: absolute; inset: auto 0 0; height: 5cqw; background: #0b1b33; border-top: 0.6cqw solid #e0b65c }
+/* portrait badge */
+.tallc .hb { height: 46% }
+.tallc .p { inset: 9cqw 8cqw; align-items: center; text-align: center }
+.tallc .mk { width: 46cqw } .tallc .org { font-size: 5.6cqw; margin-top: 4cqw } .tallc .org small { font-size: 4.2cqw }
+.tallc .nm { font-size: 9.4cqw } .tallc .crs { font-size: 7.4cqw }
+.tallc .kv { font-size: 4cqw; align-items: center } .tallc .kv b { font-size: 5.4cqw }
+.tallc .bk { grid-template-columns: 1fr; justify-items: center; text-align: center } .tallc .bk svg { width: 48cqw; height: 48cqw }
+.tallc .bk h4 { font-size: 7.4cqw } .tallc .bk p { font-size: 5cqw } .tallc .bk em { font-size: 4cqw } .tallc .fine { font-size: 4cqw }
+@page { size: 13.333in 7.5in; margin: 0.4in 0.5in }
+@media print {
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact }
+  body { background: #fff; color: #14181a }
+  .sheet { display: block; max-width: none; padding: 0 }
+  header.top { break-after: page; padding-top: 2.2in }
+  section { display: block; break-after: page }
+  section .head { margin-bottom: 8px }
+  .pairs { display: block }
+  .pairs > div { width: 8.5in; margin: 0 auto; break-inside: avoid }
+  .pairs > div:first-child { break-after: page }
+  .pairs > div:last-child { padding-top: 0.36in }
+  .wrap { box-shadow: none; outline: 0.5pt solid #cfccc3 } .cw { filter: none } .card { outline: 0.5pt solid #cfccc3 }
+  .cards { max-width: 11.6in; margin: 0.5in auto 0; gap: 0.4in } .cards.tall { max-width: 6.4in; margin-top: 0.1in }
+  .note { break-before: avoid } .end { border: 0 }
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <path id="arcOld" d="M42 104a58 58 0 0 0 116 0"/>
+  <linearGradient id="fg-d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbeab0"/><stop offset="0.45" stop-color="#e4bd66"/><stop offset="1" stop-color="#b08030"/></linearGradient>
+  <linearGradient id="fg-l" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c9983f"/><stop offset="0.5" stop-color="#93681f"/><stop offset="1" stop-color="#6b4a12"/></linearGradient>
+</defs></svg>
+
+<div class="sheet">
+  <header class="top">
+    <h1>Certificates and cards</h1>
+    <p>Five certificate designs, each as two separate sheets: one fully Arabic, one fully English. Below them, four printable wallet cards in English. Names, dates and numbers are sample data, and every QR code is a drawn placeholder.</p>
+  </header>
+  <section><div class="head"><span class="tag">CERTIFICATE 1</span><h2>Ivory and gold</h2><p>Engraved gold border on warm ivory, the Medallion as the crest.</p></div><div class="pairs" data-pair="frame"></div></section>
+  <section><div class="head"><span class="tag">CERTIFICATE 2</span><h2>Navy foil</h2><p>Deep navy with gold lettering. Strongest on screen.</p></div><div class="pairs" data-pair="navy"></div></section>
+  <section><div class="head"><span class="tag">CERTIFICATE 3</span><h2>Navy band</h2><p>A navy band carries the Medallion and the verification code.</p></div><div class="pairs" data-pair="band"></div></section>
+  <section><div class="head"><span class="tag">CERTIFICATE 4</span><h2>Crest ribbon</h2><p>A navy header with the Medallion set into it like a wax seal.</p></div><div class="pairs" data-pair="ribbon"></div></section>
+  <section><div class="head"><span class="tag">CERTIFICATE 5</span><h2>Modern minimal</h2><p>No border pattern. A large name, a fine gold rule and a faint ring.</p></div><div class="pairs" data-pair="minimal"></div></section>
+
+  <section><div class="head"><span class="tag">CARD A</span><h2>Navy and gold</h2><p>Front and back. Standard bank-card size, 85.6 × 54 mm.</p></div><div class="cards" data-card="a"></div></section>
+  <section><div class="head"><span class="tag">CARD B</span><h2>Ivory with navy header</h2><p>Matches certificates 1 and 4. Lightest on ink.</p></div><div class="cards" data-card="b"></div></section>
+  <section><div class="head"><span class="tag">CARD C</span><h2>Gold ring</h2><p>The tick ring from the logo, enlarged and cropped.</p></div><div class="cards" data-card="c"></div></section>
+  <section><div class="head"><span class="tag">CARD D</span><h2>Portrait badge</h2><p>Upright, for a lanyard or a site badge holder.</p></div><div class="cards tall" data-card="d"></div></section>
+  <p class="note"><b>For printing:</b> these show the design at card proportions. Print-ready files will need 3 mm bleed and the printer's colour profile; gold can be printed as ink or as real foil.</p>
+  <p class="end"><strong>Next:</strong> choose a certificate (1 to 5) and a card (A to D).</p>
+</div>
+
+<script>
+(function () {
+  function medal(sz) {
+    var rays = "";
+    for (var i = 0; i < 48; i++) rays += '<line x1="100" y1="' + (i % 4 ? 16 : 13) + '" x2="100" y2="22" stroke="#e0b65c" stroke-width="1.600" transform="rotate(' + i * 7.5 + ' 100 100)"/>';
+    return '<svg viewBox="0 0 200 200" role="img" aria-label="أكاديمية أمان"><circle cx="100" cy="100" r="94" fill="#0b1b33" stroke="#e0b65c" stroke-width="3.500"/>' + rays +
+      '<circle cx="100" cy="100" r="75" fill="none" stroke="#e0b65c" stroke-width="1.400"/><text x="100" y="108" text-anchor="middle" direction="rtl" style="font-family:\'Aref Ruqaa\',serif;font-weight:700;font-size:56px" fill="#e0b65c">أمان</text>' +
+      '<text style="font-family:\'Marcellus\',serif;font-size:10.500px;letter-spacing:3.200px" fill="#e0b65c"><textPath href="#arcOld" startOffset="50%" text-anchor="middle">AMAN ACADEMY</textPath></text></svg>';
+  }
+  // Placeholder code: finder squares plus a fixed pattern. It does not encode anything.
+  function qr(fg, bg) {
+    var n = 25, s = '<svg viewBox="0 0 ' + (n + 2) + ' ' + (n + 2) + '" role="img" aria-label="QR placeholder"><rect width="' + (n + 2) + '" height="' + (n + 2) + '" fill="' + bg + '"/>', seed = 7;
+    function fin(x, y) { return x < 7 && y < 7 || x >= n - 7 && y < 7 || x < 7 && y >= n - 7; }
+    for (var y = 0; y < n; y++) for (var x = 0; x < n; x++) {
+      seed = (seed * 1103515245 + 12345) & 0x7fffffff;
+      if (!fin(x, y) && (seed >> 16) % 5 < 2) s += '<rect x="' + (x + 1) + '" y="' + (y + 1) + '" width="1.020" height="1.020" fill="' + fg + '"/>';
+    }
+    [[0, 0], [n - 7, 0], [0, n - 7]].forEach(function (p) {
+      s += '<rect x="' + (p[0] + 1) + '" y="' + (p[1] + 1) + '" width="7" height="7" fill="' + fg + '"/><rect x="' + (p[0] + 2) + '" y="' + (p[1] + 2) + '" width="5" height="5" fill="' + bg + '"/><rect x="' + (p[0] + 3) + '" y="' + (p[1] + 3) + '" width="3" height="3" fill="' + fg + '"/>';
+    });
+    return s + '</svg>';
+  }
+  // Engraved border: fine interlaced waves between two rules, a faint tick ring behind the text, small rosettes in the corners.
+  function ornament(dark, x0, x1, plain) {
+    var g = dark ? "url(#fg-d)" : "url(#fg-l)", W = x1 - x0, H = 210, a = 7, b = 12.5, s = '<svg class="orn" viewBox="0 0 297 210" preserveAspectRatio="none" aria-hidden="true"><g transform="translate(' + x0 + ' 0)">';
+    if (plain) {
+      var r = "";
+      for (var j = 0; j < 120; j++) r += '<line x1="250" y1="-20" x2="250" y2="' + (j % 5 ? -12 : -6) + '" transform="rotate(' + j * 3 + ' 250 105)"/>';
+      return s + '<g stroke="' + g + '" fill="none" stroke-width="0.350" opacity="0.3">' + r + '<circle cx="250" cy="105" r="128"/><circle cx="250" cy="105" r="108"/><circle cx="250" cy="105" r="86"/></g><g fill="none" stroke="' + g + '"><rect x="8" y="8" width="281" height="194" stroke-width="0.800"/><rect x="10.500" y="10.500" width="276" height="189" stroke-width="0.250"/></g></g></svg>';
+    }
+    var cx = W / 2, cy = 108, t = "";
+    for (var i = 0; i < 120; i++) t += '<line x1="' + cx + '" y1="' + (cy - 78) + '" x2="' + cx + '" y2="' + (cy - (i % 5 ? 73 : 69)) + '" transform="rotate(' + i * 3 + ' ' + cx + ' ' + cy + ')"/>';
+    s += '<g stroke="' + g + '" stroke-width="0.350" fill="none" opacity="' + (dark ? 0.16 : 0.2) + '">' + t + '<circle cx="' + cx + '" cy="' + cy + '" r="80"/><circle cx="' + cx + '" cy="' + cy + '" r="66"/></g>';
+    s += '<g fill="none" stroke="' + g + '"><rect x="' + a + '" y="' + a + '" width="' + (W - 2 * a) + '" height="' + (H - 2 * a) + '" stroke-width="0.900"/><rect x="' + b + '" y="' + b + '" width="' + (W - 2 * b) + '" height="' + (H - 2 * b) + '" stroke-width="0.450"/><rect x="' + (b + 1.4) + '" y="' + (b + 1.4) + '" width="' + (W - 2 * b - 2.8) + '" height="' + (H - 2 * b - 2.8) + '" stroke-width="0.200"/>';
+    var m = (a + b) / 2, amp = 1.9;
+    function wave(x0, y0, len, horiz, ph) {
+      var d = "", steps = Math.round(len / 0.8);
+      for (var k = 0; k <= steps; k++) { var u = k / steps * len, o = Math.sin(u / 3.2 * Math.PI + ph) * amp; d += (k ? "L" : "M") + (horiz ? (x0 + u).toFixed(2) + " " + (y0 + o).toFixed(2) : (x0 + o).toFixed(2) + " " + (y0 + u).toFixed(2)); }
+      return '<path d="' + d + '" stroke-width="0.220"/>';
+    }
+    [0, 2.094, 4.189].forEach(function (ph) {
+      s += wave(b, m, W - 2 * b, true, ph) + wave(b, H - m, W - 2 * b, true, ph) + wave(m, b, H - 2 * b, false, ph) + wave(W - m, b, H - 2 * b, false, ph);
+    });
+    s += '</g>';
+    [[m, m], [W - m, m], [m, H - m], [W - m, H - m]].forEach(function (c) {
+      var r = "";
+      for (var i = 0; i < 16; i++) r += '<line x1="' + c[0] + '" y1="' + (c[1] - 3.9) + '" x2="' + c[0] + '" y2="' + (c[1] - 2.9) + '" transform="rotate(' + i * 22.5 + ' ' + c[0] + ' ' + c[1] + ')"/>';
+      s += '<g stroke="' + g + '" stroke-width="0.300"><circle cx="' + c[0] + '" cy="' + c[1] + '" r="4.600" fill="' + (dark ? "#0b1b33" : "#fbf6e9") + '"/>' + r + '<circle cx="' + c[0] + '" cy="' + c[1] + '" r="1.300" fill="' + g + '" stroke="none"/></g>';
+    });
+    return s + '</g></svg>';
+  }
+  var T = {
+    ar: { ttl: "شهادة إتمام", l1: "تشهد أكاديمية أمان بأن", name: "سارة عبدالله القحطاني", l2: "حضرت التدريب المباشر واجتازت الاختبار الإلكتروني لدورة", course: "الإسعافات الأولية", sig: "مدير التدريب", k: ["تاريخ الإصدار", "ساعات التدريب", "رقم الشهادة"], date: "14 ديسمبر 2026", ver: "تحقق من الشهادة", lab: "ARABIC SHEET" },
+    en: { ttl: 'Certificate <small>OF COMPLETION</small>', l1: "This is to certify that", name: "Sarah A. Al-Qahtani", l2: "attended the live training and passed the online exam for the course", course: "First Aid", sig: "Training Director", k: ["Issued", "Hours", "Certificate no."], date: "14 December 2026", ver: "Scan to verify", lab: "ENGLISH SHEET" }
+  };
+  function sheet(kind, lang) {
+    var t = T[lang], dark = kind === "navy";
+    var q = '<div class="qr"><span class="tx"><b>' + t.ver + '</b><em>aman.example/verify</em></span>' + qr("#0b1b33", dark || kind === "band" ? "#f3ead7" : (kind === "minimal" ? "#fffdf8" : "#fbf6e9")) + '</div>';
+    var meta = '<div class="meta"><div><span class="k">' + t.k[0] + '</span><span class="v">' + t.date + '</span></div><div><span class="k">' + t.k[1] + '</span><span class="v">6</span></div><div><span class="k">' + t.k[2] + '</span><span class="v" dir="ltr">AMN-2026-000123</span></div></div>';
+    var sig = '<div class="sig"><span class="ln"></span><span>' + t.sig + '</span></div>';
+    var body = '<div class="c-bd"><p class="lead">' + t.l1 + '</p><p class="name foil">' + t.name + '</p><p class="lead">' + t.l2 + '</p><p class="course">' + t.course + '</p></div>';
+    var ttl = '<h3 class="ttl' + (lang === "ar" ? " foil" : "") + '">' + t.ttl + '</h3>';
+    var h = "", cls = "cert " + lang + " ";
+    if (kind === "band") {
+      var x0 = lang === "ar" ? 0 : 80.2;
+      h = ornament(false, x0, x0 + 216.8) + '<div class="in">' + ttl + body + '<div class="c-ft" style="grid-template-columns:auto 1fr">' + sig + '<div style="justify-self:end">' + meta + '</div></div></div>' +
+        '<div class="bnd"><span class="mk">' + medal() + '</span><span class="nm"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></span>' + q + '</div>';
+      cls += "band";
+    } else if (kind === "ribbon") {
+      h = '<div class="rb"><span class="l">AMAN ACADEMY</span><span class="r">أكاديمية أمان</span><span class="mk">' + medal() + '</span></div><div class="in">' + ttl + body + '<div class="c-ft">' + sig + meta + q + '</div></div>';
+      cls += "ribbon";
+    } else if (kind === "minimal") {
+      h = ornament(false, 0, 297, true) + '<div class="in"><div class="c-hd"><span class="mk">' + medal() + '</span><b>' + (lang === "ar" ? "أكاديمية أمان" : "AMAN ACADEMY") + '</b></div><div class="c-bd">' + ttl + '<p class="lead">' + t.l1 + '</p><p class="name foil">' + t.name + '</p><p class="lead">' + t.l2 + '</p><p class="course">' + t.course + '</p></div><div class="c-ft">' + sig + meta + q + '</div></div>';
+      cls += "minimal";
+    } else {
+      h = ornament(dark, 0, 297) + '<div class="in"><div class="c-hd"><span class="mk">' + medal() + '</span>' + ttl + '</div>' + body + '<div class="c-ft">' + sig + meta + q + '</div></div>';
+      cls += dark ? "navy" : "frame";
+    }
+    return '<div><p class="lbl">' + t.lab + '</p><div class="wrap"><div class="' + cls + '">' + h + '</div></div></div>';
+  }
+  document.querySelectorAll("[data-pair]").forEach(function (el) { var k = el.getAttribute("data-pair"); el.innerHTML = sheet(k, "ar") + sheet(k, "en"); });
+
+  function ring() {
+    var t = "";
+    for (var i = 0; i < 96; i++) t += '<line x1="100" y1="' + (i % 4 ? 9 : 6) + '" x2="100" y2="14" transform="rotate(' + i * 3.75 + ' 100 100)"/>';
+    return '<svg class="ring" viewBox="0 0 200 200" aria-hidden="true"><g fill="none" stroke="url(#fg-d)" stroke-width="0.700">' + t + '<circle cx="100" cy="100" r="97" stroke-width="1.400"/><circle cx="100" cy="100" r="82"/><circle cx="100" cy="100" r="66" stroke-width="0.400"/></g></svg>';
+  }
+  var org = '<span class="org">AMAN ACADEMY<small>TRAINING CARD</small></span>';
+  var who = '<div><div class="nm">Sarah A. Al-Qahtani</div><div class="crs">First Aid</div></div>';
+  var kv = '<div class="row"><span class="kv">Issued<b>14 Dec 2026</b></span><span class="kv">Card no.<b>AMN-2026-000123</b></span></div>';
+  function back(bg) { return '<div class="p"><div class="bk">' + qr("#0b1b33", bg) + '<div><h4>Scan to verify this card</h4><p>Shows the holder, course and issue date on the Aman Academy website.</p><em>aman.example/verify</em></div></div><div class="fine">This card records completion of live training and an online exam with Aman Academy. If found, please return it to the holder.</div></div>'; }
+  function wrapc(cls, inner) { return '<div class="cw"><div class="card ' + cls + '">' + inner + '</div></div>'; }
+  var C = {
+    a: wrapc("", '<span class="fr"></span><div class="p"><div class="top"><span class="mk">' + medal() + '</span>' + org + '</div>' + who + kv + '</div>') + wrapc("", '<span class="fr"></span>' + back("#f3ead7")),
+    b: wrapc("iv", '<span class="hb"></span><div class="p"><div class="top"><span class="mk">' + medal() + '</span>' + org + '</div>' + who + kv + '</div><span class="strip"></span>') + wrapc("iv", back("#fbf6e9") + '<span class="strip"></span>'),
+    c: wrapc("", ring() + '<div class="p"><div class="top">' + org + '</div>' + who + kv + '</div>') + wrapc("iv", '<span class="fr"></span>' + back("#fbf6e9")),
+    d: wrapc("iv tallc", '<span class="hb"></span><div class="p"><div><span class="mk">' + medal() + '</span>' + org + '</div>' + who + '<span class="kv">Card no.<b>AMN-2026-000123</b></span></div>') + wrapc("tallc", '<span class="fr"></span>' + back("#f3ead7"))
+  };
+  document.querySelectorAll("[data-card]").forEach(function (el) { el.innerHTML = C[el.getAttribute("data-card")]; });
+})();
+</script>

@@ -1,0 +1,125 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aman Academy Brand</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=El+Messiri:wght@400;600&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Gulzar&family=IBM+Plex+Mono:wght@500&family=Marcellus&display=swap">
+<style>
+@page { size: 13.333in 7.5in; margin: 0 }
+* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact }
+:root { --navy: #0b1b33; --gold: #e0b65c; --cream: #f3ead7; --ivory: #fbf6e9; --goldd: #8f6520 }
+body { margin: 0; background: #d9d6ce; font-family: "EB Garamond", serif; color: var(--navy) }
+.page { width: 13.333in; height: 7.5in; margin: 0 auto 24px; padding: 0.7in 0.8in 0.6in; background: var(--ivory); position: relative; overflow: hidden; break-after: page; display: flex; flex-direction: column }
+@media print { body { background: none } .page { margin: 0 } }
+.page.dark { background: radial-gradient(120% 90% at 50% 40%, #13294a, #0b1b33 60%, #07132a); color: var(--cream) }
+.eyebrow { font: 500 10pt "IBM Plex Mono", monospace; letter-spacing: 0.14em; color: var(--goldd) }
+.dark .eyebrow { color: var(--gold) }
+h1 { font-family: "Fraunces", serif; font-weight: 400; font-size: 34pt; margin: 6pt 0 0; line-height: 1.1 }
+.sub { font-size: 14pt; max-width: 7.6in; margin: 8pt 0 0; opacity: 0.85; line-height: 1.4 }
+.foot { position: absolute; left: 0.8in; right: 0.8in; bottom: 0.32in; display: flex; justify-content: space-between; font: 500 8pt "IBM Plex Mono", monospace; letter-spacing: 0.1em; opacity: 0.55 }
+.grow { flex: 1; display: flex; align-items: center; min-height: 0 }
+svg { display: block }
+.lock { display: flex; align-items: center; gap: 0.28in; direction: rtl }
+.lock b { display: block; font-family: "Aref Ruqaa", serif; font-size: 40pt; line-height: 1.3; color: var(--gold) }
+.lock i { display: block; font-family: "Marcellus", serif; font-style: normal; font-size: 11.5pt; letter-spacing: 0.34em; direction: ltr; text-align: center }
+.lt .lock b { color: var(--goldd) }
+/* cover */
+.cover { align-items: center; justify-content: center; text-align: center; gap: 0.2in }
+.cover .tag-ar { font-family: "Gulzar", serif; font-size: 26pt; line-height: 1.8; direction: rtl; color: var(--gold) }
+.cover .tag-en { font-family: "Fraunces", serif; font-style: italic; font-size: 17pt }
+/* logo */
+.g2 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 0.3in; width: 100%; height: 100% }
+.tile { border-radius: 6pt; display: grid; place-items: center; position: relative; padding: 0.3in }
+.tile.n { background: var(--navy); color: var(--cream) } .tile.c { background: var(--cream); border: 0.5pt solid #d9c690 }
+.tile .cap { position: absolute; left: 12pt; top: 10pt; font: 500 8pt "IBM Plex Mono", monospace; letter-spacing: 0.1em; opacity: 0.6 }
+.stack { display: grid; grid-template-rows: 1fr 1fr; gap: 0.3in }
+.rules { margin: 12pt 0 0; padding: 0; list-style: none; display: flex; gap: 0.4in; font-size: 11.5pt }
+.rules li { flex: 1; border-top: 0.6pt solid var(--goldd); padding-top: 6pt }
+/* colours */
+.sw { display: grid; grid-template-columns: 1.5fr 1.2fr 1fr 0.8fr 0.8fr; gap: 0.22in; width: 100%; height: 3.9in }
+.sw div { border-radius: 6pt; padding: 0.24in; display: flex; flex-direction: column; justify-content: flex-end; font: 500 9.5pt "IBM Plex Mono", monospace; line-height: 1.6 }
+.sw b { font-family: "Fraunces", serif; font-weight: 600; font-size: 19pt; display: block; margin-bottom: 4pt }
+.sw small { font: inherit; opacity: 0.75 }
+/* type */
+.ty { display: grid; grid-template-columns: 1fr 1fr; gap: 0.24in 0.5in; width: 100% }
+.ty > div { border-top: 0.6pt solid var(--goldd); padding-top: 8pt }
+.ty .role { font: 500 8.5pt "IBM Plex Mono", monospace; letter-spacing: 0.1em; color: var(--goldd) }
+.ty .fam { font-size: 12pt; opacity: 0.8 }
+.sp-gz { font-family: "Gulzar", serif; font-size: 30pt; line-height: 1.9; direction: rtl; text-align: right }
+.sp-fr { font-family: "Fraunces", serif; font-weight: 600; font-size: 28pt; line-height: 1.25; margin: 10pt 0 }
+.sp-em { font-family: "El Messiri", sans-serif; font-size: 15pt; line-height: 1.9; direction: rtl; text-align: right }
+.sp-eb { font-size: 15pt; line-height: 1.5 }
+/* use */
+.use { display: grid; grid-template-columns: 1fr 1fr; gap: 0.3in; width: 100%; height: 100% }
+.use .tile { place-items: start; align-content: center; padding: 0.5in; gap: 12pt }
+.use .ar { direction: rtl; text-align: right; justify-items: start }
+.use h3 { margin: 0; font-weight: 400 }
+.use .ar h3 { font-family: "Gulzar", serif; font-size: 31pt; line-height: 1.9 } .use .en h3 { font-family: "Fraunces", serif; font-weight: 600; font-size: 31pt; line-height: 1.2 }
+.use em { font-style: normal; color: var(--gold) }
+.use p { margin: 0; font-size: 14pt; line-height: 1.6; opacity: 0.85 } .use .ar p { font-family: "El Messiri", sans-serif; line-height: 1.9 }
+.btns { display: flex; gap: 10pt } .btn { padding: 8pt 18pt; border-radius: 3pt; background: var(--gold); color: var(--navy); font-weight: 600; font-size: 12.5pt } .btn.o { background: none; color: var(--cream); border: 0.8pt solid var(--gold) }
+.ar .btn { font-family: "El Messiri", sans-serif }
+.open { margin: 10pt 0 0; font-size: 11.5pt; opacity: 0.8 }
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs><path id="arc" d="M42 104a58 58 0 0 0 116 0"/></defs></svg>
+
+<div class="page dark cover">
+  <span data-m style="width:2.5in"></span>
+  <div class="lock" style="flex-direction:column;gap:0"><b>أكاديمية أمان</b><i>AMAN ACADEMY</i></div>
+  <div style="margin-top:0.25in"><div class="tag-ar">معرفة تحمي، وثقة للتصرف</div><div class="tag-en">Confidence to act. Knowledge to protect.</div></div>
+  <div class="foot"><span>BRAND SHEET</span><span>AGREED 11 NOVEMBER 2026</span></div>
+</div>
+
+<div class="page">
+  <span class="eyebrow">01 · LOGO</span><h1>The Medallion</h1>
+  <p class="sub">The word أمان in gold on a navy disc, inside a ring of fine ticks, with AMAN ACADEMY on the lower arc. It is used exactly as drawn.</p>
+  <div class="grow" style="padding:14pt 0 0"><div class="g2">
+    <div class="tile n"><span class="cap">THE MARK</span><span data-m style="width:2.9in"></span></div>
+    <div class="stack">
+      <div class="tile n"><span class="cap">LOCKUP ON NAVY</span><div class="lock"><span data-m style="width:1.15in"></span><span><b style="font-size:30pt">أكاديمية أمان</b><i style="font-size:9pt">AMAN ACADEMY</i></span></div></div>
+      <div class="tile c lt"><span class="cap">LOCKUP ON CREAM</span><div class="lock"><span data-m style="width:1.15in"></span><span><b style="font-size:30pt">أكاديمية أمان</b><i style="font-size:9pt">AMAN ACADEMY</i></span></div></div>
+    </div>
+  </div></div>
+  <ul class="rules"><li>No added symbols. The ring is not tied to any course, so new courses never change the logo.</li><li>The disc always stays navy with gold, on any background.</li><li>Keep clear space around it equal to the width of the tick ring.</li></ul>
+  <div class="foot"><span>AMAN ACADEMY · BRAND SHEET</span><span>2</span></div>
+</div>
+
+<div class="page">
+  <span class="eyebrow">02 · COLOURS</span><h1>Navy, gold and cream</h1>
+  <p class="sub">Three brand colours taken from the Medallion, with two supporting tones for paper and for gold text on light backgrounds.</p>
+  <div class="grow"><div class="sw">
+    <div style="background:#0b1b33;color:#f3ead7"><b>Navy</b>#0B1B33<br>RGB 11 · 27 · 51<br><small>Main background, text on light</small></div>
+    <div style="background:#e0b65c;color:#0b1b33"><b>Gold</b>#E0B65C<br>RGB 224 · 182 · 92<br><small>Logo, accents, buttons on navy</small></div>
+    <div style="background:#f3ead7;color:#0b1b33;border:0.5pt solid #d9c690"><b>Cream</b>#F3EAD7<br>RGB 243 · 234 · 215<br><small>Light surfaces, text on navy</small></div>
+    <div style="background:#fbf6e9;color:#0b1b33;border:0.5pt solid #d9c690"><b style="font-size:14pt">Ivory</b>#FBF6E9<br><small>Supporting: paper</small></div>
+    <div style="background:#8f6520;color:#fbf6e9"><b style="font-size:14pt">Deep gold</b>#8F6520<br><small>Supporting: gold text on light</small></div>
+  </div></div>
+  <div class="foot"><span>AMAN ACADEMY · BRAND SHEET</span><span>3</span></div>
+</div>
+
+<div class="page">
+  <span class="eyebrow">03 · FONTS</span><h1>Four typefaces</h1>
+  <p class="sub">One for headlines and one for reading in each language. All four are free Google Fonts.</p>
+  <div class="grow"><div class="ty">
+    <div><span class="role">ARABIC HEADLINES</span> <span class="fam">· Gulzar</span><div class="sp-gz">معرفة تحمي، وثقة للتصرف</div></div>
+    <div><span class="role">ENGLISH HEADLINES</span> <span class="fam">· Fraunces</span><div class="sp-fr">Confidence to act. Knowledge to protect.</div></div>
+    <div><span class="role">ARABIC READING AND INTERFACE</span> <span class="fam">· El Messiri</span><div class="sp-em">تدريب مباشر مع مدرب، اختبار إلكتروني، وشهادة رقمية يمكن التحقق منها. 0123456789</div></div>
+    <div><span class="role">ENGLISH READING AND INTERFACE</span> <span class="fam">· EB Garamond</span><div class="sp-eb">Live training with an instructor, an online exam, and a digital certificate anyone can verify. 0123456789</div></div>
+  </div></div>
+  <p class="open">The logo keeps its own lettering: Aref Ruqaa for أمان and Marcellus for AMAN ACADEMY. Gulzar is for short, large headlines only.</p>
+  <div class="foot"><span>AMAN ACADEMY · BRAND SHEET</span><span>4</span></div>
+</div>
+
+<div class="page">
+  <span class="eyebrow">04 · TOGETHER</span><h1>How it reads</h1>
+  <p class="sub">The website shows one language at a time, switched with the AR / EN button. Sample text.</p>
+  <div class="grow" style="padding-top:12pt"><div class="use">
+    <div class="tile n ar"><h3>معرفة <em>تحمي</em>، وثقة للتصرف</h3><p>تدريب مباشر مع مدرب، اختبار إلكتروني، وشهادة رقمية يمكن التحقق منها.</p><div class="btns"><span class="btn">سجّل الآن</span><span class="btn o">تصفح الدورات</span></div></div>
+    <div class="tile n en"><h3>Confidence to act. <em>Knowledge</em> to protect.</h3><p>Live training with an instructor, an online exam, and a digital certificate anyone can verify.</p><div class="btns"><span class="btn">Enrol now</span><span class="btn o">Browse courses</span></div></div>
+  </div></div>
+  <p class="open"><b>Still to decide:</b> certificate design, card design, a simplified logo for very small sizes, and the website layout.</p>
+  <div class="foot"><span>AMAN ACADEMY · BRAND SHEET</span><span>5</span></div>
+</div>
+<script>
+var rays = "";
+for (var i = 0; i < 48; i++) rays += '<line x1="100" y1="' + (i % 4 ? 16 : 13) + '" x2="100" y2="22" stroke="#e0b65c" stroke-width="1.6" transform="rotate(' + i * 7.5 + ' 100 100)"/>';
+var m = '<svg viewBox="0 0 200 200" width="100%"><circle cx="100" cy="100" r="94" fill="#0b1b33" stroke="#e0b65c" stroke-width="3.5"/>' + rays + '<circle cx="100" cy="100" r="75" fill="none" stroke="#e0b65c" stroke-width="1.4"/><text x="100" y="108" text-anchor="middle" direction="rtl" style="font-family:\'Aref Ruqaa\',serif;font-weight:700;font-size:56px" fill="#e0b65c">أمان</text><text style="font-family:\'Marcellus\',serif;font-size:10.5px;letter-spacing:3.2px" fill="#e0b65c"><textPath href="#arc" startOffset="50%" text-anchor="middle">AMAN ACADEMY</textPath></text></svg>';
+document.querySelectorAll("[data-m]").forEach(function (e) { e.style.display = "block"; e.style.flex = "none"; e.innerHTML = m; });
+</script></body></html>

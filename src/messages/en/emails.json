@@ -1,0 +1,24 @@
+{
+  "greeting": "Hello {name},",
+  "signature": "Aman Academy\nConfidence to act. Knowledge to protect.",
+  "welcome": {
+    "subject": "Welcome to Aman Academy",
+    "body": "Your account is ready. Browse the live courses and choose a session that suits you:\n{url}"
+  },
+  "passwordReset": {
+    "subject": "Reset your Aman Academy password",
+    "body": "We received a request to reset your password. Use this link within 30 minutes:\n{url}\n\nIf you did not ask for this, you can ignore this email and your password will stay the same."
+  },
+  "invitation": {
+    "subject": "{company} invited you to Aman Academy",
+    "body": "{company} has invited you to join its training account on Aman Academy. Accept the invitation and create your account here:\n{url}\n\nThis invitation expires in 14 days."
+  },
+  "enrollmentConfirmed": {
+    "subject": "You are enrolled: {course}",
+    "body": "Your place is confirmed.\n\nCourse: {course}\nStarts: {date} (Saudi time, Asia/Riyadh)\n\nYour joining instructions are in your dashboard:\n{url}"
+  },
+  "certificateIssued": {
+    "subject": "Your certificate for {course}",
+    "body": "Congratulations on completing {course}.\n\nCertificate number: {number}\nDownload it from your dashboard:\n{url}"
+  }
+}

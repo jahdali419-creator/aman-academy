@@ -1,0 +1,98 @@
+{
+  "brand": "Aman Academy",
+  "brandOther": "أكاديمية أمان",
+  "tagline": "Confidence to act. Knowledge to protect.",
+  "skipToContent": "Skip to main content",
+  "optional": "Optional",
+  "fixErrors": "Please check the highlighted fields and try again.",
+  "sample": "Sample",
+  "sampleData": "Sample data",
+  "draft": "Draft",
+  "loading": "Loading…",
+  "demoBanner": "Demonstration site with fictional data. No real payments are taken and certificates are samples.",
+  "nav": {
+    "main": "Main navigation",
+    "courses": "Courses",
+    "companies": "For companies",
+    "about": "About",
+    "verify": "Verify a certificate",
+    "contact": "Contact",
+    "signIn": "Sign in",
+    "register": "Create account",
+    "signOut": "Sign out",
+    "dashboard": "My learning",
+    "company": "Company",
+    "instructor": "Instructor",
+    "admin": "Admin",
+    "settings": "Account settings",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "account": "Account"
+  },
+  "language": {
+    "label": "Language",
+    "switchTo": "العربية",
+    "switchAria": "التبديل إلى العربية"
+  },
+  "time": {
+    "zone": "Saudi time (GMT+3)",
+    "zoneShort": "KSA time",
+    "zoneNote": "All times are shown in Saudi Arabia time (Asia/Riyadh, GMT+3)."
+  },
+  "teaching": { "ar": "Arabic", "en": "English", "label": "Taught in" },
+  "provider": { "teams": "Microsoft Teams", "zoom": "Zoom" },
+  "format": { "live": "Live online", "liveVia": "Live online via {provider}" },
+  "seats": {
+    "left": "{count, plural, =0 {Fully booked} one {1 seat left} other {# seats left}}",
+    "few": "{count, plural, one {Only 1 seat left} other {Only # seats left}}",
+    "full": "Fully booked",
+    "available": "Seats available"
+  },
+  "actions": {
+    "exploreCourses": "Explore courses",
+    "trainTeam": "Train your team",
+    "viewCourse": "View course",
+    "viewAll": "View all sessions",
+    "enroll": "Enrol",
+    "back": "Back",
+    "save": "Save changes",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "send": "Send message",
+    "download": "Download",
+    "view": "View",
+    "edit": "Edit",
+    "create": "Create",
+    "tryAgain": "Try again",
+    "goHome": "Back to home"
+  },
+  "success": {
+    "saved": "Your changes have been saved.",
+    "sent": "Thank you. Your message has been received and we will reply by email.",
+    "resetSent": "If an account exists for that email, a reset link is on its way.",
+    "passwordChanged": "Your password has been changed.",
+    "invited": "Invitation sent.",
+    "assigned": "Seat assigned.",
+    "recorded": "Attendance recorded.",
+    "created": "Created successfully."
+  },
+  "footer": {
+    "blurb": "Live, instructor-led safety training for individuals and small companies in Saudi Arabia.",
+    "learn": "Learn",
+    "organisation": "Academy",
+    "legal": "Policies",
+    "privacy": "Privacy policy",
+    "terms": "Terms of use",
+    "refunds": "Cancellation and refunds",
+    "rights": "© {year} Aman Academy. All rights reserved.",
+    "disclaimer": "Courses are delivered online and assess knowledge. They do not replace hands-on practical training or any qualification required by a regulator."
+  },
+  "notFound": {
+    "title": "We couldn't find that page",
+    "body": "The page may have moved, or the link may be incorrect."
+  },
+  "error": {
+    "title": "Something went wrong",
+    "body": "This is on our side, not yours. Please try again in a moment."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "meta": "About Aman Academy",
+  "eyebrow": "About us",
+  "title": "Safety knowledge, taught by people, for people",
+  "lead": "Aman Academy delivers live, instructor-led safety training online for individuals and small companies in Saudi Arabia.",
+  "missionTitle": "Why we exist",
+  "mission": [
+    "In an emergency, the first few minutes belong to whoever is there. We want more people to know what to do in those minutes — and to feel confident enough to act.",
+    "We believe that confidence comes from understanding, not from watching a video alone. That is why every Aman Academy course is taught live: a real instructor, real questions, and time to talk through real situations."
+  ],
+  "principlesTitle": "What we hold ourselves to",
+  "principles": [
+    { "title": "Honest about what online training can do", "body": "Live online courses are excellent for knowledge and judgement. They do not replace hands-on practice, and we say so on every course page." },
+    { "title": "Clear requirements", "body": "You know before you book what attendance, exam and certificate requirements apply." },
+    { "title": "Verifiable certificates", "body": "Every certificate carries a unique number and QR code that anyone can check on our website." },
+    { "title": "Arabic and English, equally", "body": "The whole experience — courses, exams, certificates and support — is available in both languages." },
+    { "title": "Respect for your data", "body": "We collect what we need to run your training and issue your certificate, and no more." }
+  ],
+  "statusTitle": "Accreditation and approvals",
+  "status": "Aman Academy does not currently claim accreditation or approval from any regulator or awarding body. If that changes, the details and the way to verify them will be published on this page.",
+  "cta": "Explore courses"
+}
